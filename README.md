@@ -5,7 +5,7 @@ This repository containins information on the SuperMegaBot as used for the [Robo
 Please check out the [github pages](https://ethz-robotx.github.io/SuperMegaBot) for the documentation related to the SuperMegaBot.
 
 ## Issue tracking
-Please use the [issues page](issues) to report any issues concerning the robots (hardware and software related issues). 
+Please use the [issues page](https://github.com/ETHZ-RobotX/SuperMegaBot/issues) to report any issues concerning the robots (hardware and software related issues). 
 
 ## History
 The SuperMegaBot was originally developped by the ETH Construction Robotics group. 
