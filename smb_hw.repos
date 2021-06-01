@@ -1,0 +1,18 @@
+repositories:
+  rslidar_sdk:
+    type: git
+    url: https://github.com/ETHZ-RobotX/rslidar_sdk.git
+    version: supermegabot
+  versavis:
+    type: git
+    url: https://github.com/ethz-asl/versavis.git
+    version: test/upstream_rosserial
+  flir_camera_driver:
+    type: git
+    url: https://github.com/ethz-asl/flir_camera_driver.git
+    version: master
+  realsense:
+    type: git
+    url: https://github.com/IntelRealSense/realsense-ros.git
+    version: 2.2.24
+    
