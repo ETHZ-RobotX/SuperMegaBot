@@ -52,6 +52,12 @@ In the document there are two terminal types:
 
 !!!![TODO]!!!!
 
+Prepare such a document for summer school area! 
+
+https://ethz.ch/content/dam/ethz/special-interest/mavt/department-dam/departement/documents/Code%20of%20Conduct%20Rechargeable%20Batteries.pdf
+
+
+!!!![TODO]!!!!
 
 ### Powering Up 
 
