@@ -11,6 +11,10 @@ The four wheels of the SMB base are driven by individual motors, connected to a 
 
 SMB consist of two parts: Base and payload.
 
+<p align="center">
+  <img style=" left;"  src="../Images/SMB_Backpanel.png" width="300" title="asd">
+</p>
+
 
 ## RC Transmitter
 <p align="center">
@@ -23,6 +27,3 @@ SMB consist of two parts: Base and payload.
   <img style=" right;"  src="../Images/E-Stop.png" width="300" title="asd">
 </p>
 
-<p align="center">
-  <img style=" left;"  src="../Images/SMB_Backpanel.png" width="300" title="asd">
-</p>

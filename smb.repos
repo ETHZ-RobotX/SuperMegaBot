@@ -7,6 +7,22 @@ repositories:
     type: git
     url: git@bitbucket.org:leggedrobotics/smb_common.git
     version: dev/ros_control
-  robosense:
+  robosense_simulator:
     type: git
     url: https://github.com/tomlogan501/robosense_simulator.git
+  smb_path_planner:
+    type: git
+    url: https://github.com/VIS4ROB-lab/smb_path_planner.git
+    version: dev/rss
+  teb_local_planner:
+    type: git
+    url: git@github.com:leggedrobotics/teb_local_planner.git
+    version: feature/correct_local_plan_timestamps
+  eigen_catkin:
+    type: git
+    url: https://github.com/ethz-asl/eigen_catkin.git
+    version: master
+  catkin_simple:
+    type: git
+    url: https://github.com/catkin/catkin_simple.git
+    version: master

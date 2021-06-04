@@ -17,14 +17,49 @@ To use the software correctly please be sure that you followed the [HowToUseSMB 
 ### Use Basic Functionality
 
 You can run the software in two mode: 
-1. Manuel Mode
-2. Autonomous Mode
+1. Simulation Mode 
+2. Manuel SMB Mode
+3. Autonomous SMB Mode
 
 In both mode all sensor values, odometry and robot state can be reached and visualized. In autonomous mode, you can give goal position for the robot to navigate autonomously via Rviz Interface. 
 
+### Simulation Mode
+>If you want to switch between modes make sure that you killed the previous mode.
 
-#### Manuel Mode
->If you want to switch between modes make sure that you killed the other process. 
+Simulation runs on the host pc. To run the simulation you do not need connection to SMB
+
+```bash
+# In the host pc
+roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true
+
+```
+
+#### Autonomous Navigation Simulation 
+
+More information about the path planner can be found in the [path planner reposiotry](https://github.com/VIS4ROB-lab/smb_path_planner)
+
+Since we have successfully set up the SMB software, one can launch the simulation and get the first experience with the OMPL path planner.
+Make sure that the `smb_navigation` is built. If not, run:
+```bash
+# In the host pc
+catkin build smb_navigation
+```
+then, launch the simulation environment:
+```bash
+# In the host pc
+roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true run_twist_scaling_node:=true
+```
+Subsequently, in the second terminal window launch the OMPL path planner:
+```bash
+# In the host pc
+roslaunch smb_navigation navigate2d_ompl.launch sim:=true global_frame:=tracking_camera_odom robot_base_frame:=base_link
+```
+In the RVIZ you should observe a grey-scaled map with SMB in the middle. Now, select `2d Navigation Goal` from the top toolbar and set the goal for the planner in the feasible region within the map.
+
+
+
+### Manuel Mode
+>If you want to switch between modes make sure that you killed the previous mode. 
 
 
 ```bash
@@ -52,7 +87,7 @@ roslaunch smb_opc opc.launch
 > You might need to restart the base if the robot does not respond to the teleop control
 
 
-#### Autonomous Mode
+### Autonomous Mode
 >If you want to switch between modes make sure that you killed the other process. 
 
 ```bash

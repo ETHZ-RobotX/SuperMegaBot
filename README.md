@@ -11,7 +11,7 @@ Please use the [issues page](https://github.com/ETHZ-RobotX/SuperMegaBot/issues)
 Please refer to the [installation document](/docs/installation.md) to install necessary packages and their dependencies
 
 ## How to Use SMB
-Please refer to the [HowToUseSmb Document](/docs/HowToUseSMB.md) to use SMB. The document will direct you to the [HowToRunSoftware Document](/docs/HowToRunSoftware.md) after you see the necessary safety informations.
+Please refer to the [HowToUseSmb Document](/docs/HowToUseSMB.md) to use SMB. The document will direct you to the [HowToRunSoftware Document](/docs/HowToRunSoftware.md) after you see the necessary safety information.
  
 
 ## History
