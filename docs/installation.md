@@ -131,7 +131,7 @@ Since every SMB package and dependency is installed, you can build the project.
 # Navigate to the directory of workspace
 cd <directory_to_ws>/<catkin_ws_name>/
 
-catkin build
+catkin build smb
 ```
 
 You should see that every package is built.
