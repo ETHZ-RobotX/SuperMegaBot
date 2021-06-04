@@ -6,15 +6,25 @@ Documentation of the SuperMegaBot (SMB) for the ETHZ Robotic Summer School.
 {:toc}
 
 ## Introduction
-What is covered in this documentation? 
+This documentation aims at introducing basic usage of the SMB software. 
+To get a basic understanding and perform basic testing, a simulation environment based on Gazebo can be used.
+This simulation is part of the basic software setup.
 
-## Using the Simulation
-Gazebo based simulation of robot incl. most of it sensors (cameras, imu, lidar)
+Furthermore, the fundamentals in how to use the real robot is described as well.
+
+## The Simulation
+For simulation of the SuperMegaBot, the Gazebo environment is used. 
+It incorporates a simulation of the 4-wheeled robot including most of its sensors:
+- 16 beam Lidar
+- RGB camera
+- Tracking camera
+- IMU
 
 ### Installation
---> link to installation
+To install the simulation, follow the steps described in the [installation documentation](installation.md).
+
 ### Running the simulation environment
-refer to documentation of simulation
+_refer to documentation of simulation_
 
 ## Operating the real robot
 _Detailed information on extra pages_
