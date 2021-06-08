@@ -6,7 +6,9 @@
 
 ## Remark
 
-SMB system consist of two part: simulation and hardware. If you want to use the system on a real SMB Robot with real sensors and actuators, hardware part should be installed **on top of the simulation part**. This document contains the instruction about SMB Simulation Software. To install SMB Simulation Hardware plaese refer to this [document](doc/installation_wh.md).
+The SMB software consists of two parts: core and hardware related.
+
+If you want to use the system on a real SMB robot with real sensors and actuators, the [hardware related part](installation_hw.md) should be installed **on top of the core part**. This document contains the instructions about SMB core software, which also contains the simulation environment.
 
 ## Table of Contents
 - [Setting up the SMB Simulation Software](#setting-up-the-smb-simulation-software)
