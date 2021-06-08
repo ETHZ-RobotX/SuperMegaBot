@@ -136,3 +136,6 @@ After you built the packages, you can add the source file into .bashrc so that y
 # Do not forget to change <...> parts
 echo "source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash" >> ~/.bashrc
 ```
+
+### Hardware related software
+To get everything running on the real robot, you also need to follow the steps describe in the [hardware related software installation description](installation_hw.md).
