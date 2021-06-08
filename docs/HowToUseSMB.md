@@ -98,6 +98,8 @@ In order to connect to SMB remotely, the host PC should connect the Wifi of the 
 
 Once you are connected, from the terminal you should connect the SMB via SSH. **The ip addresses of every SMB is 11.0.0.5** .
 
+> Note that there might be an error in the host PC while trying to connect the SMB via ssh. Please read the terminal and use the suggested command in terminal to remove the previous ssh connection settings. 
+
 ```bash
 # In the terminal of host pc
 ssh smb@11.0.0.5
@@ -108,9 +110,15 @@ ssh smb@11.0.0.5
 # To connect the SMB to Internet 
 nmcli connection up
 ```
-Note that there might be an error in the host PC while trying to connect the SMB via ssh. Please read the terminal and use the suggested command in terminal to remove the previous ssh connection settings. 
-
 Once you are connected to the SMB you will see an IP address and port tuple on the terminal starting with 'http://'. Please save it since we will need it in the next step. 
+
+If you do not see such a tupple, please start the roscore and check the part ROS_MASTER_URI.
+
+```bash
+# In the terminal of SSH
+roscore
+# See the part of ROS_MASTER_URI
+```
 
 ### Running the Software 
 
