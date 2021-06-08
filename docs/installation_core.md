@@ -12,8 +12,9 @@ Table of contents
 
 ## Remark
 
-SMB system consist of two part: core and hardware. If you want to use the system on a real SMB Robot with real sensors and actuators, hardware part should be installed **on top of the core part**. This document contains the instruction about SMB Core Software. To install SMB Hardware Related Software refer to this [document](doc/hw_installation.md).
+The SMB software consists of two parts: core and hardware related.
 
+If you want to use the system on a real SMB robot with real sensors and actuators, the [hardware related part](installation_hw.md) should be installed **on top of the core part**. This document contains the instructions about SMB core software, which also contains the simulation environment.
 
 ## Table of Contents
 
@@ -30,6 +31,7 @@ SMB system consist of two part: core and hardware. If you want to use the system
   - [Catkin Workspace and all Packages](#catkin-workspace-and-all-packages)
   - [Installing Dependencies](#installing-dependencies)
   - [Finalization](#finalization)
+    - [Hardware related software](#hardware-related-software)
 
 ## Prerequisites
 - ROS Noetic
@@ -146,3 +148,6 @@ After you built the packages, you can add the source file into .bashrc so that y
 # Do not forget to change <...> parts
 echo "source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash" >> ~/.bashrc
 ```
+
+### Hardware related software
+To get everything running on the real robot, you also need to follow the steps describe in the [hardware related software installation description](installation_hw.md).
