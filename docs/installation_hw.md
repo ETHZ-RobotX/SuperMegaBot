@@ -53,9 +53,9 @@ sudo apt-get install -y libyaml-cpp-dev libpcap-dev libprotobuf-dev protobuf-com
 ```
 
 ### Spinnaker Camera Driver
-Download [the driver](../drivers/spinnaker-2.4.0.143-Ubuntu20.04-amd64-pkg.tar.gz) from this repo.
+Download [the spinnaker driver](https://drive.google.com/file/d/1wVK0dAH4mre1Prsr-Wsaowz0_OAmWe2f/view?usp=sharing).
 ```bash
-# Installing necessary libraries for RoboSense.
+# Installing necessary libraries for camera driver.
 sudo apt install ros-noetic-roslint
 
 cd <Directory_to_download>/
