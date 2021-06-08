@@ -29,7 +29,7 @@ Due to the nature of the development process, some extra bugs, errors, hardware 
 For safety purposes, the power input to the motor controller can be cut off by de-energizing a contactor that is part of the [SMB emergency stop system](https://unlimited.ethz.ch/display/ROBOTX/SMB+Emergency+Stop+System).\
 Emergency buttons are in series so if one of them is pushed e-stop is activated! This means, the motor controller and thus motors are not powered anymore, robot stops! 
 <p align="center">
-  <img style="right;"  src="../Images/E-Stop.png" width="300" title="asd">
+  <img style="right;"  src="images/E-Stop.png" width="300" title="asd">
 </p>
 
 
@@ -61,23 +61,23 @@ https://ethz.ch/content/dam/ethz/special-interest/mavt/department-dam/departemen
 
 ### Powering Up 
 
-In the SMBs there is an emergency stop system directly connected to the base. Therefore, a wireless e-stop switch is needed to activate the motors. When the [e-stop switch is activated](Images/EB_Activated.jpg), motors do not receive any power.\
+In the SMBs there is an emergency stop system directly connected to the base. Therefore, a wireless e-stop switch is needed to activate the motors. When the [e-stop switch is activated](images/EB_Activated.jpg), motors do not receive any power.\
 Keep the wireless e-stop transmitter close by (e.g. attach it to your belt or similar), in order to be able to switch off all power to the motors in case of an unlikely failure of the motor controller resulting in the robot being uncontrollable. Note that the emergency stop is not a brake system so the robot might continue to move due to its inertia.
 
 
 Please follow the steps carefully.
 
 1. Before doing anything else, be sure that emergency stop buttons are in the activated position so that the motors cannot be powered up.
-   * [The Emergency stop button](../Images/SMB_Backpanel.png) on the back panel is activated.
-   * The E-Stop switch is in activated [e-stop switch is activated](../Images/EB_Activated.jpg).
+   * [The Emergency stop button](images/SMB_Backpanel.png) on the back panel is activated.
+   * The E-Stop switch is in activated [e-stop switch is activated](images/EB_Activated.jpg).
   
 2. Turn on the RC transmitter.
    * Be sure that the transmitter is connected to the right smb: check the number on the screen of the transmitter and the number that is written back panel of the smb 
-   * Be sure that the [Emergency Stop Switch of the RC Transmitter](../Images/RCTransmitter.png)  is in the position of 0. It gives '0' commands to the motots . 
+   * Be sure that the [Emergency Stop Switch of the RC Transmitter](images/RCTransmitter.png)  is in the position of 0. It gives '0' commands to the motots . 
    * BUT IF THERE IS A PROBLEM WITH THE CONTROLLER (e.g. the robot is uncontrollable) USE THE EMERGENCY STOP SWITCH! THAT SAFETY STOP SWITCH MIGHT NOT WORK 
 
-3. Power up the base using the switch [Base Power Switch](../Images/SMB_Backpanel.png) . This switch activates also the wireless e-stop receiver.
-   * Since the wireless e-stop system is energized and it is in the activate state (we did it so at step 1), we can deactivate the [Emergency Stop Button on the SMB](../Images/SMB_Backpanel.png). 
+3. Power up the base using the switch [Base Power Switch](images/SMB_Backpanel.png) . This switch activates also the wireless e-stop receiver.
+   * Since the wireless e-stop system is energized and it is in the activate state (we did it so at step 1), we can deactivate the [Emergency Stop Button on the SMB](images/SMB_Backpanel.png). 
   
 4. Deactivate the wireless e-stop by pulling out the button.  
     * As soon as the emergency stop circuit is closed, you should be able to hear a clicking sound. This clicking sound originates from the contactor that physically closed the power circuit to the motors. Also, the LED on the wireless e-stop transmitter should be blinking at a regular interval. 
@@ -91,7 +91,7 @@ Please follow the steps carefully.
 
 ### Connecting to SMB 
 
-In order to power-up the computer on the SMB use the [OnBoard PC Power Switch](../Images/SMB_Backpanel.png) Close the lid of the switch to prevent shut-down by mistake.
+In order to power-up the computer on the SMB use the [OnBoard PC Power Switch](images/SMB_Backpanel.png) Close the lid of the switch to prevent shut-down by mistake.
 In order to connect to SMB remotely, the host PC should connect the Wifi of the SMB: 
   * Wifi (SSID): smb-<SMB_ROBOT_NUMBER>
   * Password: SMB_<SMB_ROBOT_NUMBER>_RSS or *_RSL
@@ -145,7 +145,7 @@ export ROS_IP=<wlp4s0_ip>
 # the ip and port tuple we have saved in the previous step  
 ```
 
-To use the packages and run the software please refer to the [HowToRunSoftware](/docs/HowToRunSoftware.md)
+To use the packages and run the software please refer to the [HowToRunSoftware](HowToRunSoftware.md)
 
 
 ### ShutDown Procedure
