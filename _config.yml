@@ -1,4 +1,4 @@
 title: ETHZ RobotX SuperMegaBot
 description: Documentation of the SuperMegaBot
-theme: jekyll-rtd-theme
+remote_theme: pmarsceill/just-the-docs
 markdown: kramdown
