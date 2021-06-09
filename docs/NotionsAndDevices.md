@@ -4,7 +4,7 @@
 
 ## SMB 
 <p align="center">
-  <img style=" right;"  src="../Images/SMB.jpg" width="300" title="asd">
+  <img style=" right;"  src="images/SMB.jpg" width="300" title="asd">
 </p>
 
 The four wheels of the SMB base are driven by individual motors, connected to a gear box to get sufficient torque. The two motors on each side are connected to the same channel of the motor controller respectively, which results in a classical skid steer configuration. 
@@ -12,18 +12,18 @@ The four wheels of the SMB base are driven by individual motors, connected to a 
 SMB consist of two parts: Base and payload.
 
 <p align="center">
-  <img style=" left;"  src="../Images/SMB_Backpanel.png" width="300" title="asd">
+  <img style=" left;"  src="images/SMB_Backpanel.png" width="300" title="asd">
 </p>
 
 
 ## RC Transmitter
 <p align="center">
-  <img style=" right;"  src="../Images/RCTransmitter.png" width="300" title="asd">
+  <img style=" right;"  src="images/RCTransmitter.png" width="300" title="asd">
 </p>
 
 
 ## Emergency Stops
 <p align="center">
-  <img style=" right;"  src="../Images/E-Stop.png" width="300" title="asd">
+  <img style=" right;"  src="images/E-Stop.png" width="300" title="asd">
 </p>
 
