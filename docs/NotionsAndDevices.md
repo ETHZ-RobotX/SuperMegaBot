@@ -43,4 +43,5 @@ The Linux command line is a text interface to your computer. Often referred to a
 For more info please refer to this [link](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
 
 
-### 
+* #### Export 
+  A command in the Bash shell language. When used to set a variable, as in your example, the variable (PATH) will be visible ("exported to") any subprocesses started from that instance of Bash. Without the export command, the variable will not exist in the subprocess.
