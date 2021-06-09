@@ -1,4 +1,4 @@
-# Setting up the hardware related software
+# Setting Up The Hardware Related Software
 In the following, the steps required to use all the hardware installed on the SuperMegaBot are described.
 
 > This section is only for the SMB itself. It is not needed to install drivers and packages related to sensors into user's pc. 
@@ -6,12 +6,14 @@ In the following, the steps required to use all the hardware installed on the Su
 > Hardware installation should be on top of the software installation. 
 
 ## Table of Contents
-- [ROS Packages](#ros-packages)
-- [Driver installations:](#driver-installations)
-  - [RealSense](#realsense)
-  - [Robosense](#robosense)
-  - [Spinnaker Camera Driver](#spinnaker-camera-driver)
-  - [Versavis](#versavis)
+- [Setting Up The Hardware Related Software](#setting-up-the-hardware-related-software)
+  - [Table of Contents](#table-of-contents)
+  - [ROS packages](#ros-packages)
+  - [Driver installations:](#driver-installations)
+    - [RealSense](#realsense)
+    - [Robosense](#robosense)
+    - [Spinnaker Camera Driver](#spinnaker-camera-driver)
+    - [Versavis](#versavis)
     
 
 ## ROS packages

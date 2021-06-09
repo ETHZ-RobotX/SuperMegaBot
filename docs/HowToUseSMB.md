@@ -95,14 +95,14 @@ Please follow the steps carefully.
    * Since the wireless e-stop system is energized and it is in the activate state (we did it so at step 1), we can deactivate the [Emergency Stop Button on the SMB](images/SMB_Backpanel.png). 
   
 4. Deactivate the wireless e-stop by pulling out the button.  
-    * As soon as the emergency stop circuit is closed, you should be able to hear a clicking sound. This clicking sound originates from the contactor that physically closed the power circuit to the motors. Also, the LED on the wireless e-stop transmitter should be blinking at a regular interval. 
+    * As soon as the emergency stop circuit is closed, you should hear a mechanical clicking sound. This clicking sound originates from the contactor that physically closed the power circuit to the motors. Also, the LED on the wireless e-stop transmitter should be blinking at a regular interval. 
     * Now you are able to drive drive the smb via RC
   
- 5. Be sure that the safety stop switch on the RC transmitter is functional by doing a small test.
+ 1. Be sure that the safety stop switch on the RC transmitter is functional by doing a small test.
     * Try to drive the robot while it is in the position 0 -> no movement 
     * Flipping the safety stop switch on the RC remote to position 1 should allow movement of the robot. Use the right control stick on the RC transmitter to steer the SMB. 
     * Switching the safety stop on the Remote back into position 0 should stop the robot. Try again to to control the robot while switch is in position 0. It should not move. 
-6. Bring the safety stop switch to the position 1 again. Small movements on the stick are already enough to command forward motion. 
+5. Bring the safety stop switch to the position 1 again. Small movements on the stick are already enough to command forward motion. 
 
 ### Connecting to SMB 
 
@@ -164,9 +164,9 @@ export ROS_IP=<wlp4s0_ip>
 # the ip and port tuple we have saved in the previous step  
 ```
 
-> Note that at every new terminal you have to repeat the steps under the title of Running the Software. Please refer to [the NotionsAndDevices document](/docs/NotionsAndDevices.md) for more information related to 'export' command.
+> Note that at every new terminal you have to repeat the steps under the title of Running the Software. Please refer to [the NotionsAndDevices document](NotionsAndDevices.md) for more information related to 'export' command.
 
-To use the packages and run the software please refer to the [HowToRunSoftware](/docs/HowToRunSoftware.md)
+To use the packages and run the software please refer to the [HowToRunSoftware](HowToRunSoftware.md)
 
 
 ### ShutDown Procedure

@@ -18,10 +18,6 @@ If you want to use the system on a real SMB robot with real sensors and actuator
 
 ## Table of Contents
 
-
-
-
-
 - [Setting up the SMB Core Software](#setting-up-the-smb-core-software)
   - [Remark](#remark)
   - [Table of Contents](#table-of-contents)

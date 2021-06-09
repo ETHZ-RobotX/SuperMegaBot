@@ -12,7 +12,7 @@ In the document there are two terminal types:
 1) Terminal of host PC: The terminal that has access to host pc system.
 2) Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
 
-To use the software correctly please be sure that you followed the [HowToUseSMB Document](./HowToUseSMB.md) until the part **ShutDown Procedure**.
+To use the software correctly please be sure that you followed the [HowToUseSMB Document](HowToUseSMB.md) until the part **ShutDown Procedure**.
 
 ### Use Basic Functionality
 
@@ -83,8 +83,12 @@ roslaunch smb_opc opc.launch
 # You should see the robot model in Rviz
 ```
 
-
 > You might need to restart the base if the robot does not respond to the teleop control
+
+In order to control the SMB with the joystick, you should keep presing the L1 button while driving and use the left stick to control the robot.
+
+!!!! THIS WILL CHANGE !!!!!! 
+
 
 
 ### Autonomous Mode

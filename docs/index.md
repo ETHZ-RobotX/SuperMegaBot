@@ -12,6 +12,9 @@ This simulation is part of the core software setup.
 
 Furthermore, the fundamentals in how to use the real robot is described as well.
 
+## Issue tracking
+Please use the [issues page](https://github.com/ETHZ-RobotX/SuperMegaBot/issues) to report any issues concerning the robots (hardware and software related issues). 
+
 ## The Simulation
 For simulation of the SuperMegaBot, the Gazebo environment is used. 
 It incorporates a simulation of the 4-wheeled robot including most of its sensors (16 beam Lidar, RGB camera, tracking camera, IMU)
@@ -24,3 +27,9 @@ Once the SMB core software is installed, you can start the simulation by followi
 
 ## Operating the real robot
 Please follow the steps described in [How to use the SMB](HowToUseSMB.md) to operate a SuperMegaBot.
+
+## History
+The SuperMegaBot was originally developped by the ETH Construction Robotics group. 
+
+### RSS 2019 Edition
+See https://github.com/ethz-asl/eth_supermegabot
