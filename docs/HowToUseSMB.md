@@ -59,6 +59,21 @@ https://ethz.ch/content/dam/ethz/special-interest/mavt/department-dam/departemen
 
 !!!![TODO]!!!!
 
+:exclamation: Please be sure that you are well informed about the type of the battery you are using. Read the safety document and do not hesitate to ask for help if you are not sure about something. 
+
+:exclamation: While placing the battery into its drawer, visually verify that the wires are not twisted, sheared or wedged into something. 
+
+:exclamation: If you notice even a small amount of expantion on the battery, inform your supervisor!
+
+:exclamation: Do not cut the wires! 
+
+:exclamation: Be sure that wire tips are connected to the right way as the color of connected tips should be same! 
+
+:exclamation: LiPo cells are affected by the same problems as other lithium-ion cells. This means that overcharge, over-discharge, over-temperature, short circuit, crush and nail penetration may all result in a catastrophic failure, including the pouch rupturing, the electrolyte leaking, and fire.
+
+
+
+
 ### Powering Up 
 
 In the SMBs there is an emergency stop system directly connected to the base. Therefore, a wireless e-stop switch is needed to activate the motors. When the [e-stop switch is activated](Images/EB_Activated.jpg), motors do not receive any power.\
@@ -91,7 +106,7 @@ Please follow the steps carefully.
 
 ### Connecting to SMB 
 
-In order to power-up the computer on the SMB use the [OnBoard PC Power Switch](../Images/SMB_Backpanel.png) Close the lid of the switch to prevent shut-down by mistake.
+In order to power-up the computer on the SMB use the [Payload Power Switch](../Images/SMB_Backpanel.png) Close the lid of the switch to prevent shut-down by mistake.
 In order to connect to SMB remotely, the host PC should connect the Wifi of the SMB: 
   * Wifi (SSID): smb-<SMB_ROBOT_NUMBER>
   * Password: SMB_<SMB_ROBOT_NUMBER>_RSS or *_RSL
@@ -120,6 +135,10 @@ roscore
 # See the part of ROS_MASTER_URI
 ```
 
+
+
+
+
 ### Running the Software 
 
 In order to use the visualization tools of ROS, we will set the SMB as ROS master on our local machine:
@@ -144,6 +163,8 @@ ifconfig
 export ROS_IP=<wlp4s0_ip>
 # the ip and port tuple we have saved in the previous step  
 ```
+
+> Note that at every new terminal you have to repeat the steps under the title of Running the Software. Please refer to [the NotionsAndDevices document](/docs/NotionsAndDevices.md) for more information related to 'export' command.
 
 To use the packages and run the software please refer to the [HowToRunSoftware](/docs/HowToRunSoftware.md)
 

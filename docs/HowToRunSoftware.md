@@ -92,7 +92,7 @@ roslaunch smb_opc opc.launch
 
 ```bash
 # In the terminal of SSH
-roslaunch smb smb.launch run_twist_scaling_node:=true
+roslaunch smb smb.launch
 
 # If you see the message "First IMU Received", 
 # everything started without any problem
