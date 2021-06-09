@@ -1,3 +1,8 @@
+---
+layout: default
+title: Setting up the SMB Core Software
+nav_order: 2
+---
 
 # Setting up the SMB Core Software
 > The updated SMB software is still work in progress! Thus, this documentation explains the steps to install SMB software. Installation process might lack of some dependencies. 

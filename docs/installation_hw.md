@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 # Setting Up The Hardware Related Software
 In the following, the steps required to use all the hardware installed on the SuperMegaBot are described.
 

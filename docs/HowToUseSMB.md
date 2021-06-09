@@ -1,3 +1,9 @@
+---
+layout: default
+title: Operating the SMB
+nav_order: 5
+---
+
 # How to Use SMB? 
 > This documentation explains the basic steps about how to use SMB robot. The documentation might lack of of some information since the updated SMB software is still work in progress!  
 > Please inform oilter@ethz.ch for any missing or unclear instruction.
