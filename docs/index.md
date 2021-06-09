@@ -32,4 +32,4 @@ Please follow the steps described in [How to use the SMB](HowToUseSMB.md) to ope
 The SuperMegaBot was originally developped by the ETH Construction Robotics group. 
 
 ### RSS 2019 Edition
-See https://github.com/ethz-asl/eth_supermegabot
+See the [link](https://github.com/ethz-asl/eth_supermegabot)
