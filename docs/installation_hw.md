@@ -29,7 +29,7 @@ To download the SMB packages by using vcs tool run the following terminal comman
 cd <directory_to_ws>/<catkin_ws_name>/src
 
 # Download the packages
-vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/smb_hw.repos .
+vcs import --recursive --input https://github.com/ETHZ-RobotX/SuperMegaBot/blob/master/smb_hw.repos .
 
 # Magic of rosdep
 # Install dependencies
