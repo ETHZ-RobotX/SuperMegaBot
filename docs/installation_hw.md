@@ -10,6 +10,7 @@ In the following, the steps required to use all the hardware installed on the Su
   - [Table of Contents](#table-of-contents)
   - [ROS packages](#ros-packages)
   - [Driver installations:](#driver-installations)
+    - [Motor Controller](#motor-controller)
     - [RealSense](#realsense)
     - [Robosense](#robosense)
     - [Spinnaker Camera Driver](#spinnaker-camera-driver)
@@ -25,15 +26,26 @@ To download the SMB packages by using vcs tool run the following terminal comman
 cd <directory_to_ws>/<catkin_ws_name>/src
 
 # Download the packages
-vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/smb_hw.repos .
+vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb_hw.repos?token=AIDKBDU4PBIOTTL4DIPL6R3A2JQ66 .
 
 # Magic of rosdep
 # Install dependencies
 rosdep install --from-paths . --ignore-src --os=ubuntu:focal -r -y
+
+# Add user in dialout group
+sudo adduser $USER dialout
+
 ```
 ## Driver installations: 
 
-> This part has not been tested fully !!!
+
+### Motor Controller 
+The USB rules for the motor controller driver should be copied to rules.d .
+```bash
+# Copy the USB rule
+# Dont forget to change <>
+sudo cp <catkin_ws_dir>/src/smb_lowlevel_controller/smb_driver/udev/55-smb.rules /etc/udev/rules.d/
+```
 
 ### RealSense 
 ```bash
@@ -93,5 +105,9 @@ sudo udevadm control --reload
 
 After every installation to build the packages
 ```bash
+# Build it
 catkin build smb
+
+# Source it
+source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash
 ```

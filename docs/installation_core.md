@@ -91,7 +91,7 @@ To download the SMB packages, the vcs command-line tools will be used. For more 
 To install ***vcstool*** run the following terminal command.
 
 ```bash
-sudo apt install python3-vcstool
+sudo apt install python3-vcstool 
 ```
 To download the SMB packages by using vcs tool run the following terminal commands in order. 
 
@@ -101,7 +101,7 @@ To download the SMB packages by using vcs tool run the following terminal comman
 cd <directory_to_ws>/<catkin_ws_name>/src
 
 # Download the packages
-vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/smb.repos .
+vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb.repos?token=AIDKBDQIIKN3H5CX2UTGC3TA2JRAQ .
 ```
 
 ## Installing Dependencies
@@ -128,13 +128,27 @@ rosdep install --from-paths . --ignore-src --os=ubuntu:focal -r -y
 
 Installing all the dependency may take a while. 
 
+> Note that, rosdep might not be able to install all dependencies.
+> Example : ros-noetic-gazebo-plugins
+
+```bash
+# Install example missing package even after resdep
+sudo apt install ros-noetic-gazebo-plugins
+```
+
+sudo apt install ros-noetic-gazebo-plugins
+
 ## Finalization
 Since every SMB package and dependency is installed, you can build the project.
 ```bash
 # Navigate to the directory of workspace
 cd <directory_to_ws>/<catkin_ws_name>/
 
+# Build it
 catkin build smb_gazebo
+
+# Source it
+source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash
 ```
 
 You should see that every package is built.
