@@ -1,3 +1,9 @@
+---
+layout: default
+title: Running the Software
+nav_order: 4
+---
+
 # How to Run SMB Software? 
 > This documentation explains the basic steps about how to run SMB software . The documentation might lack of of some information since the updated SMB software is still work in progress!  
 

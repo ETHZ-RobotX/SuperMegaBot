@@ -1,3 +1,8 @@
+---
+layout: default
+title: Setting up the SMB Core Software
+nav_order: 2
+---
 
 # Setting up the SMB Core Software
 > The updated SMB software is still work in progress! Thus, this documentation explains the steps to install SMB software. Installation process might lack of some dependencies. 
@@ -70,8 +75,19 @@ catkin config --extend /opt/ros/noetic
 catkin config -DCMAKE_BUILD_TYPE=Release
 ```
 
+
+> If there is an error of "catkin: command not found" 
+```bash
+sudo apt install python3-catkin-lint python3-pip
+pip3 install osrf-pycommon
+```
+
+
+
+
 <details><summary> Example: </summary>
 <p>
+  
 
 
 ```bash
@@ -101,7 +117,7 @@ To download the SMB packages by using vcs tool run the following terminal comman
 cd <directory_to_ws>/<catkin_ws_name>/src
 
 # Download the packages
-vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb.repos?token=AIDKBDQIIKN3H5CX2UTGC3TA2JRAQ .
+vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb.repos?token=AIDKBDVOX5Y4Y3VAOHVSHFDAZRDW4 .
 ```
 
 ## Installing Dependencies

@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 # Setting Up The Hardware Related Software
 In the following, the steps required to use all the hardware installed on the SuperMegaBot are described.
 
@@ -26,7 +30,11 @@ To download the SMB packages by using vcs tool run the following terminal comman
 cd <directory_to_ws>/<catkin_ws_name>/src
 
 # Download the packages
+<<<<<<< HEAD
 vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb_hw.repos?token=AIDKBDU4PBIOTTL4DIPL6R3A2JQ66 .
+=======
+vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb_hw.repos?token=AIDKBDRWKPPOBGOC4HJ2DZ3AZRNF4 .
+>>>>>>> f4dd4a002fe188cda94e8d58118499b683bbefb1
 
 # Magic of rosdep
 # Install dependencies
