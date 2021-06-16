@@ -64,7 +64,7 @@ In the RVIZ you should observe a grey-scaled map with SMB in the middle. Now, se
 
 
 
-### Manuel Mode
+### Manual Mode
 >If you want to switch between modes make sure that you killed the previous mode. 
 
 
