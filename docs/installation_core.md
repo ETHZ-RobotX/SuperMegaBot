@@ -83,23 +83,12 @@ pip3 install osrf-pycommon
 ```
 
 
-
-
-<details><summary> Example: </summary>
-<p>
-  
-
-
 ```bash
 # Example directory to ws and catkin workspace name
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
 # Example ends
 ```
-
-</p>
-</details>
-
 
 
 To download the SMB packages, the vcs command-line tools will be used. For more information about the tool you can check the [link](http://wiki.ros.org/vcstool).

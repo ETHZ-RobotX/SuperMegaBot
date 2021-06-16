@@ -4,7 +4,7 @@
 
 ## SMB 
 <p align="center">
-  <img style=" right;"  src="images/SMB.jpg" width="300" title="asd">
+  <img style=" right;"  src="images/SMB.png" width="300" title="Image of SMB">
 </p>
 
 The four wheels of the SMB base are driven by individual motors, connected to a gear box to get sufficient torque. The two motors on each side are connected to the same channel of the motor controller respectively, which results in a classical skid steer configuration. 
@@ -12,25 +12,23 @@ The four wheels of the SMB base are driven by individual motors, connected to a 
 SMB consist of two parts: Base and payload.
 
 <p align="center">
-  <img style=" left;"  src="images/SMB_Backpanel.png" width="300" title="asd">
+  <img style=" left;"  src="images/SMB_Backpanel.png" width="300" title="Back Panel of the SMB">
 </p>
 
 
 ## RC Transmitter
 <p align="center">
-  <img style=" right;"  src="images/RCTransmitter.png" width="300" title="asd">
+  <img style=" right;"  src="images/RCTransmitter.png" width="300" title="RC Transmitter">
 </p>
 
 
 ## Emergency Stops
 <p align="center">
-  <img style=" right;"  src="images/E-Stop.png" width="300" title="asd">
+  <img style=" right;"  src="images/E-Stop.png" width="300" title="Remote Emergy Button">
 </p>
 
 
 ## Some Notions
-
-### Build & Source 
 
 ### Git 
 Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different systems).
