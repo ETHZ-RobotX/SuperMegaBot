@@ -35,7 +35,7 @@ Due to the nature of the development process, some extra bugs, errors, hardware 
 For safety purposes, the power input to the motor controller can be cut off by de-energizing a contactor that is part of the [SMB emergency stop system](https://unlimited.ethz.ch/display/ROBOTX/SMB+Emergency+Stop+System).\
 Emergency buttons are in series so if one of them is pushed e-stop is activated! This means, the motor controller and thus motors are not powered anymore, robot stops! 
 <p align="center">
-  <img style="right;"  src="images/E-Stop.png" width="300" title="asd">
+  <img style="right;"  src="images/E-Stop.png" width="300" title="Remote Emergency Stop">
 </p>
 
 
@@ -82,7 +82,7 @@ https://ethz.ch/content/dam/ethz/special-interest/mavt/department-dam/departemen
 
 ### Powering Up 
 
-In the SMBs there is an emergency stop system directly connected to the base. Therefore, a wireless e-stop switch is needed to activate the motors. When the [e-stop switch is activated](images/EB_Activated.jpg), motors do not receive any power.\
+In the SMBs there is an emergency stop system directly connected to the base. Therefore, a wireless e-stop switch is needed to activate the motors. When the [e-stop switch is activated](images/E-Stop.png), motors do not receive any power.\
 Keep the wireless e-stop transmitter close by (e.g. attach it to your belt or similar), in order to be able to switch off all power to the motors in case of an unlikely failure of the motor controller resulting in the robot being uncontrollable. Note that the emergency stop is not a brake system so the robot might continue to move due to its inertia.
 
 
@@ -90,7 +90,7 @@ Please follow the steps carefully.
 
 1. Before doing anything else, be sure that emergency stop buttons are in the activated position so that the motors cannot be powered up.
    * [The Emergency stop button](images/SMB_Backpanel.png) on the back panel is activated.
-   * The E-Stop switch is in activated [e-stop switch is activated](images/EB_Activated.jpg).
+   * The E-Stop switch is in activated [e-stop switch is activated](images/E-Stop.png).
   
 2. Turn on the RC transmitter.
    * Be sure that the transmitter is connected to the right smb: check the number on the screen of the transmitter and the number that is written back panel of the smb 
