@@ -3,12 +3,3 @@ description: Documentation of the SuperMegaBot
 remote_theme: pmarsceill/just-the-docs
 markdown: kramdown
 
-
-<style>
-  .purple {
-    color:inherit;
-  }
-  .purple:hover {
-    color:rgb(107,79,187);
-  }
-</style>

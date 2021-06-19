@@ -8,18 +8,6 @@ nav_order: 5
 > This documentation explains the basic steps about how to use SMB robot. The documentation might lack of of some information since the updated SMB software is still work in progress!  
 > Please inform oilter@ethz.ch for any missing or unclear instruction.
 
-<style>
-.alert-warning {
-  color: rgb(138,109,59) !important;
-}
-</style>
-
-
-
-
-Hey! Hover the cursor over me and guess what?! :)
-{: .purple}
-
 
 ## Table of Contents
 - [How to Use SMB?](#how-to-use-smb)
