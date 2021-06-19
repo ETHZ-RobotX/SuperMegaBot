@@ -8,15 +8,25 @@ nav_order: 5
 > This documentation explains the basic steps about how to use SMB robot. The documentation might lack of of some information since the updated SMB software is still work in progress!  
 > Please inform oilter@ethz.ch for any missing or unclear instruction.
 
-<div class="panel panel-warning">
-**Warning**
-{: .panel-heading}
-<div class="panel-body">
+<style>
+.alert-warning {
+  color: rgb(138,109,59) !important;
+}
+</style>
 
-WARNING DESCRIPTION
 
-</div>
-</div>
+<style>
+  .purple {
+    color:inherit;
+  }
+  .purple:hover {
+    color:rgb(107,79,187);
+  }
+</style>
+
+Hey! Hover the cursor over me and guess what?! :)
+{: .purple}
+
 
 ## Table of Contents
 - [How to Use SMB?](#how-to-use-smb)
