@@ -8,13 +8,23 @@ nav_order: 5
 > This documentation explains the basic steps about how to use SMB robot. The documentation might lack of of some information since the updated SMB software is still work in progress!  
 > Please inform oilter@ethz.ch for any missing or unclear instruction.
 
+<div class="panel panel-warning">
+**Warning**
+{: .panel-heading}
+<div class="panel-body">
+
+WARNING DESCRIPTION
+
+</div>
+</div>
+
 ## Table of Contents
 - [How to Use SMB?](#how-to-use-smb)
   - [Table of Contents](#table-of-contents)
   - [Remark](#remark)
       - [Issue Page](#issue-page)
     - [Emergency Stop](#emergency-stop)
-    - [RC Connection and Controller](#rc-connection-and-controller)
+    - [RC Connection and Transmitter](#rc-connection-and-transmitter)
   - [Steps](#steps)
     - [Connecting the Battery](#connecting-the-battery)
     - [Powering Up](#powering-up)
@@ -44,7 +54,7 @@ Emergency buttons are in series so if one of them is pushed e-stop is activated!
 
 
 
-### RC Connection and Controller
+### RC Connection and Transmitter
 When driving the SMB base using the RC transmitter, there is an additional switch on the RC Transmitter to stop all motor movement. It is located on the lower back left of the RC Transmitter with the name [Emergency Stop Switch](images/RCTransmitter.png) and can be used to activate the safety stop functionality of the motor controller powering the motors. The safety stop is activated in the lower position (0).\
 Note that when the software overrides the RC commands. 
 
