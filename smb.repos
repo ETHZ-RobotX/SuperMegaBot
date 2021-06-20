@@ -16,7 +16,7 @@ repositories:
     version: dev/rss
   teb_local_planner:
     type: git
-    url: git@github.com:leggedrobotics/teb_local_planner.git
+    url: https://github.com/leggedrobotics/teb_local_planner.git
     version: feature/correct_local_plan_timestamps
   eigen_catkin:
     type: git
