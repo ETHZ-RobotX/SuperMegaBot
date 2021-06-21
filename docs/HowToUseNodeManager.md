@@ -50,9 +50,10 @@ Node Manager synchronizes all the ROS topic and ROS services, but unfortunately 
 # Troubleshooting
   - You get an exception on access remote host: Exception: ssh connection to REMOTE_HOST failed: not a valid RSA private key file. Generate an SSH key file with e.g. `ssh-keygen -p -m PEM -f ~/.ssh/id_rsa`
   - Before starting the node manager make sure that there are no processes running in the detached mode, i.e. execute `screen -ls`. You should get a similar output to the following one:
-  ```bash
-  76259._roscore--11311	(21.06.2021 17:22:32)	(Detached)
-  ```
+    ```bash
+    76259._roscore--11311	(21.06.2021 17:22:32)	(Detached)
+    ```
+    
     To kill such a process execute `kill 76259`.
   - To enable internet connection for SMB, you need to delete previously defined defualt ip route. In the console of the SMB run:
     ```bash
