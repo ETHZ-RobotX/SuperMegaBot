@@ -53,4 +53,6 @@ Node Manager synchronizes all the ROS topic and ROS services, but unfortunately 
   ```bash
   76259._roscore--11311	(21.06.2021 17:22:32)	(Detached)
   ```
-  To kill such a process execute `kill 76259`.
+    To kill such a process execute `kill 76259`.
+  - To enable internet connection for SMB, you need to delete previously defined defualt ip route. In the console of the SMB run:
+    `sudo ip route del default via 11.0.0.5`
