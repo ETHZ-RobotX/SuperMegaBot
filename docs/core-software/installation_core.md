@@ -6,15 +6,14 @@ nav_order: 1
 ---
 
 # Setting up the SMB Core Software
-> The updated SMB software is still work in progress! Thus, this documentation explains the steps to install SMB software. Installation process might lack of some dependencies. 
-
 > Please inform oilter@ethz.ch for any missing library, package, driver, error or any kind of unclear instruction.
 
 {:.no_toc} 
 Documentation of the SuperMegaBot (SMB) for the ETHZ Robotic Summer School.
-Table of contents 
-{:toc}
 
+## Table of Contents
+*Table of contents 
+{:toc}
 
 ## Remark
 
@@ -22,18 +21,6 @@ The SMB software consists of two parts: core and hardware related.
 
 If you want to use the system on a real SMB robot with real sensors and actuators, the [hardware related part](installation_hw.md) should be installed **on top of the core part**. This document contains the instructions about SMB core software, which also contains the simulation environment.
 
-## Table of Contents
-
-- [Setting up the SMB Core Software](#setting-up-the-smb-core-software)
-  - [Remark](#remark)
-  - [Table of Contents](#table-of-contents)
-  - [Prerequisites](#prerequisites)
-  - [Closed source packages](#closed-source-packages)
-- [Software Installation](#software-installation)
-  - [Catkin Workspace and all Packages](#catkin-workspace-and-all-packages)
-  - [Installing Dependencies](#installing-dependencies)
-  - [Finalization](#finalization)
-    - [Hardware related software](#hardware-related-software)
 
 ## Prerequisites
 - ROS Noetic
@@ -53,14 +40,9 @@ After installation, please ensure that environment variables like ROS_ROOT and R
 printenv | grep ROS
 ```
 
-## Closed source packages
+## Software Installation
 
-Currently, for some of the core software packages, you'll need to be granted access by the [Robotic Systems Lab](https://rsl.ethz.ch/). These repositories are hosted on bitbucket, thus you'll need a bitbucket (Atlassian) account. 
-Send your account details (username and associated email address) to [Johannes from RSL](https://rsl.ethz.ch/the-lab/people/person-detail.MjU0MDk1.TGlzdC8yNDQyLC0xNDI1MTk1NzM1.html) and ask for permission to access the RSS related SMB repositories.
-
-# Software Installation
-
-## Catkin Workspace and all Packages
+### Catkin Workspace and all Packages
 
 Create a new catkin workspace.
 
@@ -110,7 +92,7 @@ cd <directory_to_ws>/<catkin_ws_name>/src
 vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb.repos?token=AIDKBDVOX5Y4Y3VAOHVSHFDAZRDW4 .
 ```
 
-## Installing Dependencies
+### Installing Dependencies
 
 To install the dependencies, rosdep package will be used. For more information about the package you can check the [link](https://docs.ros.org/en/independent/api/rosdep/html/)
 
@@ -144,7 +126,7 @@ sudo apt install ros-noetic-gazebo-plugins
 
 sudo apt install ros-noetic-gazebo-plugins
 
-## Finalization
+### Finalization
 Since every SMB package and dependency is installed, you can build the project.
 ```bash
 # Navigate to the directory of workspace
@@ -165,5 +147,9 @@ After you built the packages, you can add the source file into .bashrc so that y
 echo "source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash" >> ~/.bashrc
 ```
 
-### Hardware related software
+## Running the simulation
+Refer to the [documentation on how to run the software](HowToRunSoftware.md) to learn on how to run the simulation.
+
+
+## Hardware related software
 To get everything running on the real robot, you also need to follow the steps describe in the [hardware related software installation description](installation_hw.md).
