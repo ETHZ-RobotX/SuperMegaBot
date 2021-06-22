@@ -21,7 +21,7 @@ Hardware installation should be on top of the software installation.
 
 
 * Table of contents
-{: .toc }
+{:toc}
     
 
 ## Motor Controller 
