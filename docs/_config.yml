@@ -2,4 +2,4 @@ title: ETHZ RobotX SuperMegaBot
 description: Documentation of the SuperMegaBot
 remote_theme: pmarsceill/just-the-docs
 markdown: kramdown
-
+color_scheme: RobotX
