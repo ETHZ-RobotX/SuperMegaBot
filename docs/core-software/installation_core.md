@@ -19,7 +19,7 @@ Documentation of the SuperMegaBot (SMB) for the ETHZ Robotic Summer School.
 
 The SMB software consists of two parts: core and hardware related.
 
-If you want to use the system on a real SMB robot with real sensors and actuators, the [hardware related part](installation_hw.md) should be installed **on top of the core part**. This document contains the instructions about SMB core software, which also contains the simulation environment.
+If you want to use the system on a real SMB robot with real sensors and actuators, the [hardware related part](../installation_hw.md) should be installed **on top of the core part**. This document contains the instructions about SMB core software, which also contains the simulation environment.
 
 
 ## Prerequisites
@@ -124,8 +124,6 @@ Installing all the dependency may take a while.
 sudo apt install ros-noetic-gazebo-plugins
 ```
 
-sudo apt install ros-noetic-gazebo-plugins
-
 ### Finalization
 Since every SMB package and dependency is installed, you can build the project.
 ```bash
@@ -148,7 +146,7 @@ echo "source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash" >> ~/.bashrc
 ```
 
 ## Running the simulation
-Refer to the [documentation on how to run the software](HowToRunSoftware.md) to learn on how to run the simulation.
+Refer to the documentation called [ HowToRunSoftware](HowToRunSoftware.md) to learn on how to run the simulation.
 
 
 ## Hardware related software

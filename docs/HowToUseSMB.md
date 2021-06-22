@@ -5,7 +5,7 @@ nav_order: 5
 ---
 
 # How to Use SMB? 
-> This documentation explains the basic steps about how to use SMB robot. The documentation might lack of of some information since the updated SMB software is still work in progress!  
+> This documentation explains the basic steps about how to use SMB robot. 
 > Please inform oilter@ethz.ch for any missing or unclear instruction.
 
 
@@ -57,27 +57,24 @@ In the document there are two terminal types:
 
 ### Connecting the Battery
 
-!!!![TODO]!!!!
 
-Prepare such a document for summer school area! 
+Please be sure that you are well informed about the type of the battery you are using. Read the safety document and do not hesitate to ask for help if you are not sure about something!
+{: .smb-warning }
 
-https://ethz.ch/content/dam/ethz/special-interest/mavt/department-dam/departement/documents/Code%20of%20Conduct%20Rechargeable%20Batteries.pdf
+While placing the battery into its drawer, visually verify that the wires are not twisted, sheared or wedged into something!
+{: .smb-warning }
 
+If you notice or suspect even a small amount of expantion on the battery, inform your supervisor!
+{: .smb-warning }
 
-!!!![TODO]!!!!
+Do not cut the wires!
+{: .smb-warning }
 
-:exclamation: Please be sure that you are well informed about the type of the battery you are using. Read the safety document and do not hesitate to ask for help if you are not sure about something. 
+Be sure that wire tips are connected to the right way as the color of connected tips should be same! 
+{: .smb-warning }
 
-:exclamation: While placing the battery into its drawer, visually verify that the wires are not twisted, sheared or wedged into something. 
-
-:exclamation: If you notice even a small amount of expantion on the battery, inform your supervisor!
-
-:exclamation: Do not cut the wires! 
-
-:exclamation: Be sure that wire tips are connected to the right way as the color of connected tips should be same! 
-
-:exclamation: LiPo cells are affected by the same problems as other lithium-ion cells. This means that overcharge, over-discharge, over-temperature, short circuit, crush and nail penetration may all result in a catastrophic failure, including the pouch rupturing, the electrolyte leaking, and fire.
-
+LiPo cells are affected by the same problems as other lithium-ion cells. This means that overcharge, over-discharge, over-temperature, short circuit, crush and nail penetration may all result in a catastrophic failure, including the pouch rupturing, the electrolyte leaking, and fire.
+{: .smb-warning }
 
 
 
@@ -113,7 +110,7 @@ Please follow the steps carefully.
 
 ### Connecting to SMB 
 
-In order to power-up the computer on the SMB use the [Payload Power Switch](Images/SMB_Backpanel.png) Close the lid of the switch to prevent shut-down by mistake.
+In order to power-up the computer on the SMB use the [Payload Power Switch](images/SMB_Backpanel.png) Close the lid of the switch to prevent shut-down by mistake.
 In order to connect to SMB remotely, the host PC should connect the Wifi of the SMB: 
   * Wifi (SSID): smb-<SMB_ROBOT_NUMBER>
   * Password: SMB_<SMB_ROBOT_NUMBER>_RSS or *_RSL
@@ -171,9 +168,11 @@ export ROS_IP=<wlp4s0_ip>
 # the ip and port tuple we have saved in the previous step  
 ```
 
-> Note that at every new terminal you have to repeat the steps under the title of Running the Software. Please refer to [the NotionsAndDevices document](NotionsAndDevices.md) for more information related to 'export' command.
+Note that at every new terminal you have to repeat the steps under the title of Running the Software. Please refer to [the NotionsAndDevices document](NotionsAndDevices.md) for more information related to 'export' command.
+{: .smb-info }
 
-To use the packages and run the software please refer to the [HowToRunSoftware](HowToRunSoftware.md)
+To use the packages and run the software please refer to the [HowToRunSoftware](core-software/HowToRunSoftware.md)
+{: .smb-info }
 
 
 ### ShutDown Procedure

@@ -11,7 +11,8 @@ This is a test paragraph of class smb-warning
 This is a test paragraph of class smb-info
 {: .smb-info }
 
-
+This is a test paragraph of class smb-mention
+{: .smb-mention }
 
 This is another test paragraph using existing style elements
 {: .d-inline-block .bg-red-000}

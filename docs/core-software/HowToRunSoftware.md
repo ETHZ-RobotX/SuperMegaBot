@@ -10,8 +10,6 @@ This documentation explains the basic steps about how to run SMB software.
 
 > Please inform oilter@ethz.ch for any missing or unclear instruction.
 
-> ToDo Add test phases, Warnings
-
 ## Remark
 This document does not explain the full capability of the robot. It gives basic information related to software and how to run it. For more information please check the packages. 
 
@@ -19,7 +17,7 @@ In the document there are two terminal types:
 1. Terminal of host PC: The terminal that has access to host pc system.
 2. Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
 
-If you're planning to use the software on the robot, please be sure that you followed the [How To Use SMB Document](HowToUseSMB.md) until the part **ShutDown Procedure**.
+If you're planning to use the software on the robot, please be sure that you followed the [How To Use SMB Document](../HowToUseSMB.md) until the part **ShutDown Procedure**.
 {: .smb-info }
 
 ### Use Basic Functionality
@@ -39,7 +37,6 @@ Simulation runs on the host pc. To run the simulation you do not need connection
 ```bash
 # In the host pc
 roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true
-
 ```
 
 #### Autonomous Navigation Simulation 
@@ -80,9 +77,6 @@ roslaunch smb smb.launch
 
 You can test the sensor by reading the published topics.
 
-The Expected topic list as the following.
-!!!! Add Expected Topic List !!! 
-
 To visualize the sensor reading via Rviz
 ```bash
 # In the terminal of host PC
@@ -94,9 +88,6 @@ roslaunch smb_opc opc.launch
 > You might need to restart the base if the robot does not respond to the teleop control
 
 In order to control the SMB with the joystick, you should keep presing the L1 button while driving and use the left stick to control the robot.
-
-!!!! THIS WILL CHANGE !!!!!! 
-
 
 
 ### Autonomous Mode
