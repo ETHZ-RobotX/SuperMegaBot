@@ -1,6 +1,6 @@
-> This documentation explains the notions that are used in other documents. The documentation might lack of of some information since the updated SMB software is still work in progress!  
-> Please inform oilter@ethz.ch for any missing or unclear instruction.
-
+This documentation explains the notions that are used in other documents.
+Please inform oilter@ethz.ch for any missing or unclear instruction.
+{: .smb-mention }
 
 ## SMB 
 <p align="center">
