@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Setting up the SMB Core Software
-nav_order: 2
+title: Software Setup
+parent: SMB Core Software
+nav_order: 1
 ---
 
 # Setting up the SMB Core Software

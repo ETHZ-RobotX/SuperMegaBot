@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Running the Software
-nav_order: 4
+parent: SMB Core Software
+nav_order: 2
 ---
 
 # How to Run SMB Software? 
