@@ -7,7 +7,7 @@ nav_order: 1
 
 # How to connect to the SMB
 {:.no_toc}
-
+In the following, the basic usage of the SMB payload is described.
 
 * Table of contents
 {:toc}
@@ -34,7 +34,8 @@ Be sure that wire tips are connected to the right way as the color of connected 
 Li-Ion batteries are affected by the same problems as other lithium based batteries. This means that overcharge, over-discharge, over-temperature, short circuit, crush and nail penetration may all result in a catastrophic failure, including the pouch rupturing, the electrolyte leaking, and fire.
 {: .smb-warning }
 
-In order to power-up the computer on the SMB use the [Payload Power Switch](images/SMB_Backpanel.png). Close the lid of the switch to prevent shut-down by mistake.
+### Turning on the SMB payload
+In order to power-up the computer on the SMB use the [Payload Power Switch](../images/SMB_Backpanel.png). Close the lid of the switch to prevent shut-down by mistake.
 
 ## Connecting to the SMB 
 
@@ -103,8 +104,8 @@ export ROS_IP=<wlp4s0_ip>
 # the ip and port tuple we have saved in the previous step  
 ```
 
-Note that at every new terminal you have to repeat the steps under the title of Running the Software. Please refer to [the NotionsAndDevices document](NotionsAndDevices.md) for more information related to 'export' command.
+Note that at every new terminal you have to repeat the steps under the title of Running the Software. Please refer to [the NotionsAndDevices document](../NotionsAndDevices.md) for more information related to 'export' command.
 {: .smb-info }
 
-To use the packages and run the software please refer to the [HowToRunSoftware](core-software/HowToRunSoftware.md)
+To use the packages and run the software please refer to the [HowToRunSoftware](../core-software/HowToRunSoftware.md)
 {: .smb-info }
