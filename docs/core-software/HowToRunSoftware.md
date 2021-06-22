@@ -7,8 +7,9 @@ nav_order: 2
 
 # How to Run SMB Software? 
 This documentation explains the basic steps about how to run SMB software. 
+Please inform oilter@ethz.ch for any missing or unclear instruction.
+{: .smb-mention }
 
-> Please inform oilter@ethz.ch for any missing or unclear instruction.
 
 ## Remark
 This document does not explain the full capability of the robot. It gives basic information related to software and how to run it. For more information please check the packages. 
@@ -17,7 +18,10 @@ In the document there are two terminal types:
 1. Terminal of host PC: The terminal that has access to host pc system.
 2. Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
 
-If you're planning to use the software on the robot, please be sure that you followed the [How To Use SMB Document](../HowToUseSMB.md) until the part **ShutDown Procedure**.
+If you're planning to use the software on the robot, please be sure that you followed the [HowToUseSMB Document](../HowToUseSMB.md).
+{: .smb-info }
+
+To connect SMB please refer to the [HowToConnectSMB Document](../HowToConnectSMB.md) 
 {: .smb-info }
 
 ### Use Basic Functionality

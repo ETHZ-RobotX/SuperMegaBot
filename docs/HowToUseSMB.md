@@ -5,9 +5,9 @@ nav_order: 5
 ---
 
 # How to Use SMB? 
-> This documentation explains the basic steps about how to use SMB robot. 
-> Please inform oilter@ethz.ch for any missing or unclear instruction.
-
+This documentation explains the basic steps about how to safely use SMB robot.  
+Please inform oilter@ethz.ch for any missing or unclear instruction.
+{: .smb-mention }
 
 ## Table of Contents
 - [How to Use SMB?](#how-to-use-smb)
@@ -19,8 +19,6 @@ nav_order: 5
   - [Steps](#steps)
     - [Connecting the Battery](#connecting-the-battery)
     - [Powering Up](#powering-up)
-    - [Connecting to SMB](#connecting-to-smb)
-    - [Running the Software](#running-the-software)
     - [ShutDown Procedure](#shutdown-procedure)
 
 
@@ -31,7 +29,7 @@ Due to the nature of the development process, some extra bugs, errors, hardware 
 #### [Issue Page](https://github.com/ETHZ-RobotX/SuperMegaBot/issues)
 
 
-<br/><br/>
+<br/> <br/>
 ### Emergency Stop
 For safety purposes, the power input to the motor controller can be cut off by de-energizing a contactor that is part of the [SMB emergency stop system](https://unlimited.ethz.ch/display/ROBOTX/SMB+Emergency+Stop+System).\
 Emergency buttons are in series so if one of them is pushed e-stop is activated! This means, the motor controller and thus motors are not powered anymore, robot stops! 
@@ -110,78 +108,20 @@ Please follow the steps carefully.
     * Switching the safety stop on the Remote back into position 0 should stop the robot. Try again to to control the robot while switch is in position 0. It should not move. 
 5. Bring the safety stop switch to the position 1 again. Small movements on the stick are already enough to command forward motion. 
 
-### Connecting to SMB 
 
-In order to power-up the computer on the SMB use the [Payload Power Switch](images/SMB_Backpanel.png) Close the lid of the switch to prevent shut-down by mistake.
-In order to connect to SMB remotely, the host PC should connect the Wifi of the SMB: 
-  * Wifi (SSID): smb-<SMB_ROBOT_NUMBER>
-  * Password: SMB_<SMB_ROBOT_NUMBER>_RSS or *_RSL
-
-Once you are connected, from the terminal you should connect the SMB via SSH. **The ip addresses of every SMB is 11.0.0.5** .
-
-> Note that there might be an error in the host PC while trying to connect the SMB via ssh. Please read the terminal and use the suggested command in terminal to remove the previous ssh connection settings. 
-
-```bash
-# In the terminal of host pc
-ssh smb@11.0.0.5
-# Password: smb
-
-#! Terminal becomes terminal of SSH! 
-
-# To connect the SMB to Internet 
-nmcli connection up
-```
-Once you are connected to the SMB you will see an IP address and port tuple on the terminal starting with 'http://'. Please save it since we will need it in the next step. 
-
-If you do not see such a tupple, please start the roscore and check the part ROS_MASTER_URI.
-
-```bash
-# In the terminal of SSH
-roscore
-# See the part of ROS_MASTER_URI
-```
-
-
-
-
-
-### Running the Software 
-
-In order to use the visualization tools of ROS, we will set the SMB as ROS master on our local machine:
-
-```bash
-# In the terminal of host pc
-export ROS_MASTER_URI=http://11.0.0.5:<port>
-# the ip and port tuple we have saved in the previous step  
-```
-
-Now we can run SMB software and visualize it in the host pc. 
-
-In order to give commands from the host pc to SMB, ROS_IP should be set. 
-
-```bash
-# In the terminal of host pc
-
-ifconfig
-# See the ip addres of wlp4s0
-# It is probably 11.0.0.100
-
-export ROS_IP=<wlp4s0_ip>
-# the ip and port tuple we have saved in the previous step  
-```
-
-Note that at every new terminal you have to repeat the steps under the title of Running the Software. Please refer to [the NotionsAndDevices document](NotionsAndDevices.md) for more information related to 'export' command.
+You can refer to the [HowToConnectSMB](HowToConnectSMB.md) to learn about how to connect to SMB by using your pc. 
 {: .smb-info }
-
-To use the packages and run the software please refer to the [HowToRunSoftware](core-software/HowToRunSoftware.md)
-{: .smb-info }
-
 
 ### ShutDown Procedure
 SMBs run with ubuntu 20.04, so the general shutdown procedure for an ubuntu computer applies here. For general remarks please see the followings:
-* Make sure that SMB does not have defined goal position to move to. 
-* Make sure that SMB has no movement in its motors.
-* To shut down the on-board pc 
+
+Make sure that SMB does not have defined goal position to move to.
+{: .smb-warning }
+
+Make sure that SMB has no movement in its motors.
+{: .smb-warning }
+
+To shut down the on-board pc 
    ```bash
    # In terminal of SSH to SMB
    sudo poweroff
