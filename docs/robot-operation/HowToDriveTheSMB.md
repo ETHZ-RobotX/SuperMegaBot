@@ -6,13 +6,14 @@ nav_order: 4
 ---
 
 # How to drive the SMB? 
-{: .no-toc}
+{: .no_toc}
+
 This documentation explains the basic steps about how to safely use the SMB robot.
 
 Please inform oilter@ethz.ch for any missing or unclear instruction.
 {: .smb-mention }
 
-## Table of Contents
+
 * Table of contents
 {:toc}
 

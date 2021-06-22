@@ -13,6 +13,9 @@ Please inform oilter@ethz.ch for any missing or unclear instruction.
 {: .smb-mention }
 
 
+* Table of contents
+{:toc}
+
 ## Remark
 This document does not explain the full capability of the robot. It gives basic information related to software and how to run it. For more information please check the packages. 
 

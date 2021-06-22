@@ -7,6 +7,7 @@ nav_order: 2
 
 # Installation of the hardware drivers
 {:.no_toc}
+
 In the following, the steps required to install the system-level drivers of the sensors are described.
 
 This section is only for the SMB itself. It is not needed to install drivers and packages related to sensors into user's pc.
@@ -18,12 +19,12 @@ The system-level software usually needs to be installed once and is already take
 Hardware installation should be on top of the software installation. 
 {: .smb-info }
 
-## Table of Contents
+
 * Table of contents
 {: .toc }
     
 
-### Motor Controller 
+## Motor Controller 
 The USB rules for the motor controller driver should be copied to rules.d .
 ```bash
 # Copy the USB rule
@@ -31,7 +32,7 @@ The USB rules for the motor controller driver should be copied to rules.d .
 sudo cp <catkin_ws_dir>/src/smb_lowlevel_controller/smb_driver/udev/55-smb.rules /etc/udev/rules.d/
 ```
 
-### RealSense 
+## RealSense 
 ```bash
 # Installing necessary libraries for RealSense.
 sudo apt-key adv --keyserver keys.gnupg.net --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
@@ -44,13 +45,13 @@ sudo apt install librealsense2-dev librealsense2-dkms librealsense2-utils
 sudo apt install ros-noetic-ddynamic-reconfigure
 ```
 
-### Robosense
+## Robosense
 ```bash
 # Installing necessary libraries for RoboSense.
 sudo apt-get install -y libyaml-cpp-dev libpcap-dev libprotobuf-dev protobuf-compiler git
 ```
 
-### Spinnaker Camera Driver
+## Spinnaker Camera Driver
 Download [the spinnaker driver](https://drive.google.com/file/d/1wVK0dAH4mre1Prsr-Wsaowz0_OAmWe2f/view?usp=sharing).
 ```bash
 # Installing necessary libraries for camera driver.

@@ -13,7 +13,7 @@ Please inform oilter@ethz.ch for any missing library, package, driver, error or 
 
 Documentation of the SuperMegaBot (SMB) for the ETHZ Robotic Summer School.
 
-## Table of Contents
+
 * Table of contents
 {:toc}
 
