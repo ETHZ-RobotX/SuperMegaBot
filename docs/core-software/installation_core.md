@@ -26,6 +26,7 @@ If you want to use the system on a real SMB robot with real sensors and actuator
 
 ## Prerequisites
 - ROS Noetic
+
 Note that, the system has been developed in Ubuntu 20.04.
 {: .smb-info }
 
@@ -35,9 +36,9 @@ To see if the system has the correct ROS distribution please use the following t
 echo $ROS_DISTRO
 # output: noetic
 ```
-If you do not see the output, please refer to the [official ROS website](http://wiki.ros.org/noetic/Installation/Ubuntu) to install **ROS Noetic Desktop**. 
+If you do not see the correct output, please refer to the [official ROS website](http://wiki.ros.org/noetic/Installation/Ubuntu) to install **ROS Noetic Desktop**. 
 
-After installation, please ensure that environment variables like ROS_ROOT and ROS_PACKAGE_PATH are set. In order to verify the installation by running the following terminal command.
+After installation, please ensure that environment variables like ROS_ROOT and ROS_PACKAGE_PATH are set. Please verify the installation by running the following terminal command.
 
 ```bash
 printenv | grep ROS
@@ -78,6 +79,7 @@ cd ~/catkin_ws/
 
 
 To download the SMB packages, the vcs command-line tools will be used. For more information about the tool you can check the [link](http://wiki.ros.org/vcstool).
+{: .smb-mention }
 
 To install ***vcstool*** run the following terminal command.
 
@@ -97,7 +99,9 @@ vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/Sup
 
 ### Installing Dependencies
 
-To install the dependencies, rosdep package will be used. For more information about the package you can check the [link](https://docs.ros.org/en/independent/api/rosdep/html/)
+To install the dependencies, rosdep package will be used.For more information about the package you can check the [link](https://docs.ros.org/en/independent/api/rosdep/html/)
+{: .smb-mention }
+
 
 To install ***rosdep*** package run the following terminal commands in order, unless you did not do in the ROS installation step.
 
