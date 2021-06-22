@@ -21,9 +21,9 @@ after sourcing your workspace execute:
 ```bash
 node_manager
 ```
-3. Click on Start button, then without introducing any changes press OK.
+3. Click on Start button, set only the MCast Group to `224.0.0.1` and without introducing any other changes press OK.
 4. Start the synchronization node by pressing the button next to the available ROS Network in the upper left part of the Node Manager window.
-5. Again, click Start, but now change the Host to 11.0.0.5 and press OK. The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below localhost network.
+5. Again, click Start, but now change the Host to `11.0.0.5`, the MCast Group to `224.0.0.1` and press OK. The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below localhost network.
 
 ## Launch files
 In the panel below the ROS Network, you can search for launch files which can be started either on SMB or on your host machine. By selecting appropriate launch file, in order to load it press Load button in the lower part of this panel. After successfully loading the launch file the associated node should appear in the main panel.
