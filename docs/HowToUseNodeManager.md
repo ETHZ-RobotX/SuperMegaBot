@@ -9,25 +9,21 @@ title: Node Manager
 
 ## Preliminary steps
 1. Connect your host machine to the proper WiFi network.
-2. Subsequently, go to WiFi Settings of the corresponding network. Then on tab IPv4 go to DNS section. Here, disable Automatic and set DNS to 11.0.0.5
-3. On your local machine, in the console window, execute `hostname -I` to get IP address.
-4. In the same console window, run:
+2. Subsequently, go to WiFi Settings of the corresponding network. Then on tab IPv4 go to Routes section. Here, disable Automatic and set address as well as netmask to `224.0.0.0`. As a gateway enter `0.0.0.0`
+
+## Establish a connection between host and SMB
+1. On your local machine, in the console window, execute `hostname -I` to get IP address.
+2. In the same console window, run:
 ```bash
-export ROS_IP=#IP address
+export ROS_IP=#IP address of your host machine
 ```
 after sourcing your workspace execute:
 ```bash
 node_manager
 ```
-5. In the console window of SMB run:
-```bash
-sudo ip route add default via 11.0.0.5
-```
-## Establish a connection between host and SMB
-1. Click on Start button, then without introducing any changes press OK.
-2. Start the synchronization node by pressing the button next to the available ROS Network in the upper left part of the Node Manager window.
-3. Again, click Start, but now change the Host to 11.0.0.5 and press OK. The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below localhost network.
-
+3. Click on Start button, then without introducing any changes press OK.
+4. Start the synchronization node by pressing the button next to the available ROS Network in the upper left part of the Node Manager window.
+5. Again, click Start, but now change the Host to 11.0.0.5 and press OK. The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below localhost network.
 
 ## Launch files
 In the panel below the ROS Network, you can search for launch files which can be started either on SMB or on your host machine. By selecting appropriate launch file, in order to load it press Load button in the lower part of this panel. After successfully loading the launch file the associated node should appear in the main panel.
@@ -53,9 +49,5 @@ Node Manager synchronizes all the ROS topic and ROS services, but unfortunately 
     ```bash
     76259._roscore--11311	(21.06.2021 17:22:32)	(Detached)
     ```
-    
+
     To kill such a process execute `kill 76259`.
-  - To enable internet connection for SMB, you need to delete previously defined defualt ip route. In the console of the SMB run:
-    ```bash
-    sudo ip route del default via 11.0.0.5
-    ```
