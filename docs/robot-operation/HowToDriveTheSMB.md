@@ -1,25 +1,20 @@
 ---
 layout: default
-title: Operating the SMB
-nav_order: 5
+title: How to drive the SMB
+parent: Operating the SMB
+nav_order: 4
 ---
 
-# How to Use SMB? 
-This documentation explains the basic steps about how to safely use SMB robot.  
+# How to drive the SMB? 
+{: .no-toc}
+This documentation explains the basic steps about how to safely use the SMB robot.
+
 Please inform oilter@ethz.ch for any missing or unclear instruction.
 {: .smb-mention }
 
 ## Table of Contents
-- [How to Use SMB?](#how-to-use-smb)
-  - [Table of Contents](#table-of-contents)
-  - [Remark](#remark)
-      - [Issue Page](#issue-page)
-    - [Emergency Stop](#emergency-stop)
-    - [RC Connection and Transmitter](#rc-connection-and-transmitter)
-  - [Steps](#steps)
-    - [Connecting the Battery](#connecting-the-battery)
-    - [Powering Up](#powering-up)
-    - [ShutDown Procedure](#shutdown-procedure)
+* Table of contents
+{: .toc}
 
 
 

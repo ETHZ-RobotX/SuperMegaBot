@@ -1,4 +1,18 @@
-### Connecting to SMB 
+---
+layout: default
+title: Connecting to the SMB
+parent: Operating the SMB
+nav_order: 1
+---
+
+# How to connect to the SMB
+{: .no-toc}
+
+## Table of Contents
+* Table of contents
+{: .toc}
+
+## Connecting to the SMB 
 
 In order to power-up the computer on the SMB use the [Payload Power Switch](images/SMB_Backpanel.png) Close the lid of the switch to prevent shut-down by mistake.
 In order to connect to SMB remotely, the host PC should connect the Wifi of the SMB: 
@@ -31,7 +45,7 @@ roscore
 ```
 
 
-### Visualization Settings
+## Visualization Settings
 
 In order to use the visualization tools of ROS, we will set the SMB as ROS master on our local machine:
 

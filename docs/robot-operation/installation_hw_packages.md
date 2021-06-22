@@ -1,3 +1,10 @@
+---
+layout: default
+title: Hardware ROS packages
+parent: Operating the SMB
+nav_order: 3
+---
+
 # Setting Up The Hardware Related ROS packages
 {: .no-toc}
 In this document, the steps required to install the ROS packages related to the SMB hardware are described.
@@ -27,4 +34,28 @@ vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/Sup
 # Install dependencies
 rosdep install --from-paths . --ignore-src --os=ubuntu:focal -r -y
 
+```
+
+### Versavis 
+```bash
+# Installing necessary libraries for Versavis.
+cd <directory_to_catkin_ws>/src/versavis
+git submodule update --init
+
+## dependency of rosserial
+sudo apt install python3-serial
+
+## install udev rules for versavis
+sudo cp <directory_to_catkin_ws>/src/versavis/firmware/98-versa-vis.rules /etc/udev/rules.d/
+sudo udevadm control --reload
+```
+
+
+After every installation to build the packages
+```bash
+# Build it
+catkin build smb
+
+# Source it
+source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash
 ```

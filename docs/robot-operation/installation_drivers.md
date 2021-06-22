@@ -1,3 +1,10 @@
+---
+layout: default
+title: Hardware Driver Installation
+parent: Operating the SMB
+nav_order: 2
+---
+
 # Installation of the hardware drivers
 {: .no-toc}
 In the following, the steps required to install the system-level drivers of the sensors are described.
@@ -65,26 +72,4 @@ sudo ./configure_spinnaker_paths.sh
 
 After the installation you can remove the tar.gz file and also the content of it. 
 
-### Versavis 
-```bash
-# Installing necessary libraries for Versavis.
-cd <directory_to_catkin_ws>/src/versavis
-git submodule update --init
 
-## dependency of rosserial
-sudo apt install python3-serial
-
-## install udev rules for versavis
-sudo cp <directory_to_catkin_ws>/src/versavis/firmware/98-versa-vis.rules /etc/udev/rules.d/
-sudo udevadm control --reload
-```
-
-
-After every installation to build the packages
-```bash
-# Build it
-catkin build smb
-
-# Source it
-source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash
-```
