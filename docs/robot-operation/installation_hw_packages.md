@@ -6,7 +6,7 @@ nav_order: 3
 ---
 
 # Setting Up The Hardware Related ROS packages
-{: .no-toc}
+{: .no_toc}
 In this document, the steps required to install the ROS packages related to the SMB hardware are described.
 
 This section is only for the SMB itself. It is not needed to install drivers and packages related to sensors on a personal computer. 

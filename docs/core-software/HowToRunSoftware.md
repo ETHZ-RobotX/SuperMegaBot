@@ -5,8 +5,10 @@ parent: SMB Core Software
 nav_order: 2
 ---
 
-# How to Run SMB Software? 
+# How to Run SMB Software?
+{:.no_toc}
 This documentation explains the basic steps about how to run SMB software. 
+
 Please inform oilter@ethz.ch for any missing or unclear instruction.
 {: .smb-mention }
 

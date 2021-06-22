@@ -6,7 +6,7 @@ nav_order: 2
 ---
 
 # Installation of the hardware drivers
-{: .no-toc}
+{:.no_toc}
 In the following, the steps required to install the system-level drivers of the sensors are described.
 
 This section is only for the SMB itself. It is not needed to install drivers and packages related to sensors into user's pc.

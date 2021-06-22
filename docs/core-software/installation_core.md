@@ -6,10 +6,11 @@ nav_order: 1
 ---
 
 # Setting up the SMB Core Software
+{:.no_toc} 
+
 Please inform oilter@ethz.ch for any missing library, package, driver, error or any kind of unclear instruction.
 {: .smb-mention }
 
-{:.no_toc} 
 Documentation of the SuperMegaBot (SMB) for the ETHZ Robotic Summer School.
 
 ## Table of Contents

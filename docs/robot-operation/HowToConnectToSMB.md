@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 # How to connect to the SMB
-{: .no-toc}
+{:.no_toc}
 
 ## Table of Contents
 * Table of contents
