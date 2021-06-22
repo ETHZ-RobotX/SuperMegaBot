@@ -10,7 +10,7 @@ nav_order: 1
 
 ## Table of Contents
 * Table of contents
-{: .toc}
+{:toc}
 
 ## Connecting to the SMB 
 

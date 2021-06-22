@@ -17,7 +17,7 @@ The installation of the hardware related ROS packages should be on in addition t
 
 ## Table of Contents
 * Table of contents
-{: .toc}
+{:toc}
 
 ## Download ROS packages
 To clone the HW related repositories by using the vcs tool run the following terminal commands sequentially. 

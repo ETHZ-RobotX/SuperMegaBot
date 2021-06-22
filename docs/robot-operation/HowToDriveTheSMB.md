@@ -14,8 +14,7 @@ Please inform oilter@ethz.ch for any missing or unclear instruction.
 
 ## Table of Contents
 * Table of contents
-{: .toc}
-
+{:toc}
 
 
 ## Remark
