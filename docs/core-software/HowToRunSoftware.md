@@ -19,7 +19,8 @@ In the document there are two terminal types:
 1. Terminal of host PC: The terminal that has access to host pc system.
 2. Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
 
-If you're planning to use the software on the robot, please be sure that you followed the [How To Use SMB Document](HowToUseSMB.md) until the part **ShutDown Procedure**. {: .smb-info }
+If you're planning to use the software on the robot, please be sure that you followed the [How To Use SMB Document](HowToUseSMB.md) until the part **ShutDown Procedure**.
+{: .smb-info }
 
 ### Use Basic Functionality
 
