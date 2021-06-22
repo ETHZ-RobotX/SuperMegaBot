@@ -9,9 +9,6 @@ has_children: true
 {:.no_toc}
 The SMB core software allows simulation of the robot in a gazebo environment but is also required on the real robots.
 
-* Table of contents
-{:toc}
-
 ## Installation
 To install the simulation/SMB core software, follow the steps described in the [installation documentation](installation_core.md).
 
