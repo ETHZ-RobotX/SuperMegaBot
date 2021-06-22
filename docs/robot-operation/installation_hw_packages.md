@@ -29,7 +29,7 @@ To clone the HW related repositories by using the vcs tool run the following ter
 cd <directory_to_ws>/<catkin_ws_name>/src
 
 # Download the packages
-vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb_hw.repos?token=AIDKBDU4PBIOTTL4DIPL6R3A2JQ66 .
+vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb_hw.repos .
 
 # Magic of rosdep
 # Install dependencies
