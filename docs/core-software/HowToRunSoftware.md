@@ -68,8 +68,8 @@ In the RVIZ you should observe a grey-scaled map with SMB in the middle. Now, se
 
 
 ### Manual Mode
->If you want to switch between modes make sure that you killed the previous mode. 
-
+If you want to switch between modes make sure that you killed the previous mode. 
+{: .smb-info }
 
 ```bash
 # In the terminal of SSH
@@ -89,13 +89,15 @@ roslaunch smb_opc opc.launch
 # You should see the robot model in Rviz
 ```
 
-> You might need to restart the base if the robot does not respond to the teleop control
+You might need to restart the base if the robot does not respond to the teleop control
+{: .smb-info }
 
 In order to control the SMB with the joystick, you should keep presing the L1 button while driving and use the left stick to control the robot.
 
 
 ### Autonomous Mode
->If you want to switch between modes make sure that you killed the other process. 
+If you want to switch between modes make sure that you killed the other process.
+{: .smb-info }
 
 ```bash
 # In the terminal of SSH

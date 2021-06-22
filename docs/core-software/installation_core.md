@@ -6,7 +6,8 @@ nav_order: 1
 ---
 
 # Setting up the SMB Core Software
-> Please inform oilter@ethz.ch for any missing library, package, driver, error or any kind of unclear instruction.
+Please inform oilter@ethz.ch for any missing library, package, driver, error or any kind of unclear instruction.
+{: .smb-mention }
 
 {:.no_toc} 
 Documentation of the SuperMegaBot (SMB) for the ETHZ Robotic Summer School.
@@ -24,7 +25,8 @@ If you want to use the system on a real SMB robot with real sensors and actuator
 
 ## Prerequisites
 - ROS Noetic
-> Note that, the system has been developed in Ubuntu 20.04.
+Note that, the system has been developed in Ubuntu 20.04.
+{: .smb-info }
 
 To see if the system has the correct ROS distribution please use the following terminal command. 
 
@@ -59,7 +61,7 @@ catkin config -DCMAKE_BUILD_TYPE=Release
 ```
 
 
-> If there is an error of "catkin: command not found" 
+If there is an error of "catkin: command not found" 
 ```bash
 sudo apt install python3-catkin-lint python3-pip
 pip3 install osrf-pycommon
@@ -116,13 +118,13 @@ rosdep install --from-paths . --ignore-src --os=ubuntu:focal -r -y
 
 Installing all the dependency may take a while. 
 
-> Note that, rosdep might not be able to install all dependencies.
-> Example : ros-noetic-gazebo-plugins
-
+Note that, rosdep might not be able to install all dependencies.
+Example : ros-noetic-gazebo-plugins
 ```bash
 # Install example missing package even after resdep
 sudo apt install ros-noetic-gazebo-plugins
 ```
+{: .smb-info }
 
 ### Finalization
 Since every SMB package and dependency is installed, you can build the project.
