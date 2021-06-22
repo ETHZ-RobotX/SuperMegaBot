@@ -89,7 +89,7 @@ To download the SMB packages by using vcs tool run the following terminal comman
 cd <directory_to_ws>/<catkin_ws_name>/src
 
 # Download the packages
-vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb.repos?token=AIDKBDVOX5Y4Y3VAOHVSHFDAZRDW4 .
+vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/SuperMegaBot/master/smb.repos .
 ```
 
 ### Installing Dependencies
