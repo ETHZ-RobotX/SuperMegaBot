@@ -7,7 +7,8 @@ In order to connect to SMB remotely, the host PC should connect the Wifi of the 
 
 Once you are connected, from the terminal you should connect the SMB via SSH. **The ip addresses of every SMB is 11.0.0.5** .
 
-> Note that there might be an error in the host PC while trying to connect the SMB via ssh. Please read the terminal and use the suggested command in terminal to remove the previous ssh connection settings. 
+Note that there might be an error in the host PC while trying to connect the SMB via ssh. Please read the terminal and use the suggested command in terminal to remove the previous ssh connection settings. 
+{: .smb-info }
 
 ```bash
 # In the terminal of host pc

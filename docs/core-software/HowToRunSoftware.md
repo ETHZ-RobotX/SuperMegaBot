@@ -21,7 +21,7 @@ In the document there are two terminal types:
 If you're planning to use the software on the robot, please be sure that you followed the [HowToUseSMB Document](../HowToUseSMB.md).
 {: .smb-info }
 
-To connect SMB please refer to the [HowToConnectSMB Document](../HowToConnectSMB.md) 
+To connect SMB please refer to the [HowToConnectSMB Document](../HowToConnectSMB.md).
 {: .smb-info }
 
 ### Use Basic Functionality

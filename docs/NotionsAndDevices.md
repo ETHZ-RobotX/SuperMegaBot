@@ -22,10 +22,17 @@ SMB consist of two parts: Base and payload.
 </p>
 
 
+## JoyStick
+<p align="center">
+  <img style=" right;"  src="images/JoyStick.png" width="300" title="RC Transmitter">
+</p>
+
+
 ## Emergency Stops
 <p align="center">
   <img style=" right;"  src="images/E-Stop.png" width="300" title="Remote Emergy Button">
 </p>
+
 
 
 ## Some Notions

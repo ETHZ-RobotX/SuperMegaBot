@@ -5,7 +5,8 @@ parent: Additional Software
 ---
 
 # How to use fkie_node_manager for the SMB?
-> This documentation explains the basic steps about how to run node manager for the SMB.
+This documentation explains the basic steps about how to run node manager for the SMB.
+{: .smb-info }
 
 ## Preliminary steps
 1. Connect your host machine to the proper WiFi network.
