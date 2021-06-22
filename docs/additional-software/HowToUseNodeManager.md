@@ -10,6 +10,9 @@ parent: Additional Software
 ## Preliminary steps
 1. Connect your host machine to the proper WiFi network.
 2. Subsequently, go to WiFi Settings of the corresponding network. Then on tab IPv4 go to Routes section. Here, disable Automatic and set address as well as netmask to `224.0.0.0`. As a gateway enter `0.0.0.0`
+3. In your local machine add the hostname of the SMB.
+  - on ssh console window run: `hostname` and `hostname -I` to get address and name of the SMB to which you are connected
+  - on your host machine, run `sudo nano /etc/hosts` and add the address with SMB hostname obtained within previous step
 
 ## Establish a connection between host and SMB
 1. On your local machine, in the console window, execute `hostname -I` to get IP address.
