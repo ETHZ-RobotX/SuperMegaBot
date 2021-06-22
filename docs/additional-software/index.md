@@ -15,4 +15,4 @@ This page introduces some additional software that can be used to simplify or he
 ## Mission Planner
 
 ## NodeManager
-When running the full software stack on the robot, a lot of ROS nodes are run simultaneously. [NodeManager](additional-software/HowToUseNodeManager.md) can help in launching and monitoring the current status of each node.
+When running the full software stack on the robot, a lot of ROS nodes are run simultaneously. [NodeManager](HowToUseNodeManager.md) can help in launching and monitoring the current status of each node.
