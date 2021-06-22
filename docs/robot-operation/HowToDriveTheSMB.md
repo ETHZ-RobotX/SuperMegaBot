@@ -8,11 +8,7 @@ nav_order: 4
 # How to drive the SMB? 
 {: .no_toc}
 
-This documentation explains the basic steps about how to safely use the SMB robot.
-
-Please inform oilter@ethz.ch for any missing or unclear instruction.
-{: .smb-mention }
-
+This documentation explains the basic steps about how to safely drive the SMB robot.
 
 * Table of contents
 {:toc}
@@ -41,36 +37,6 @@ Emergency buttons are in series so if one of them is pushed e-stop is activated!
 ### RC Connection and Transmitter
 When driving the SMB base using the RC transmitter, there is an additional switch on the RC Transmitter to stop all motor movement. It is located on the lower back left of the RC Transmitter with the name [Emergency Stop Switch](images/RCTransmitter.png) and can be used to activate the safety stop functionality of the motor controller powering the motors. The safety stop is activated in the lower position (0).\
 Note that when the software overrides the RC commands. 
-
-## Steps
-
-In the document there are two terminal types:
-
-1. Terminal of host PC: The terminal that has access to host pc system.
-   
-2. Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
-
-### Connecting the Battery
-
-
-Please be sure that you are well informed about the type of the battery you are using. Read the safety document and do not hesitate to ask for help if you are not sure about something!
-{: .smb-warning }
-
-While placing the battery into its drawer, visually verify that the wires are not twisted, sheared or wedged into something!
-{: .smb-warning }
-
-If you notice or suspect even a small amount of expantion on the battery, inform your supervisor!
-{: .smb-warning }
-
-Do not cut the wires!
-{: .smb-warning }
-
-Be sure that wire tips are connected to the right way as the color of connected tips should be same! 
-{: .smb-warning }
-
-LiPo cells are affected by the same problems as other lithium-ion cells. This means that overcharge, over-discharge, over-temperature, short circuit, crush and nail penetration may all result in a catastrophic failure, including the pouch rupturing, the electrolyte leaking, and fire.
-{: .smb-warning }
-
 
 
 ### Powering Up 
