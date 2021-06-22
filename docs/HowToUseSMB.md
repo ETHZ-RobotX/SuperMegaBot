@@ -53,9 +53,9 @@ Note that when the software overrides the RC commands.
 
 In the document there are two terminal types:
 
-1) Terminal of host PC: The terminal that has access to host pc system.
+1. Terminal of host PC: The terminal that has access to host pc system.
    
-2) Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
+2. Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
 
 ### Connecting the Battery
 
