@@ -6,7 +6,7 @@ nav_order: 2
 ---
 
 # How to Run SMB Software? 
-> This documentation explains the basic steps about how to run SMB software . The documentation might lack of of some information since the updated SMB software is still work in progress!  
+This documentation explains the basic steps about how to run SMB software. 
 
 > Please inform oilter@ethz.ch for any missing or unclear instruction.
 
@@ -16,10 +16,10 @@ nav_order: 2
 This document does not explain the full capability of the robot. It gives basic information related to software and how to run it. For more information please check the packages. 
 
 In the document there are two terminal types:
-1) Terminal of host PC: The terminal that has access to host pc system.
-2) Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
+1. Terminal of host PC: The terminal that has access to host pc system.
+2. Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
 
-To use the software correctly please be sure that you followed the [HowToUseSMB Document](HowToUseSMB.md) until the part **ShutDown Procedure**.
+If you're planning to use the software on the robot, please be sure that you followed the [How To Use SMB Document](HowToUseSMB.md) until the part **ShutDown Procedure**. {: .smb-info }
 
 ### Use Basic Functionality
 
@@ -31,7 +31,7 @@ You can run the software in two mode:
 In both mode all sensor values, odometry and robot state can be reached and visualized. In autonomous mode, you can give goal position for the robot to navigate autonomously via Rviz Interface. 
 
 ### Simulation Mode
->If you want to switch between modes make sure that you killed the previous mode.
+If you want to switch between modes make sure that you killed the previous mode. {: .smb-info }
 
 Simulation runs on the host pc. To run the simulation you do not need connection to SMB
 
