@@ -9,37 +9,34 @@ nav_order: 2
 {:.no_toc}
 This documentation explains the basic steps about how to run SMB software. 
 
-Please inform oilter@ethz.ch for any missing or unclear instruction.
-{: .smb-mention }
-
-
 * Table of contents
 {:toc}
 
 ## Remark
 {:.no_toc}
-This document does not explain the full capability of the robot. It gives basic information related to software and how to run it. For more information please check the packages. 
+This document does not explain the full capability of the robot. It gives basic information related to the core software and how to run it. For more information please check the packages. 
 
-In the document there are two terminal types:
-1. Terminal of host PC: The terminal that has access to host pc system.
-2. Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
+In this document there are two terminal types:
+1. Terminal on your PC: A terminal on your PC (called _host PC_). 
+2. Terminal of the SMB: A terminal on the SMB, established via a SSH connection.
 
-If you're planning to use the software on the robot, please be sure that you followed the [HowToUseSMB Document](../HowToUseSMB.md).
+If you're planning to use the software on the robot, please be sure that you followed the [How to drive the SMB documentation](../robot-operation/HowToDriveTheSMB.md).
 {: .smb-info }
 
-To connect SMB please refer to the [HowToConnectSMB Document](../HowToConnectSMB.md).
+To connect SMB please refer to the [HowToConnectSMB Document](../robot-operation/HowToConnectToSMB.md).
 {: .smb-info }
 
 ## Use of Basic Functionality
 
 You can run the software either in simulation or on the real robot. In both cases, you can control the robot manually (using the Logitch Joypad) or operate it in autonomous mode.
 
+If you want to switch between modes make sure that you killed the previous mode.
+{: .smb-info }
+
 In both modes all sensor values, odometry and robot state can be read and visualized. In autonomous mode, you can give a goal position for the robot to navigate autonomously via the Rviz interface. 
 
 ### Simulation Mode
-If you want to switch between modes make sure that you killed the previous mode. {: .smb-info }
-
-The simulation runs on the host pc. To run the simulation you do not need a connection to SMB.
+The simulation runs on the host PC (your computer). To run the simulation you do not need a connection to SMB.
 
 ```bash
 # In the host pc
