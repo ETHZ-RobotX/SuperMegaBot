@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Node Manager
-# nav_order: 10
+parent: Additional software
 ---
 
 # How to use fkie_node_manager for the SMB?
