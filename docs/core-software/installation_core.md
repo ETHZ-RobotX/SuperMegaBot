@@ -148,8 +148,8 @@ echo "source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash" >> ~/.bashrc
 ```
 
 ## Running the simulation
-Refer to the documentation called [ HowToRunSoftware](HowToRunSoftware.md) to learn on how to run the simulation.
+Refer to the documentation called [ HowToRunSoftware](core-software/HowToRunSoftware.md) to learn on how to run the simulation.
 
 
 ## Hardware related software
-To get everything running on the real robot, you also need to follow the steps describe in the [hardware related software installation description](installation_hw.md).
+To get everything running on the real robot, you also need to follow the steps describe in the [hardware related software installation description](../installation_hw.md).
