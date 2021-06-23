@@ -65,7 +65,7 @@ catkin config -DCMAKE_BUILD_TYPE=Release
 
 If there is an error of "*catkin: command not found*" 
 ```bash
-sudo apt install python3-catkin-lint python3-pip
+sudo apt install python3-catkin-tools python3-catkin-lint python3-pip
 pip3 install osrf-pycommon
 ```
 {: .smb-info }

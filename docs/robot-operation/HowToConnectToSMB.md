@@ -22,7 +22,7 @@ Please be sure that you are well informed about the type of the battery you are 
 While placing the battery into its drawer, visually verify that the wires are not twisted, sheared or wedged into something!
 {: .smb-warning }
 
-If you notice or suspect even a small amount of expantion on the battery, inform your supervisor!
+If you notice or suspect even a small amount of expansion on the battery, inform your supervisor!
 {: .smb-warning }
 
 Do not cut the wires!
