@@ -8,7 +8,7 @@ nav_order: 1
 # Setting up the SMB Core Software
 {:.no_toc} 
 
-Please inform oilter@ethz.ch for any missing library, package, driver, error or any kind of unclear instruction.
+Please [create an issue](https://github.com/ETHZ-RobotX/SuperMegaBot/issues/new) for any missing library, package, driver, error or any kind of unclear instruction.
 {: .smb-mention }
 
 Documentation of the SuperMegaBot (SMB) for the ETHZ Robotic Summer School.
@@ -21,7 +21,7 @@ Documentation of the SuperMegaBot (SMB) for the ETHZ Robotic Summer School.
 
 The SMB software consists of two parts: core and hardware related.
 
-If you want to use the system on a real SMB robot with real sensors and actuators, the [hardware related part](../installation_hw.md) should be installed **on top of the core part**. This document contains the instructions about SMB core software, which also contains the simulation environment.
+If you want to use the system on a real SMB robot with real sensors and actuators, the [hardware related part](../robot-operation/installation_hw_packages.md) should be installed **on top of the core part**. This document contains the instructions about SMB core software, which also contains the simulation environment.
 
 
 ## Prerequisites
