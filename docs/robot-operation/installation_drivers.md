@@ -65,7 +65,10 @@ cd spinnaker-2.4.0.143-amd64/
 sudo dpkg -i libgentl_2.4.0.143_amd64.deb libspinnaker_2.4.0.143_amd64.deb libspinnaker-dev_2.4.0.143_amd64.deb libspinnaker-c_2.4.0.143_amd64.deb libspinnaker-c-dev_2.4.0.143_amd64.deb
 
 # Setting up FLIR driver (libspinnaker). Enter username when asked!
-sudo ./install_spinnaker.sh
+sudo ./configure_gentl_paths.sh 64
+sudo ./configure_usbfs.sh
+sudo ./configure_spinnaker.sh
+sudo ./configure_spinnaker_paths.sh
 ```
 
 After the installation you can remove the tar.gz file and also the content of it. 
