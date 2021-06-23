@@ -7,7 +7,10 @@ nav_order: 2
 
 # How to Run SMB Software?
 {:.no_toc}
-This documentation explains the basic steps about how to run SMB software. 
+This documentation explains the basic steps on how to run SMB software. 
+
+Please [create an issue](https://github.com/ETHZ-RobotX/SuperMegaBot/issues/new) for any missing library, package, driver, error or any kind of unclear instruction.
+{: .smb-mention }
 
 * Table of contents
 {:toc}
