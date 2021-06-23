@@ -15,12 +15,7 @@ repositories:
     type: git
     url: https://github.com/IntelRealSense/realsense-ros.git
     version: 2.2.24
-  smb_lowlevel_controller:
-    type: git
-    url: git@bitbucket.com:leggedrobotics/smb_lowlevel_controller.git
-    version: dev/effort_control
   message_logger:
     type: git
     url: https://github.com/leggedrobotics/message_logger.git
     version: master
-    

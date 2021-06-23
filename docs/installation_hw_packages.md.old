@@ -1,9 +1,11 @@
 # Setting Up The Hardware Related Software
 In the following, the steps required to use all the hardware installed on the SuperMegaBot are described.
 
-> This section is only for the SMB itself. It is not needed to install drivers and packages related to sensors into user's pc. 
+This section is only for the SMB itself. It is not needed to install drivers and packages related to sensors into user's pc. 
+{: .smb-mention }
 
-> Hardware installation should be on top of the software installation. 
+Hardware installation should be on top of the software installation. 
+{: .smb-info }
 
 ## Table of Contents
 - [Setting Up The Hardware Related Software](#setting-up-the-hardware-related-software)

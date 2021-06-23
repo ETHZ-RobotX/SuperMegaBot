@@ -32,7 +32,7 @@ To install the simulation/SMB core software, follow the steps described in the [
 Once the SMB core software is installed, you can start the simulation by following the steps in [How To Run the SMB Software](core-software/HowToRunSoftware.md)
 
 ## Operating the real robot
-Please follow the steps described in [How to use the SMB](HowToUseSMB.md) to operate a SuperMegaBot.
+Please follow the steps described in [How to use the SMB](robot-operation) to operate a SuperMegaBot.
 
 ## History
 The SuperMegaBot was originally developped by the ETH Construction Robotics group. 

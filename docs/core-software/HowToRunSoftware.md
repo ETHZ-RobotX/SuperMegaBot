@@ -5,44 +5,48 @@ parent: SMB Core Software
 nav_order: 2
 ---
 
-# How to Run SMB Software? 
-This documentation explains the basic steps about how to run SMB software. 
+# How to Run SMB Software?
+{:.no_toc}
+This documentation explains the basic steps on how to run SMB software. 
 
-> Please inform oilter@ethz.ch for any missing or unclear instruction.
+Please [create an issue](https://github.com/ETHZ-RobotX/SuperMegaBot/issues/new) for any missing library, package, driver, error or any kind of unclear instruction.
+{: .smb-mention }
 
-> ToDo Add test phases, Warnings
+* Table of contents
+{:toc}
 
 ## Remark
-This document does not explain the full capability of the robot. It gives basic information related to software and how to run it. For more information please check the packages. 
+{:.no_toc}
+This document does not explain the full capability of the robot. It gives basic information related to the core software and how to run it. For more information please check the packages. 
 
-In the document there are two terminal types:
-1. Terminal of host PC: The terminal that has access to host pc system.
-2. Terminal of SSH: The terminal that has SSH connection to the SMB, therefore has access to the SMB system.
+In this document there are two terminal types:
+1. Terminal on your PC: A terminal on your PC (called _host PC_). 
+2. Terminal of the SMB: A terminal on the SMB, established via a SSH connection.
 
-If you're planning to use the software on the robot, please be sure that you followed the [How To Use SMB Document](HowToUseSMB.md) until the part **ShutDown Procedure**.
+If you're planning to use the software on the robot, please be sure that you followed the [How to drive the SMB documentation](../robot-operation/HowToDriveTheSMB.md).
 {: .smb-info }
 
-### Use Basic Functionality
+To connect SMB please refer to the [HowToConnectSMB Document](../robot-operation/HowToConnectToSMB.md).
+{: .smb-info }
 
-You can run the software in two mode: 
-1. Simulation Mode 
-2. Manuel SMB Mode
-3. Autonomous SMB Mode
+## Use of Basic Functionality
 
-In both mode all sensor values, odometry and robot state can be reached and visualized. In autonomous mode, you can give goal position for the robot to navigate autonomously via Rviz Interface. 
+You can run the software either in simulation or on the real robot. In both cases, you can control the robot manually (using the Logitch Joypad) or operate it in autonomous mode.
+
+If you want to switch between modes make sure that you killed the previous mode.
+{: .smb-info }
+
+In both modes all sensor values, odometry and robot state can be read and visualized. In autonomous mode, you can give a goal position for the robot to navigate autonomously via the Rviz interface. 
 
 ### Simulation Mode
-If you want to switch between modes make sure that you killed the previous mode. {: .smb-info }
-
-Simulation runs on the host pc. To run the simulation you do not need connection to SMB
+The simulation runs on the host PC (your computer). To run the simulation you do not need a connection to SMB.
 
 ```bash
 # In the host pc
 roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true
-
 ```
 
-#### Autonomous Navigation Simulation 
+### Autonomous Navigation in Simulation 
 
 More information about the path planner can be found in the [path planner reposiotry](https://github.com/VIS4ROB-lab/smb_path_planner)
 
@@ -55,20 +59,21 @@ catkin build smb_navigation
 then, launch the simulation environment:
 ```bash
 # In the host pc
-roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true run_twist_scaling_node:=true
+roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true
 ```
 Subsequently, in the second terminal window launch the OMPL path planner:
 ```bash
 # In the host pc
-roslaunch smb_navigation navigate2d_ompl.launch sim:=true global_frame:=tracking_camera_odom robot_base_frame:=base_link
+roslaunch smb_navigation navigate2d_ompl.launch sim:=true global_frame:=odom robot_base_frame:=base_link
 ```
 In the RVIZ you should observe a grey-scaled map with SMB in the middle. Now, select `2d Navigation Goal` from the top toolbar and set the goal for the planner in the feasible region within the map.
 
 
 
-### Manual Mode
->If you want to switch between modes make sure that you killed the previous mode. 
-
+### Running the software on the robot
+#### Manual mode
+If you want to switch between modes make sure that you killed the previous mode. 
+{: .smb-info }
 
 ```bash
 # In the terminal of SSH
@@ -80,9 +85,6 @@ roslaunch smb smb.launch
 
 You can test the sensor by reading the published topics.
 
-The Expected topic list as the following.
-!!!! Add Expected Topic List !!! 
-
 To visualize the sensor reading via Rviz
 ```bash
 # In the terminal of host PC
@@ -91,16 +93,15 @@ roslaunch smb_opc opc.launch
 # You should see the robot model in Rviz
 ```
 
-> You might need to restart the base if the robot does not respond to the teleop control
+You might need to restart the base if the robot does not respond to the teleop control
+{: .smb-info }
 
 In order to control the SMB with the joystick, you should keep presing the L1 button while driving and use the left stick to control the robot.
 
-!!!! THIS WILL CHANGE !!!!!! 
 
-
-
-### Autonomous Mode
->If you want to switch between modes make sure that you killed the other process. 
+#### Autonomous Mode
+If you want to switch between modes make sure that you killed the other process.
+{: .smb-info }
 
 ```bash
 # In the terminal of SSH
@@ -113,7 +114,7 @@ roslaunch smb smb.launch
 To start the autonomous navigation please run the following terminal command in an other terminal window.
 ```bash
 # In the terminal of SSH
-roslaunch smb_navigation navigate2d_ompl.launch global_frame:=tracking_camera_odom robot_base_frame:=base_link
+roslaunch smb_navigation navigate2d_ompl.launch 
 
 # If you see the message "odom received", 
 # everything started without any problem
