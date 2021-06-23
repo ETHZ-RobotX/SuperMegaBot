@@ -10,10 +10,9 @@ This documentation explains the basic steps about how to run node manager for th
 
 ## Preliminary steps
 1. Connect your host machine to the proper WiFi network.
-2. Subsequently, go to the WiFi Settings of the network you connected. Then on tab IPv4 go to the Routes section. Here, disable Automatic and set an address as well as the netmask to `224.0.0.0`. As a gateway enter `0.0.0.0`
-3. In your local machine add the hostname of the SMB.
+2. In your local machine add the hostname of the SMB.
   - on ssh console window run: `hostname` and `hostname -I` to get the address and name of the SMB to which you are connected
-  - on your host machine, run `sudo nano /etc/hosts` and add the address with SMB hostname obtained within the previous step
+  - on your host machine, run `sudo nano /etc/hosts` and add the address with SMB hostname obtained within the previous step as depicted on the image below
 
 ## Establish a connection between host and SMB
 1. On your local machine, in the console window, execute `hostname -I` to get an IP address.
