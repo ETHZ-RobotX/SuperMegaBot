@@ -145,8 +145,8 @@ catkin build smb_gazebo
 source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash
 ```
 
-You should see that every package is built.
-After you built the packages, you can add the source file into .bashrc so that you do not have to source it everytime you log in a new terminal. 
+You should see that every package is succesfully built.
+After you built the packages, you can add the source file into **~/.bashrc** so that you do not have to source it everytime you log in a new terminal. 
 
 ```bash
 # Do not forget to change <...> parts

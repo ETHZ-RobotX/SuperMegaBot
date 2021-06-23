@@ -46,7 +46,7 @@ The simulation runs on the host PC (your computer). To run the simulation you do
 roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true
 ```
 
-### Autonomous Navigation Simulation 
+### Autonomous Navigation in Simulation 
 
 More information about the path planner can be found in the [path planner reposiotry](https://github.com/VIS4ROB-lab/smb_path_planner)
 
