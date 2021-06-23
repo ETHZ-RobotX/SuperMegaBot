@@ -124,7 +124,7 @@ rosdep install --from-paths . --ignore-src --os=ubuntu:focal -r -y
 
 Installing all the dependency may take a while. 
 
-Note that, rosdep might not be able to install all dependencies.
+Note that, rosdep might not be able to install all dependencies. Please check the message at the terminal.
 Example : ros-noetic-gazebo-plugins
 ```bash
 # Install example missing package even after resdep
