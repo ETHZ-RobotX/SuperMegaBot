@@ -48,13 +48,13 @@ roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true
 
 ### Autonomous Navigation in Simulation 
 
-More information about the path planner can be found in the [path planner reposiotry](https://github.com/VIS4ROB-lab/smb_path_planner)
+More information about the path planner can be found in the [path planner repository](https://github.com/VIS4ROB-lab/smb_path_planner).
 
 Since we have successfully set up the SMB software, one can launch the simulation and get the first experience with the OMPL path planner.
 Make sure that the `smb_navigation` is built. If not, run:
 ```bash
 # In the host pc
-catkin build smb_navigation
+catkin build smb_path_planner
 ```
 then, launch the simulation environment:
 ```bash
@@ -64,11 +64,11 @@ roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true
 Subsequently, in the second terminal window launch the OMPL path planner:
 ```bash
 # In the host pc
-roslaunch smb_navigation navigate2d_ompl.launch sim:=true global_frame:=odom robot_base_frame:=base_link
+roslaunch smb_navigation navigate2d_ompl.launch sim:=true global_frame:=tracking_camera_odom
 ```
 In the RVIZ you should observe a grey-scaled map with SMB in the middle. Now, select `2d Navigation Goal` from the top toolbar and set the goal for the planner in the feasible region within the map.
 
-
+To be able to use the advanced features of the path planner, refer to the [SMB path planner Wiki](https://github.com/VIS4ROB-lab/smb_path_planner/wiki).
 
 ### Running the software on the robot
 #### Manual mode
