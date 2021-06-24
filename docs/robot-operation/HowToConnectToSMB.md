@@ -50,17 +50,24 @@ In the document there are two terminal types:
 In order to connect to SMB, you can either use the Wifi of the SMB or connect using a ethernet cable.
 
 Use the following details of the wireless network of the SMB: 
-  * Wifi (SSID): smb-[SMB_ROBOT_NUMBER]
+  * Wifi (SSID): SMB_[SMB_ROBOT_NUMBER]
   * Password: SMB_[SMB_ROBOT_NUMBER]_RSS
 
-Once you are connected, from the terminal you should connect the SMB via SSH. **The ip addresses of every SMB is 11.0.0.5** .
+Once you are connected, from the terminal you should connect the SMB via SSH. 
+
+**The ip addresses of every SMB is 11.0.x.5 where x is the last digit of SMB Robot Number**.
+*Example: For SMB 263 the on-board computer IP address is 10.0.3.5*
+{: .smb-info }
+
+
 
 Note that there might be an error in the host PC while trying to connect the SMB via ssh. Please read the terminal and use the suggested command in terminal to remove the previous ssh connection settings. 
 {: .smb-info }
 
 ```bash
 # In the terminal of host pc
-ssh smb@11.0.0.5
+# Do not forget to change x
+ssh smb@10.0.x.5
 # Password: smb
 
 #! Terminal becomes terminal of SSH! 
@@ -85,7 +92,7 @@ In order to use the visualization tools of ROS, we will set the SMB as ROS maste
 
 ```bash
 # In the terminal of host pc
-export ROS_MASTER_URI=http://11.0.0.5:<port>
+export ROS_MASTER_URI=http://10.0.0.5:<port>
 # the ip and port tuple we have saved in the previous step  
 ```
 
@@ -98,7 +105,7 @@ In order to give commands from the host pc to SMB, ROS_IP should be set.
 
 ifconfig
 # See the ip addres of wlp4s0
-# It is probably 11.0.0.100
+# It is probably 10.0.0.100
 
 export ROS_IP=<wlp4s0_ip>
 # the ip and port tuple we have saved in the previous step  
