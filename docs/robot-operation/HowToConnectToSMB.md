@@ -5,7 +5,7 @@ parent: Operating the SMB
 nav_order: 1
 ---
 
-# How to connect to the SMB
+# How to Connect to the SMB
 {:.no_toc}
 In the following, the basic usage of the SMB payload is described.
 
@@ -104,8 +104,8 @@ export ROS_IP=<wlp4s0_ip>
 # the ip and port tuple we have saved in the previous step  
 ```
 
-Note that at every new terminal you have to repeat the steps under the title of Running the Software. Please refer to [the NotionsAndDevices document](../NotionsAndDevices.md) for more information related to 'export' command.
+Note that at every new terminal you have to repeat the steps under the title of Running the Software. Please refer to [the Notions and Devices document](../NotionsAndDevices.md) for more information related to 'export' command.
 {: .smb-info }
 
-To use the packages and run the software please refer to the [HowToRunSoftware](../core-software/HowToRunSoftware.md)
+To use the packages and run the software please refer to the [How to Run Software](../core-software/HowToRunSoftware.md)
 {: .smb-info }
