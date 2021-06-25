@@ -17,11 +17,16 @@ This documentation explains the basic steps about how to run node manager for th
 
 ## Establish a connection between host and SMB
 1. On your local machine, in the console window, execute `hostname -I` to get an IP address. If multiple IP addresses are present, take the first one.
+
 2. In the same console window, run:
 ```bash
 export ROS_IP=#IP address of your host machine
 ```
 after sourcing your workspace execute:
+```bash
+pip3 install ruamel_yaml==0.11.14
+```
+and afterwards:
 ```bash
 node_manager
 ```
