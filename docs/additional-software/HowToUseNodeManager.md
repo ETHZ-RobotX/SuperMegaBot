@@ -24,7 +24,7 @@ export ROS_IP=#IP address of your host machine
 ```
 after sourcing your workspace execute:
 ```bash
-pip3 install ruamel_yaml==0.11.14
+pip3 install ruamel.yaml
 ```
 and afterwards:
 ```bash
