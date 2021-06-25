@@ -34,7 +34,7 @@ Emergency buttons are in series so if one of them is pushed e-stop is activated!
 </p>
 
 In case of an unexpected situation, **first** use the E-Stop on the [Joystick](../images/JoyStick.png) (if core software is activated) or on the [RC Transmitter](../images/RCTransmitter.png) (if RC Controll still active). Wait 1 second, **If the E-Stop on controllers does not work**, use the SMB emergency stop system by using the [E-Stop Remote](../images/E-Stop.png) or the on-board emergency button. 
-
+{: .smb-warning }
 
 ## RC Connection and Transmitter
 When driving the SMB base using the RC transmitter, there is an additional switch on the RC Transmitter to stop all motor movement. It is located on the lower back left of the RC Transmitter with the name [Emergency Stop Switch](../images/RCTransmitter.png) and can be used to activate the safety stop functionality of the motor controller powering the motors. The safety stop is activated in the lower position (0).\
