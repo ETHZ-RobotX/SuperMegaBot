@@ -14,12 +14,26 @@ This documentation explains the basic steps about how to safely drive the SMB ro
 {:toc}
 
 
+A safety distance of 2 meters needs to be kept while the robot is driving.
+{: .smb-warning }
+
+There always needs to be one safety operator walking with the robot holding the remote E-stop.
+{: .smb-warning }
+
+If anything suspicious happens with the robot hardware (heat, smoke, sparks etc), E-stop and report to the staff immediately.
+{: .smb-warning }
+
+If batteries are damaged or inflated, distance yourself immediately and inform the staff.
+{: .smb-warning }
+
 ## Emergency Stop
 For safety purposes, the power input to the motor controller can be cut off by de-energizing a contactor that is part of the [SMB emergency stop system](https://unlimited.ethz.ch/display/ROBOTX/SMB+Emergency+Stop+System).\
 Emergency buttons are in series so if one of them is pushed e-stop is activated! This means, the motor controller and thus motors are not powered anymore, robot stops! 
 <p align="center">
   <img style="right;"  src="../images/E-Stop.png" width="300" title="Remote Emergency Stop">
 </p>
+
+In case of an unexpected situation, **first** use the E-Stop on the [Joystick](../images/JoyStick.png) (if core software is activated) or on the [RC Transmitter](../images/RCTransmitter.png) (if RC Controll still active). Wait 1 second, **If the E-Stop on controllers does not work**, use the SMB emergency stop system by using the [E-Stop Remote](../images/E-Stop.png) or the on-board emergency button. 
 
 
 ## RC Connection and Transmitter
