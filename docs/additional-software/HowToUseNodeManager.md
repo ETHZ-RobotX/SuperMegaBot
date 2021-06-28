@@ -28,12 +28,12 @@ node_manager
 ```
 3. Click on the Start button, and the following window should appear:
 <p align="center">
-  <img style="right;"  src="../images/NodeManagerHost.png" width="300" title="Node Manager: Host start discovery">
+  <img style="right;"  src="../images/NodeManagerHost.png" width="500" title="Node Manager: Host start discovery">
 </p>
 set the MCast Group to `224.0.0.1`, check Start sync box and without introducing any other changes press OK.
 4. Again, click Start button, but now change the Host to the hostname of the SMB e.g. for SMB261 `10.0.4.1`, the MCast Group to `224.0.0.1`. The window should look as follows:
 <p align="center">
-  <img style="right;"  src="../images/NodeManagerSMB.png" width="300" title="Node Manager: SMB start discovery">
+  <img style="right;"  src="../images/NodeManagerSMB.png" width="500" title="Node Manager: SMB start discovery">
 </p>
 Press OK. If you would be ask to provide user and password, use 'smb' for both.
 The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below the localhost network.
@@ -54,7 +54,7 @@ If the node has been successfully launched, you can inspect it via the console o
 To inspect and edit the launch file corresponding to the node of interest, select the node and press F4.
 
 <p align="center">
-  <img style="right;"  src="../images/NodeManager.png" width="300" title="Node Manager">
+  <img style="right;"  src="../images/NodeManager.png" width="500" title="Node Manager">
 </p>
 
 ## Synchronization of both ROS masters
