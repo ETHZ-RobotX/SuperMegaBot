@@ -62,8 +62,6 @@ To inspect and edit the launch file corresponding to the node of interest, selec
 Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab and load all parameters (symbol with small blue arrow). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow pointing to the right. Marked with blue in the image above.
 
 # Troubleshooting
-  - If you are connected via VPN, the multicasting route needs to  be set manually. In the ssh console window execute:
-    `sudo route add -net 224.0.0.0 netmask 255.255.255.0 dev zthnhbsdox`
   - You get an exception on access the remote host: Exception: ssh connection to REMOTE_HOST failed: not a valid RSA private key file. Generate an SSH key file with e.g. `ssh-keygen -p -m PEM -f ~/.ssh/id_rsa`
   - Before starting the node manager make sure that no processes are running in the detached mode, i.e. execute `screen -ls`. You should get a similar output to the following one:
     ```bash
@@ -71,3 +69,10 @@ Node Manager synchronizes all the ROS topics and ROS services, but unfortunately
     ```
 
     To kill such a process execute `kill 76259`.
+
+
+```bash
+#obsolete ?
+#If you are connected via VPN, the multicasting route needs to  be set manually. In the ssh console window execute:
+      `sudo route add -net 224.0.0.0 netmask 255.255.255.0 dev zthnhbsdox`
+```
