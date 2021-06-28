@@ -35,5 +35,15 @@ catkin build cartographer_rviz
 
 ## Download rosbags
 In order to follow the tutorial you will need the following rosbags:
-  - [First mission rosbag](https://drive.google.com/file/d/18zWR21lLWrrMPrmI8C0SQgeFUcclFMV8/view?usp=sharing)
-  - [Second mission rosbag](https://drive.google.com/file/d/114OGae0iBZkDrRcX-PqhLf18mXBWTfG4/view?usp=sharing)
+  - [First mission rosbag](https://drive.google.com/file/d/114OGae0iBZkDrRcX-PqhLf18mXBWTfG4/view?usp=sharing)
+  - [Second mission rosbag](https://drive.google.com/file/d/18zWR21lLWrrMPrmI8C0SQgeFUcclFMV8/view?usp=sharing)
+  - [Challenge site rosbag]()
+
+Download this rosbags in to the folder ```~/catkin_ws/src/smb_common/smb_slam/data```
+
+## Download maps
+Maps for the localization
+ - [Complete map wangen]()
+ - [Challenge site]()
+
+Download this rosbags in to the folder ```~/catkin_ws/src/smb_common/smb_slam/maps```
