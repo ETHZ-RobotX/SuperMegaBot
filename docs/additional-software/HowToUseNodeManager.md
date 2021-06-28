@@ -26,9 +26,17 @@ after sourcing your workspace execute:
 ```bash
 node_manager
 ```
-3. Click on the Start button, set only the MCast Group to `224.0.0.1`, and without introducing any other changes press OK.
-4. Start the synchronization node by pressing the button next to the available ROS Network in the upper left part of the Node Manager window.
-5. Again, click Start, but now change the Host to the hostname of the SMB e.g. for SMB264 `10.0.4.5`, the MCast Group to `224.0.0.1`, and press OK. The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below the localhost network.
+3. Click on the Start button, and the following window should appear:
+<p align="center">
+  <img style="right;"  src="../images/NodeManagerHost.png" width="300" title="Node Manager: Host start discovery">
+</p>
+set the MCast Group to `224.0.0.1`, check Start sync box and without introducing any other changes press OK.
+4. Again, click Start button, but now change the Host to the hostname of the SMB e.g. for SMB261 `10.0.4.1`, the MCast Group to `224.0.0.1`. The window should look as follows:
+<p align="center">
+  <img style="right;"  src="../images/NodeManagerSMB.png" width="300" title="Node Manager: SMB start discovery">
+</p>
+Press OK. If you would be ask to provide user and password, use 'smb' for both.
+The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below the localhost network.
 
 ## Launch files
 In the panel below the ROS Network, you can search for launch files that can be started either on SMB or on your host machine. By selecting the appropriate launch file, in order to load it press the Load button in the lower part of this panel. After successfully loading the launch file the associated node should appear in the main panel.
@@ -47,6 +55,10 @@ To inspect and edit the launch file corresponding to the node of interest, selec
 
 ## Synchronization of both ROS masters
 Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab and load all parameters (symbol with small blue arrow). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow pointing to the right.
+
+<p align="center">
+  <img style="right;"  src="../images/NodeManager.png" width="300" title="Node Manager">
+</p>
 
 # Troubleshooting
   - If you are connected via VPN, the multicasting route needs to  be set manually. In the ssh console window execute:
