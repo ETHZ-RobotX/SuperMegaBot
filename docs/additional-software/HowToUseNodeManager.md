@@ -53,12 +53,12 @@ If the node has been successfully launched, you can inspect it via the console o
 ### Editing launch file
 To inspect and edit the launch file corresponding to the node of interest, select the node and press F4.
 
-## Synchronization of both ROS masters
-Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab and load all parameters (symbol with small blue arrow). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow pointing to the right.
-
 <p align="center">
   <img style="right;"  src="../images/NodeManager.png" width="300" title="Node Manager">
 </p>
+
+## Synchronization of both ROS masters
+Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab and load all parameters (symbol with small blue arrow). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow pointing to the right.
 
 # Troubleshooting
   - If you are connected via VPN, the multicasting route needs to  be set manually. In the ssh console window execute:
