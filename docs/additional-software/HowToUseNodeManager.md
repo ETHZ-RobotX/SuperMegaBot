@@ -10,13 +10,13 @@ This documentation explains the basic steps about how to run node manager for th
 
 ## Preliminary steps
 1. The detailed instructions how to install the Node Manager can be found in the [multimaster_fkie repository](https://github.com/ETHZ-RobotX/multimaster_fkie). Please clone the repository within your SMB workspace.
-2. Connect your host machine to the proper WiFi network.
+2. Connect your host machine to the corresponding SMB WiFi network.
 3. In your local machine add the hostname of the SMB.
   - on ssh console window run: `hostname` and `hostname -I` to get the address and name of the SMB to which you are connected
   - on your host machine, run `sudo nano /etc/hosts` and add the address with SMB hostname obtained within the previous step as depicted on the image below
 
 ## Establish a connection between host and SMB
-1. On your local machine, in the console window, execute `hostname -I` to get an IP address. If multiple IP addresses are present, take the first one.
+1. On your local machine, in the console window, execute `hostname -I` to get an IP address. If multiple IP addresses are present, take the one corresponds to the actual chosen network connection.
 
 2. In the same console window, run:
 ```bash
