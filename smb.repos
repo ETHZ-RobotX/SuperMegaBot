@@ -37,3 +37,11 @@ repositories:
     type: git
     url: https://github.com/leggedrobotics/pointmatcher-ros
     version: master
+  smb_powerstatus:
+    type: git
+    url: https://github.com/ETHZ-RobotX/smb_powerstatus
+    version: master
+  smb_rviz_plugins:
+    type: git
+    url: https://github.com/ETHZ-RobotX/smb_rviz_plugins
+    version: master
