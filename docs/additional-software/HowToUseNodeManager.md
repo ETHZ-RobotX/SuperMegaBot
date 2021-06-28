@@ -39,16 +39,17 @@ Press OK. If you would be ask to provide user and password, use 'smb' for both.
 The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below the localhost network.
 
 ## Launch files
-In the panel below the ROS Network, you can search for launch files that can be started either on SMB or on your host machine. By selecting the appropriate launch file, in order to load it press the Load button in the lower part of this panel. After successfully loading the launch file the associated node should appear in the main panel.
+In the panel below the ROS Network, you can search for launch files that can be started either on SMB or on your host machine. By selecting the appropriate launch file, in order to load it press the Load button in the lower part of this panel. After successfully loading the launch file the associated node should appear in the main panel. Marked with red in the image below.
 
 ### Start ROS node
-Select a ROS node, which needs to be run, and use the green play button on the left side to start the node.
+Select a ROS node, which needs to be run, and use the green play button on the left side to start the node. Marked with green in the image below.
 
 ### Kill ROS node
-In order to kill the node, select it and press the green stop button which is below the previously mentioned play button.
+In order to kill the node, select it and press the green stop button which is below the previously mentioned play button. Marked with green in the image below.
 
 ### Console for a single ROS node
-If the node has been successfully launched, you can inspect it via the console output by pressing the console symbol or by pressing F3
+If the node has been successfully launched, you can inspect it via the console output by pressing the console symbol or by pressing F3. Marked with purple in the image below.
+
 
 ### Editing launch file
 To inspect and edit the launch file corresponding to the node of interest, select the node and press F4.
@@ -58,7 +59,7 @@ To inspect and edit the launch file corresponding to the node of interest, selec
 </p>
 
 ## Synchronization of both ROS masters
-Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab and load all parameters (symbol with small blue arrow). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow pointing to the right.
+Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab and load all parameters (symbol with small blue arrow). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow pointing to the right. Marked with blue in the image above.
 
 # Troubleshooting
   - If you are connected via VPN, the multicasting route needs to  be set manually. In the ssh console window execute:
