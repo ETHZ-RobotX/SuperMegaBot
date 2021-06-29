@@ -67,7 +67,7 @@ If the node has been successfully launched, you can inspect it via the console o
 To inspect and edit the launch file corresponding to the node of interest, select the node and press F4.
 
 <p align="center">
-  <img style="right;"  src="../images/NodeManager.png" width="500" title="Node Manager">
+  <img style="right;"  src="../images/NodeManager.png" width="1000" title="Node Manager">
 </p>
 
 ## Synchronization of both ROS masters
