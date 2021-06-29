@@ -19,7 +19,7 @@ This documentation explains the basic steps about how to run node manager for th
     * add this IP address to the hosts file, i.e. your IP (separated by tab) and localhost.
 
   For reference your hosts file should look similar to the following:
-      ```bash
+  ```bash
       127.0.0.1       localhost
       127.0.1.1       grzegorzmalczyk-MacBookPro
 
@@ -28,6 +28,7 @@ This documentation explains the basic steps about how to run node manager for th
       10.0.3.5        smb-263-nuc
       10.0.4.5        smb-264-nuc
       #10.241.54.11   localhost add --> uncomment this line when using VPN and add your IP address
+  ```
 
 ## Establish a connection between host and SMB
 1. On your local machine, in the console window, execute `hostname -I` to get an IP address. If multiple IP addresses are present, take the one corresponds to the actual chosen network connection.
