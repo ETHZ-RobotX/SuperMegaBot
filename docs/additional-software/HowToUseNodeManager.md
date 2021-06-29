@@ -69,10 +69,3 @@ Node Manager synchronizes all the ROS topics and ROS services, but unfortunately
     ```
 
     To kill such a process execute `kill 76259`.
-
-
-```bash
-#obsolete ?
-#If you are connected via VPN, the multicasting route needs to  be set manually. In the ssh console window execute:
-      `sudo route add -net 224.0.0.0 netmask 255.255.255.0 dev zthnhbsdox`
-```
