@@ -33,7 +33,7 @@ This documentation explains the basic steps about how to run node manager for th
 2. In the same console window, run:
 ```bash
 export ROS_IP=#IP address of your host machine
-
+```
 after sourcing your workspace execute:
 ```bash
 node_manager
