@@ -15,8 +15,10 @@ This documentation explains the basic steps about how to run node manager for th
   - on ssh console window run: `hostname` and `hostname -I` to get the address and name of the SMB to which you are connected
   - on your host machine, run `sudo nano /etc/hosts` and add the address with SMB hostname obtained within the previous step as depicted on the image below
   - For the VPN connection:
-    - on your local machine check your IP address which corresponds to the VPN by running `hostname -I`
-    - add this IP address to the hosts file, i.e. your IP (separated by tab) and localhost. For reference your hosts file should look similar to the following:
+      - on your local machine check your IP address which corresponds to the VPN by running `hostname -I`
+      - add this IP address to the hosts file, i.e. your IP (separated by tab) and localhost.
+
+  For reference your hosts file should look similar to the following:
       ```bash
       127.0.0.1       localhost
       127.0.1.1       grzegorzmalczyk-MacBookPro
@@ -25,6 +27,7 @@ This documentation explains the basic steps about how to run node manager for th
       10.0.2.5        smb-262-nuc
       10.0.3.5        smb-263-nuc
       10.0.4.5        smb-264-nuc
+      #10.241.54.11   localhost add --> uncomment this line when using VPN and add your IP address
       ```
 
 ## Establish a connection between host and SMB
