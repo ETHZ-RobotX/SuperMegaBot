@@ -64,13 +64,14 @@ Once you are connected, from the terminal you should connect the SMB via SSH.
 
 
 
+
 Note that there might be an error in the host PC while trying to connect the SMB via ssh. Please read the terminal and use the suggested command in terminal to remove the previous ssh connection settings. 
 {: .smb-info }
 
 ```bash
 # In the terminal of host pc
-# Do not forget to change x
-ssh smb@10.0.x.5
+# Do not forget to change x and <user>
+ssh <user>@10.0.x.5
 # Password: smb
 
 #! Terminal becomes terminal of SSH! 
@@ -78,6 +79,12 @@ ssh smb@10.0.x.5
 # To connect the SMB to Internet 
 nmcli connection up
 ```
+
+**You should connect to the SMB with your own username. Username is your group number**.
+*Example: For group 1, the username is group1*
+{: .smb-info }
+
+
 Once you are connected to the SMB you will see an IP address and port tuple on the terminal starting with 'http://'. Please save it since we will need it in the next step. 
 
 If you do not see such a tupple, please start the roscore and check the part ROS_MASTER_URI.
