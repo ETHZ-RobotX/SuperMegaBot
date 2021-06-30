@@ -48,7 +48,7 @@ set the MCast Group to `224.0.0.1`, check Start sync box and without introducing
   <img style="right;"  src="../images/NodeManagerSMB.png" width="500" title="Node Manager: SMB start discovery">
 </p>
 Press OK. If you would be ask to provide user and password, use 'smb' for both.
-The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below the localhost network.
+The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below the localhost network. Go to this network, and if asked, allow launching the node_manager_dameon by clicking a green tick.
 
 ## Launch files
 In the panel below the ROS Network, you can search for launch files that can be started either on SMB or on your host machine. By selecting the appropriate launch file, in order to load it press the Load button in the lower part of this panel. After successfully loading the launch file the associated node should appear in the main panel. Marked with red in the image below.
@@ -71,7 +71,7 @@ To inspect and edit the launch file corresponding to the node of interest, selec
 </p>
 
 ## Synchronization of both ROS masters
-Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab and load all parameters (symbol with small blue arrow). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow pointing to the right. Marked with blue in the image above.
+Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab (marked with blue in the image above). Firstly, load all parameters from the chosen ROS master (marked with blue in the below image). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow (marked with green). 
 
 # Troubleshooting
   - You get an exception on access the remote host: Exception: ssh connection to REMOTE_HOST failed: not a valid RSA private key file. Generate an SSH key file with e.g. `ssh-keygen -p -m PEM -f ~/.ssh/id_rsa`
