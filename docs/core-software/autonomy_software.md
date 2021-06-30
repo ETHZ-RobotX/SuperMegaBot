@@ -27,7 +27,7 @@ If you want to use the system on a real SMB robot with real sensors and actuator
 
 
 ## Path Planning
-Once you've installed the [SMB core software](installation_core.md), you can directly follow the [documentatoin](https://github.com/VIS4ROB-lab/smb_path_planner) in the repository of the smb_path_planner.
+Once you've installed the [SMB core software](installation_core.md), you can directly follow the [documentation](https://github.com/VIS4ROB-lab/smb_path_planner) in the repository of the smb_path_planner.
 
 All the relevant repositories should already have been cloned into your catkin workspace when installing the core software.
 
