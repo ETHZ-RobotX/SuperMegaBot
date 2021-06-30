@@ -26,10 +26,14 @@ If you want to use the system on a real SMB robot with real sensors and actuator
 
 
 ## Path Planning
-Once you've installed the [SMB core software](installation_core.md), you can directly follow the [documentation](https://github.com/VIS4ROB-lab/smb_path_planner) in the repository of the smb_path_planner.
+Once you've installed the [SMB core software](installation_core.md), you can directly follow the [documentation](https://github.com/VIS4ROB-lab/smb_path_planner/wiki) in the repository of the SMB Path Planner.
 
 All the relevant repositories should already have been cloned into your catkin workspace when installing the core software.
 
+Run the following command in the catkin workspace to build all the packages related to the path planner:
+``` bash
+catkin build smb_path_planner
+```
 
 ## Mapping and Localization (SLAM)
 The mapping and localization packages have only be tested on the real robot and on recorded datasets and has not been tested in the simulation environment.
