@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Software Setup
+title: Core Software Setup
 parent: SMB Core Software
 nav_order: 1
 ---
