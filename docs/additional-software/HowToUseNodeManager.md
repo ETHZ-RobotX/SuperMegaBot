@@ -73,6 +73,10 @@ To inspect and edit the launch file corresponding to the node of interest, selec
 ## Synchronization of both ROS masters
 Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab (marked with blue in the image above). Firstly, load all parameters from the chosen ROS master (marked with blue in the below image). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow (marked with green). 
 
+<p align="center">
+  <img style="right;"  src="../images/NodeManagerROSParams.png" width="1000" title="Node Manager: ROS Params">
+</p>
+
 # Troubleshooting
   - You get an exception on access the remote host: Exception: ssh connection to REMOTE_HOST failed: not a valid RSA private key file. Generate an SSH key file with e.g. `ssh-keygen -p -m PEM -f ~/.ssh/id_rsa`
   - Before starting the node manager make sure that no processes are running in the detached mode, i.e. execute `screen -ls`. You should get a similar output to the following one:
