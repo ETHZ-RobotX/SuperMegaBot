@@ -50,8 +50,11 @@ In the document there are two terminal types:
 In order to connect to SMB, you can either use the Wifi of the SMB or connect using a ethernet cable.
 
 Use the following details of the wireless network of the SMB: 
-  * Wifi (SSID): SMB_[SMB_ROBOT_NUMBER]
-  * Password: SMB_[SMB_ROBOT_NUMBER]_RSS
+  * Wifi (SSID): SMB_26x
+  * Password: SMB_26x_RSS
+  
+*where x is the last digit of SMB Robot Number*
+
 
 Once you are connected, from the terminal you should connect the SMB via SSH. 
 
