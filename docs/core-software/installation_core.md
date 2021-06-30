@@ -18,6 +18,7 @@ Please [create an issue](https://github.com/ETHZ-RobotX/SuperMegaBot/issues/new)
 {:toc}
 
 ## Remark
+{:.no_toc}
 
 The SMB software consists of two parts: core and hardware related.
 

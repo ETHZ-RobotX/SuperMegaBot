@@ -8,13 +8,13 @@ nav_exclude: true
 
 # Preparations for Tutorials of Robotic Summer School
 {:.no_toc}
-This page provides the relevant information to prepare for the tutorials for the Robotic Summer School.
+This page provides the relevant information to prepare for the tutorials of the Robotic Summer School.
 
 * Table of contents
 {:toc}
 
 ## Mapping Tutorial
-Please follow the steps provided in the [installations documentation](mapper_tutorial_preparations.md). 
+Please follow the steps provided in the [installation documentation](mapping_tutorial_preparations.md) of the mapping tutorial. 
 
 ## Artefact detection Tutorial
 Please follow the install instruction steps provided in the [artefact mapping repository](https://github.com/ethz-asl/artefact_mapping).
