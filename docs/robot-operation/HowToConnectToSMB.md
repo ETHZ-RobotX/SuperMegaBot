@@ -50,14 +50,18 @@ In the document there are two terminal types:
 In order to connect to SMB, you can either use the Wifi of the SMB or connect using a ethernet cable.
 
 Use the following details of the wireless network of the SMB: 
-  * Wifi (SSID): SMB_[SMB_ROBOT_NUMBER]
-  * Password: SMB_[SMB_ROBOT_NUMBER]_RSS
+  * Wifi (SSID): SMB_26x
+  * Password: SMB_26x_RSS
+  
+*where x is the last digit of SMB Robot Number*
+
 
 Once you are connected, from the terminal you should connect the SMB via SSH. 
 
-**The ip addresses of every SMB is 11.0.x.5 where x is the last digit of SMB Robot Number**.
+**The ip addresses of every SMB is 10.0.x.5 where x is the last digit of SMB Robot Number**.
 *Example: For SMB 263 the on-board computer IP address is 10.0.3.5*
 {: .smb-info }
+
 
 
 
@@ -66,8 +70,8 @@ Note that there might be an error in the host PC while trying to connect the SMB
 
 ```bash
 # In the terminal of host pc
-# Do not forget to change x
-ssh smb@10.0.x.5
+# Do not forget to change x and <user>
+ssh <user>@10.0.x.5
 # Password: smb
 
 #! Terminal becomes terminal of SSH! 
@@ -75,6 +79,12 @@ ssh smb@10.0.x.5
 # To connect the SMB to Internet 
 nmcli connection up
 ```
+
+**You should connect to the SMB with your own username. Username is your group number**.
+*Example: For group 1, the username is group1*
+{: .smb-info }
+
+
 Once you are connected to the SMB you will see an IP address and port tuple on the terminal starting with 'http://'. Please save it since we will need it in the next step. 
 
 If you do not see such a tupple, please start the roscore and check the part ROS_MASTER_URI.

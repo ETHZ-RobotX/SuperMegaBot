@@ -15,6 +15,7 @@ SMB consist of two parts: Base and payload.
   <img style=" left;"  src="images/SMB_Backpanel.png" width="300" title="Back Panel of the SMB">
 </p>
 
+Click [here](images/SMB_Backpanel.png) to see it bigger
 
 ## RC Transmitter
 <p align="center">

@@ -14,6 +14,18 @@ This documentation explains the basic steps about how to run node manager for th
 3. In your local machine add the hostname of the SMB.
   - on ssh console window run: `hostname` and `hostname -I` to get the address and name of the SMB to which you are connected
   - on your host machine, run `sudo nano /etc/hosts` and add the address with SMB hostname obtained within the previous step as depicted on the image below
+  - For the VPN connection:
+    * on your local machine check your IP address which corresponds to the VPN by running `hostname -I`
+    * add this IP address to the hosts file, i.e. your IP (separated by tab) and localhost.
+
+  For reference your hosts file, if you are using SMB264, should look similar to the following :
+  ```bash
+      127.0.0.1       localhost
+      127.0.1.1       grzegorzmalczyk-MacBookPro
+
+      10.0.4.5        smb-264-nuc
+      #10.241.54.11   localhost --> uncomment this line when using VPN and add your IP address
+  ```
 
 ## Establish a connection between host and SMB
 1. On your local machine, in the console window, execute `hostname -I` to get an IP address. If multiple IP addresses are present, take the one corresponds to the actual chosen network connection.
@@ -55,7 +67,7 @@ If the node has been successfully launched, you can inspect it via the console o
 To inspect and edit the launch file corresponding to the node of interest, select the node and press F4.
 
 <p align="center">
-  <img style="right;"  src="../images/NodeManager.png" width="500" title="Node Manager">
+  <img style="right;"  src="../images/NodeManager.png" width="1000" title="Node Manager">
 </p>
 
 ## Synchronization of both ROS masters
@@ -69,10 +81,3 @@ Node Manager synchronizes all the ROS topics and ROS services, but unfortunately
     ```
 
     To kill such a process execute `kill 76259`.
-
-
-```bash
-#obsolete ?
-#If you are connected via VPN, the multicasting route needs to  be set manually. In the ssh console window execute:
-      `sudo route add -net 224.0.0.0 netmask 255.255.255.0 dev zthnhbsdox`
-```

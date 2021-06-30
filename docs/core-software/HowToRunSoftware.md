@@ -2,7 +2,7 @@
 layout: default
 title: Running the Software
 parent: SMB Core Software
-nav_order: 2
+nav_order: 3
 ---
 
 # How to Run SMB Software?
@@ -17,6 +17,7 @@ Please [create an issue](https://github.com/ETHZ-RobotX/SuperMegaBot/issues/new)
 
 ## Remark
 {:.no_toc}
+
 This document does not explain the full capability of the robot. It gives basic information related to the core software and how to run it. For more information please check the packages. 
 
 In this document there are two terminal types:

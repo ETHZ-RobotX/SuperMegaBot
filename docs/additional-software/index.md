@@ -18,5 +18,3 @@ A mission plan defines the logic how and when different missions are executed. T
 
 ## NodeManager
 When running the full software stack on the robot, a lot of ROS nodes are run simultaneously. [NodeManager](HowToUseNodeManager.md) can help in launching and monitoring the current status of each node.
-
-## Mapping
