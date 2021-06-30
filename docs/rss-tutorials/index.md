@@ -15,3 +15,6 @@ This page provides the relevant information to prepare for the tutorials for the
 
 ## Mapping Tutorial
 Please follow the steps provided in the [installations documentation](mapper_tutorial_preparations.md). 
+
+## Artefact detection Tutorial
+Please follow the install instruction steps provided in the [artefact mapping repository](https://github.com/ethz-asl/artefact_mapping).
