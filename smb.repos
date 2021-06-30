@@ -40,7 +40,7 @@ repositories:
   smb_powerstatus:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_powerstatus
-    version: master
+    version: main
   smb_rviz_plugins:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_rviz_plugins
