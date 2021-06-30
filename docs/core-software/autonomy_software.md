@@ -3,10 +3,9 @@ layout: default
 title: SLAM and Navigation
 parent: SMB Core Software
 nav_order: 2
-nav_exclude: true
 ---
 
-# Setting up the SMB Software for autonomous navigation
+# Setting up the SMB Software for Autonomous Navigation
 {:.no_toc} 
 
 
@@ -36,7 +35,7 @@ All the relevant repositories should already have been cloned into your catkin w
 The mapping and localization packages have only be tested on the real robot and on recorded datasets and has not been tested in the simulation environment.
 {: .smb-mention }
 
-As for the path planning software packages, also the mapping and localization related packages are already set up when you [cloned the list of repositories](../core-software/installation_core.html#catkin-workspace-and-all-packages) contained in smb.repos 
+As for the path planning software packages, also the mapping and localization related packages are already downloaded when you [cloned the list of repositories](../core-software/installation_core.html#catkin-workspace-and-all-packages) contained in smb.repos 
 
 Just run the following command in the catkin workspace to build all the SLAM related packages:
 ``` bash
