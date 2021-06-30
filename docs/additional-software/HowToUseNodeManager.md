@@ -24,7 +24,7 @@ This documentation explains the basic steps about how to run node manager for th
       127.0.1.1       grzegorzmalczyk-MacBookPro
 
       10.0.4.5        smb-264-nuc
-      #10.241.54.11   localhost add --> uncomment this line when using VPN and add your IP address
+      #10.241.54.11   localhost --> uncomment this line when using VPN and add your IP address
   ```
 
 ## Establish a connection between host and SMB
