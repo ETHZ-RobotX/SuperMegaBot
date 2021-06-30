@@ -58,7 +58,7 @@ Use the following details of the wireless network of the SMB:
 
 Once you are connected, from the terminal you should connect the SMB via SSH. 
 
-**The ip addresses of every SMB is 11.0.x.5 where x is the last digit of SMB Robot Number**.
+**The ip addresses of every SMB is 10.0.x.5 where x is the last digit of SMB Robot Number**.
 *Example: For SMB 263 the on-board computer IP address is 10.0.3.5*
 {: .smb-info }
 
