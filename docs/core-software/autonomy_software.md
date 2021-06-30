@@ -3,10 +3,9 @@ layout: default
 title: SLAM and Navigation
 parent: SMB Core Software
 nav_order: 2
-nav_exclude: true
 ---
 
-# Setting up the SMB Software for autonomous navigation
+# Setting up the SMB Software for Autonomous Navigation
 {:.no_toc} 
 
 
@@ -27,7 +26,7 @@ If you want to use the system on a real SMB robot with real sensors and actuator
 
 
 ## Path Planning
-Once you've installed the [SMB core software](installation_core.md), you can directly follow the [documentatoin](https://github.com/VIS4ROB-lab/smb_path_planner) in the repository of the smb_path_planner.
+Once you've installed the [SMB core software](installation_core.md), you can directly follow the [documentation](https://github.com/VIS4ROB-lab/smb_path_planner) in the repository of the smb_path_planner.
 
 All the relevant repositories should already have been cloned into your catkin workspace when installing the core software.
 
@@ -36,7 +35,7 @@ All the relevant repositories should already have been cloned into your catkin w
 The mapping and localization packages have only be tested on the real robot and on recorded datasets and has not been tested in the simulation environment.
 {: .smb-mention }
 
-As for the path planning software packages, also the mapping and localization related packages are already set up when you [cloned the list of repositories](../core-software/installation_core.html#catkin-workspace-and-all-packages) contained in smb.repos 
+As for the path planning software packages, also the mapping and localization related packages are already downloaded when you [cloned the list of repositories](../core-software/installation_core.html#catkin-workspace-and-all-packages) contained in smb.repos 
 
 Just run the following command in the catkin workspace to build all the SLAM related packages:
 ``` bash
