@@ -13,6 +13,9 @@ This page provides the relevant information to prepare for the tutorials of the 
 * Table of contents
 {:toc}
 
+## Path Planning Tutorial
+The necessary steps to prepare for the path planning tutorial are described [on this page](path_planning_tutorial_preparations.md). 
+
 ## Mapping Tutorial
 Please follow the steps provided in the [installation documentation](mapping_tutorial_preparations.md) of the mapping tutorial. 
 
