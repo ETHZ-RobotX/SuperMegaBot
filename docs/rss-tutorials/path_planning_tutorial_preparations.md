@@ -5,7 +5,7 @@ parent: Summer School Tutorials
 ---
 
 # Preparations for Path Planning Tutorial
-To prepare for the Tutorial on Path Planning, only the [core software](../core-software/installation_core.md) has to be set up and installed.
+To prepare for the Tutorial on Path Planning, only the [SMB core software](../core-software/installation_core.md) and the [SMB path planner](../core-software/autonomy_software.md#path-planning) has to be set up and installed.
 
 # Check software installation
 To test if the installation is working correctly, source the workspace where the softare is installed; then, the following need to be checked:
