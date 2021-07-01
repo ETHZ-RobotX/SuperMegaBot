@@ -15,8 +15,8 @@ This documentation explains the basic steps about how to run node manager for th
   - on ssh console window run: `hostname` and `hostname -I` to get the address and name of the SMB to which you are connected
   - on your host machine, run `sudo nano /etc/hosts` and add the address with SMB hostname obtained within the previous step as depicted on the image below
   - For the VPN connection:
-    * on your local machine check your IP address which corresponds to the VPN by running `hostname -I`
-    * add this IP address to the hosts file, i.e. your IP (separated by tab) and localhost.
+    1. on your local machine check your IP address which corresponds to the VPN by running `hostname -I`
+    2. add this IP address to the hosts file, i.e. your IP (separated by tab) and localhost.
 
   For reference your hosts file, if you are using SMB264, should look similar to the following :
   ```bash
@@ -24,7 +24,7 @@ This documentation explains the basic steps about how to run node manager for th
       127.0.1.1       grzegorzmalczyk-MacBookPro
 
       10.0.4.5        smb-264-nuc
-      #10.241.54.11   localhost add --> uncomment this line when using VPN and add your IP address
+      #10.241.54.11   localhost # --> uncomment this line when using VPN and add your IP address
   ```
 
 ## Establish a connection between host and SMB
@@ -43,12 +43,12 @@ node_manager
   <img style="right;"  src="../images/NodeManagerHost.png" width="500" title="Node Manager: Host start discovery">
 </p>
 set the MCast Group to `224.0.0.1`, check Start sync box and without introducing any other changes press OK.
-4. Again, click Start button, but now change the Host to the hostname of the SMB e.g. for SMB261 `10.0.4.1`, the MCast Group to `224.0.0.1`. The window should look as follows:
+4. Again, click Start button, but now change the Host to the hostname of the SMB e.g. for SMB261 `10.0.1.5`, the MCast Group to `224.0.0.1`. The window should look as follows:
 <p align="center">
   <img style="right;"  src="../images/NodeManagerSMB.png" width="500" title="Node Manager: SMB start discovery">
 </p>
-Press OK. If you would be ask to provide user and password, use 'smb' for both.
-The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below the localhost network.
+Press OK. In case you're asked to provide an username and password, use your team's username and corresponding password.
+The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below the localhost network. Go to this network, and if asked, allow launching the node_manager_dameon by clicking a green tick.
 
 ## Launch files
 In the panel below the ROS Network, you can search for launch files that can be started either on SMB or on your host machine. By selecting the appropriate launch file, in order to load it press the Load button in the lower part of this panel. After successfully loading the launch file the associated node should appear in the main panel. Marked with red in the image below.
@@ -71,7 +71,11 @@ To inspect and edit the launch file corresponding to the node of interest, selec
 </p>
 
 ## Synchronization of both ROS masters
-Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab and load all parameters (symbol with small blue arrow). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow pointing to the right. Marked with blue in the image above.
+Node Manager synchronizes all the ROS topics and ROS services, but unfortunately not ROS parameters. To share the ROS parameters between both masters, go to the Parameter tab (marked with blue in the image above). Firstly, load all parameters from the chosen ROS master (marked with blue in the below image). Then select which parameters need to be shared and export them to the second ROS Master by pressing the big blue arrow (marked with green). 
+
+<p align="center">
+  <img style="right;"  src="../images/NodeManagerROSParams.png" width="1000" title="Node Manager: ROS Params">
+</p>
 
 # Troubleshooting
   - You get an exception on access the remote host: Exception: ssh connection to REMOTE_HOST failed: not a valid RSA private key file. Generate an SSH key file with e.g. `ssh-keygen -p -m PEM -f ~/.ssh/id_rsa`

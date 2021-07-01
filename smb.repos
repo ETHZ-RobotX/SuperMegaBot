@@ -21,3 +21,27 @@ repositories:
     type: git
     url: https://github.com/leggedrobotics/teb_local_planner.git
     version: feature/correct_local_plan_timestamps
+  icp_localization:
+    type: git
+    url: https://github.com/leggedrobotics/icp_localization.git
+    version: master
+  libpointmatcher:
+    type: git
+    url: https://github.com/leggedrobotics/libpointmatcher
+    version: master
+  libnabo:
+    type: git
+    url: https://github.com/ANYbotics/libnabo.git
+    version: master
+  pointmatcher_ros:
+    type: git
+    url: https://github.com/leggedrobotics/pointmatcher-ros
+    version: master
+  smb_powerstatus:
+    type: git
+    url: https://github.com/ETHZ-RobotX/smb_powerstatus
+    version: main
+  smb_rviz_plugins:
+    type: git
+    url: https://github.com/ETHZ-RobotX/smb_rviz_plugins
+    version: master
