@@ -24,7 +24,7 @@ This documentation explains the basic steps about how to run node manager for th
       127.0.1.1       grzegorzmalczyk-MacBookPro
 
       10.0.4.5        smb-264-nuc
-      #10.241.54.11   localhost --> uncomment this line when using VPN and add your IP address
+      #10.241.54.11   localhost # --> uncomment this line when using VPN and add your IP address
   ```
 
 ## Establish a connection between host and SMB
@@ -43,11 +43,11 @@ node_manager
   <img style="right;"  src="../images/NodeManagerHost.png" width="500" title="Node Manager: Host start discovery">
 </p>
 set the MCast Group to `224.0.0.1`, check Start sync box and without introducing any other changes press OK.
-4. Again, click Start button, but now change the Host to the hostname of the SMB e.g. for SMB261 `10.0.4.1`, the MCast Group to `224.0.0.1`. The window should look as follows:
+4. Again, click Start button, but now change the Host to the hostname of the SMB e.g. for SMB261 `10.0.1.5`, the MCast Group to `224.0.0.1`. The window should look as follows:
 <p align="center">
   <img style="right;"  src="../images/NodeManagerSMB.png" width="500" title="Node Manager: SMB start discovery">
 </p>
-Press OK. If you would be ask to provide user and password, use 'smb' for both.
+Press OK. In case you're asked to provide an username and password, use your team's username and corresponding password.
 The SMB ROS Network should appear in the upper left corner of the Node Manager window, just below the localhost network. Go to this network, and if asked, allow launching the node_manager_dameon by clicking a green tick.
 
 ## Launch files
