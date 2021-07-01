@@ -12,7 +12,7 @@ For the tutorial you need the following packages:
 You can test it on your own computer by running it with a rosbag provided [bellow](#Download files).
 
 ## Installation
-Download the repositories and build them:
+Download the repositories in the same directory where ```smb_common``` is and build them:
 
 ```bash
 cd ~/catkin_ws/src/
@@ -22,7 +22,7 @@ git clone https://github.com/catkin/catkin_simple.git
 catkin build loam
 catkin build ethzasl_msf
 catkin build smb_msf
-source ~/<catkin_ws>/devel/setup.bashrc
+source ~/catkin_ws/devel/setup.bashrc
 ```
 If there is some issues when building the packages, see trouble shooting [below](#Trouble shooting).
 
@@ -31,14 +31,16 @@ If there is some issues when building the packages, see trouble shooting [below]
 ```bash
 # In Terminal 1
 $ roslaunch loam loam_smb.launch use_sim_time:=true publish_map_frame:=true
+
 # In Terminal 2
 $ roslaunch smb_msf smb_msf.launch  
+
 # In Terminal 3
 $ mkdir -p ~/catkin_ws/src/smb_common/smb_msf/rviz
 # Download the rviz file linked below and put it here to make life easier
 $ cd ~/catkin_ws/src/smb_common/smb_msf/rviz
-# run rviz
 $ rviz
+
 # In Terminal 4
 $ mkdir -p ~/catkin_ws/src/smb_common/smb_msf/data
 # Download the rosbag and put it here
@@ -51,10 +53,13 @@ $ rosbag play First_mission_wangen_FILTERED.bag --clock
 # In Terminal 1 on smb
 $ roslaunch smb smb.launch
 # wait until you see Received first IMU message
+
 # In Terminal 2 on smb
 $ roslaunch loam loam_smb.launch 
+
 # In Terminal 3 on smb
 $ roslaunch smb_msf smb_msf.launch
+
 # In Terminal 4 on host PC
 $ roslaunch rviz
 # and change the fixed frame (in global options) to odom
