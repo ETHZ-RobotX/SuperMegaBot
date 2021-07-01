@@ -80,8 +80,8 @@ ssh <user>@10.0.x.5
 nmcli connection up
 ```
 
-**You should connect to the SMB with your own username. Username is your group number**.
-*Example: For group 1, the username is group1*
+**You should connect to the SMB with your own username. Username is your team number**.
+*Example: For team 1, the username is team1*
 {: .smb-info }
 
 
