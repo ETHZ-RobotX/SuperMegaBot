@@ -22,4 +22,4 @@ To test if the installation is working correctly, source the workspace where the
 If everything runs, then the software is working and ready for the tutorial.
 	
 # Tutorial Slides
-The slides for the tutorial are available online [here](https://docs.google.com/presentation/d/1wrH-gTAJQq2iququ-cOHDCa6Z_HXRueYX-B6Pd9Bt50/edit?usp=sharing).
+The slides for the tutorial will be available online just before the tutorial.
