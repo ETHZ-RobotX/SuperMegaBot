@@ -2,6 +2,7 @@
 layout: default
 title: Mapping Tutorial
 parent: Summer School Tutorials
+nav_order: 3
 ---
 
 # Preparations for Mapping Tutorial

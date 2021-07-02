@@ -2,6 +2,7 @@
 layout: default
 title: Path Planning Tutorial
 parent: Summer School Tutorials
+nav_order: 4
 ---
 
 # Preparations for Path Planning Tutorial
