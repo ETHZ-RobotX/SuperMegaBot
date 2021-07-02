@@ -32,6 +32,7 @@ Build the packages **(~ 10 minutes)**
 ```bash
 catkin build cartographer_ros
 catkin build cartographer_rviz
+catkin build smb_slam
 ```
 
 ## Download rosbags
