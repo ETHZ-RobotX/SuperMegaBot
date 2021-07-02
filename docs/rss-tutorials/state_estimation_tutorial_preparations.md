@@ -9,7 +9,7 @@ For the tutorial you need the following packages:
  - [ethzasl_msf](https://github.com/ethz-asl/ethzasl_msf)
  - [compslam](https://bitbucket.org/leggedrobotics/compslam_rss/src/master/)
 
-You can test it on your own computer by running it with a rosbag provided [bellow](#Download files).
+You can test it on your own computer by running it with a rosbag provided [below](#download-files).
 
 ## Installation
 Download the repositories in the same directory where ```smb_common``` is and build them:
@@ -70,9 +70,8 @@ In order to follow the tutorial you will need the following rosbag and rviz file
   - [First mission rosbag filtered](https://drive.google.com/file/d/19WjL00NeCvQNPJggVUAQXgWmGNlgPgVX/view?usp=sharing)
   - [Rviz file](https://drive.google.com/drive/folders/1SvpEzsq67P0i6gEAY6Q_5qGgTa0NeC3r)
 
-Download this rosbags into the folder ```~/catkin_ws/src/smb_common/smb_msf/data```
-
-Download this rviz profile into the folder ```~/catkin_ws/src/smb_common/smb_msf/rviz```
+Download the rosbag into the folder ```~/catkin_ws/src/smb_common/smb_msf/data```
+Download the rviz profile into the folder ```~/catkin_ws/src/smb_common/smb_msf/rviz```
 
 ## Trouble shooting
 
