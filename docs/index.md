@@ -6,7 +6,7 @@ nav_order: 1
 
 # The SuperMegaBot
 {:.no_toc}
-Documentation of the SuperMegaBot (SMB) for the ETHZ Robotic Summer School.
+Documentation of the SuperMegaBot (SMB) for the ETHZ Robotics Summer School.
 
 * Table of contents
 {:toc}
