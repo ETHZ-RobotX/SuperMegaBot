@@ -10,19 +10,7 @@ nav_exclude: true
 {:toc}
 
 ## Update the SMB Core Software
-If some packages were updated on Github you need to pull the latest changes.
-
-```bash
-# Do not forget to change <...> parts
-cd <directory_to_ws>/<catkin_ws_name>/src
-
-# Pull the latest changes
-vcs pull
-```
-## Import new repositories
-In some cases there might be new repositories needed in order to use the SMB. Check the [smb.repos](https://github.com/ETHZ-RobotX/SuperMegaBot/blob/master/smb.repos) file.
-
-If this is the case
+The repositories will be occasionally updated. It is recommended to check if there are any updates from time to time.
 ```bash
 # Do not forget to change <...> parts
 cd <directory_to_ws>/<catkin_ws_name>/src
