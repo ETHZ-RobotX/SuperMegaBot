@@ -31,6 +31,14 @@ vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/Sup
 vcs pull
 ```
 
+## Build updated packages
+While pulling the repositories you might see this message
+```bash
+Updating <old_commit>..<new_commit>
+```
+
+If this is the case you need to build this repositories again.
+
 ## Troubleshooting
 
 ### Path already exists
