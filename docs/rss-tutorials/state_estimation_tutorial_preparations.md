@@ -23,7 +23,7 @@ git clone https://github.com/catkin/catkin_simple.git
 catkin build loam
 catkin build ethzasl_msf
 catkin build smb_msf
-source ~/catkin_ws/devel/setup.bashrc
+source ~/catkin_ws/devel/setup.bash
 ```
 If there is some issues when building the packages, see trouble shooting [below](#Trouble shooting).
 
@@ -40,6 +40,7 @@ $ roslaunch smb_msf smb_msf.launch
 $ mkdir -p ~/catkin_ws/src/smb_common/smb_msf/rviz
 # Download the rviz file linked below and put it here to make life easier
 $ cd ~/catkin_ws/src/smb_common/smb_msf/rviz
+# Select file->open config->choose the rviz config that you've dowloaded
 $ rviz
 
 # In Terminal 4
