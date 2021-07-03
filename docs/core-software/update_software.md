@@ -6,6 +6,9 @@ nav_order: 4
 nav_exclude: true
 ---
 
+* Table of contents
+{:toc}
+
 ## Update the SMB Core Software
 If some packages were updated on Github you need to pull the latest changes.
 
