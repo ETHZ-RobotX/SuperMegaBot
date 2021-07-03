@@ -39,7 +39,7 @@ catkin build smb_path_planner
 The mapping and localization packages have only be tested on the real robot and on recorded datasets and has not been tested in the simulation environment.
 {: .smb-mention }
 
-As for the path planning software packages, also the mapping and localization related packages are already downloaded when you [cloned the list of repositories](../core-software/installation_core.html#catkin-workspace-and-all-packages) contained in smb.repos 
+As for the path planning software packages, also the mapping and localization related packages are already downloaded when you [cloned the list of repositories](../core-software/installation_core.html#catkin-workspace-and-all-packages) contained in `smb.repos` and [installed all the dependencies using the rosdep tool](installation_core.md#installing-dependencies). 
 
 Just run the following command in the catkin workspace to build all the SLAM related packages:
 ``` bash
