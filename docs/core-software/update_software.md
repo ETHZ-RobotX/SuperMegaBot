@@ -3,7 +3,6 @@ layout: default
 title: Update Core Software
 parent: SMB Core Software
 nav_order: 4
-nav_exclude: true
 ---
 
 * Table of contents
