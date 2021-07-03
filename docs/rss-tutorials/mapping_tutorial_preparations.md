@@ -45,7 +45,7 @@ Download this rosbags in to the folder ```~/catkin_ws/src/smb_common/smb_slam/da
 
 ## Download maps
 Maps for the localization
- - [Complete map wangen](https://drive.google.com/file/d/1BccEK_Zm-coduvpsiC0m0Jha2eeRhw8A/view?usp=sharing)
+ - [Complete map wangen](https://drive.google.com/file/d/1u_4aOgHkeTTHCsqtAqP-cz3Jaqd6LFqo/view?usp=sharing)
  - [Challenge site](https://drive.google.com/file/d/10nhsMKLtLBDk-LJa7HmNCf9P40ncXv2c/view?usp=sharing)
 
 Download this rosbags in to the folder ```~/catkin_ws/src/smb_common/smb_slam/maps```
