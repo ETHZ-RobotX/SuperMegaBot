@@ -19,6 +19,9 @@ vcs import --recursive --input https://raw.githubusercontent.com/ETHZ-RobotX/Sup
 
 # Pull the latest changes
 vcs pull
+
+# Update dependencies with rosdep
+rosdep install --from-paths . --ignore-src --os=ubuntu:focal -r -y
 ```
 
 ## Build updated packages
