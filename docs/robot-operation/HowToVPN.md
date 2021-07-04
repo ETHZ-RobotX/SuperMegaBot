@@ -44,7 +44,7 @@ Use `listnetworks` command from above to check if you have successfully connecte
 
 
 ### Connect to the SMB
-To enter the SMB just `ssh` into it as described in the  section. [Connecting to the SMB](HowToConnectToSMB.md). Please, make sure that you are not connected to the local SMB network.
+To enter the SMB just `ssh` into it as described in the [Connecting to the SMB](HowToConnectToSMB.md) section. Please, make sure that you are not connected to the local SMB network.
 
 ### Connect to the SMB
-If the robot is not connected to the internet but your computer is in the zerotier network you cannot ssh into the robot computer even if you are connected to the local wifi. This is because it tries to route the traffic to 10.0.0.0/24 through the zerotier network to which the robot computer is not connected. As a workaround, either leave the zerotier network or delete the route on your computer locally. 
+If the robot is not connected to the internet but your computer is in the zerotier network you cannot ssh into the robot computer even if you are connected to the local wifi. This is because it tries to route the traffic to 10.0.0.0/24 through the zerotier network to which the robot computer is not connected. As a workaround, either leave the zerotier network or delete the route on your computer locally.
