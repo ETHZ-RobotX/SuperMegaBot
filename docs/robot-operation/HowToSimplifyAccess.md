@@ -24,8 +24,8 @@ You may now connect as user team5 to smb-263 on `10.0.3.5` by just executing `ss
 
 ## SSH Public Key Authentication
 
-This section assumes, that you haven't set up multiple key files yet. {: .smb-info }
-
+This section assumes, that you haven't set up multiple key files yet.
+{: .smb-info }
 
 Instead of typing the password everytime you connect to the robot, you may also copy your public ssh key to the robot. 
 
