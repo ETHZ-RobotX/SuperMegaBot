@@ -14,7 +14,7 @@ When connecting to a remote computer using ssh, you can simplify the process by 
 ## Setup ~/.ssh/config
 If it doesn't exist yet, create the file `~/.ssh/config` and add the following lines (remember to adjust them to your needs).
 
-```SSH Config
+```
 Host smb-263
   Hostname 10.0.3.5
   User team5
