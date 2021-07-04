@@ -29,7 +29,7 @@ The USB rules for the motor controller driver should be copied to rules.d .
 ```bash
 # Copy the USB rule
 # Dont forget to change <>
-sudo cp <catkin_ws_dir>/src/smb_lowlevel_controller/smb_driver/udev/55-smb.rules /etc/udev/rules.d/
+sudo cp <catkin_ws_dir>/src/smb_common/smb_lowlevel_controller/smb_driver/udev/55-smb.rules /etc/udev/rules.d/
 ```
 
 ## RealSense 

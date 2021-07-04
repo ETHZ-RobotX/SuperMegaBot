@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Software Setup
+title: Core Software Setup
 parent: SMB Core Software
 nav_order: 1
 ---
@@ -18,6 +18,7 @@ Please [create an issue](https://github.com/ETHZ-RobotX/SuperMegaBot/issues/new)
 {:toc}
 
 ## Remark
+{:.no_toc}
 
 The SMB software consists of two parts: core and hardware related.
 
@@ -65,7 +66,9 @@ catkin config -DCMAKE_BUILD_TYPE=Release
 
 If there is an error of "*catkin: command not found*" 
 ```bash
+# Install with apt
 sudo apt install python3-catkin-tools python3-catkin-lint python3-pip
+# Install with pip3
 pip3 install osrf-pycommon
 ```
 {: .smb-info }

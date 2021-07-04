@@ -2,6 +2,7 @@
 layout: default
 title: Mapping Tutorial
 parent: Summer School Tutorials
+nav_order: 3
 ---
 
 # Preparations for Mapping Tutorial
@@ -31,19 +32,20 @@ Build the packages **(~ 10 minutes)**
 ```bash
 catkin build cartographer_ros
 catkin build cartographer_rviz
+catkin build smb_slam
 ```
 
 ## Download rosbags
 In order to follow the tutorial you will need the following rosbags:
-  - [First mission rosbag](https://drive.google.com/file/d/114OGae0iBZkDrRcX-PqhLf18mXBWTfG4/view?usp=sharing)
-  - [Second mission rosbag](https://drive.google.com/file/d/18zWR21lLWrrMPrmI8C0SQgeFUcclFMV8/view?usp=sharing)
-  - [Challenge site rosbag](https://drive.google.com/file/d/1uO-xsfpAop41QRdv2RUGNn1P85fWY0L4/view?usp=sharing)
+ - [Fist mission rosbag](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/SLAMTutorial/first_mission_wangen.bag)
+ - [Second mission rosbag](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/SLAMTutorial/second_mission_wangen.bag)
+ - [Challende site rosbag](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/SLAMTutorial/challenge_site.bag)
 
 Download this rosbags in to the folder ```~/catkin_ws/src/smb_common/smb_slam/data```
 
 ## Download maps
 Maps for the localization
- - [Complete map wangen](https://drive.google.com/file/d/1BccEK_Zm-coduvpsiC0m0Jha2eeRhw8A/view?usp=sharing)
- - [Challenge site](https://drive.google.com/file/d/10nhsMKLtLBDk-LJa7HmNCf9P40ncXv2c/view?usp=sharing)
+ - [Complete map Wangen](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/SLAMTutorial/wangen_map_decimated.pcd)
+ - [Challenge site map](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/SLAMTutorial/challenge_decimated.pcd)
 
 Download this rosbags in to the folder ```~/catkin_ws/src/smb_common/smb_slam/maps```

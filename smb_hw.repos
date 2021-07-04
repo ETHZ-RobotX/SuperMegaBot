@@ -6,7 +6,7 @@ repositories:
   versavis:
     type: git
     url: https://github.com/ethz-asl/versavis.git
-    version: test/upstream_rosserial
+    version: feature/noetic_support
   flir_camera_driver:
     type: git
     url: https://github.com/ethz-asl/flir_camera_driver.git
