@@ -5,11 +5,11 @@ parent: Summer School Tutorials
 nav_order: 2
 ---
 
-# Preparations for Path Planning Tutorial
+# Preparations for Trajectory Optimization Tutorial
 To prepare for the Tutorial on Trajectory Optimization, only the [SMB core software](../core-software/installation_core.md) must be set up and installed. However, you need to check out `feature/TO_tutorial` branch on the `smb_common` repository and rebuild it. 
 
 ```bash
-# check the branch
+# Fetch and checkout the branch
 # Do not forget to change <...> parts
 cd <directory_to_ws>/<catkin_ws_name>/src/smb_common
 git fetch origin feature/TO_tutorial
