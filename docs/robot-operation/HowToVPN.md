@@ -36,7 +36,7 @@ to get the list of the networks, to which you are connected. Make sure that you 
 ```
 
 ### Join the network
-To work on the robot you need to join the desired network of the given IP address. The IP address will be provided to you by the assistants. Joining the network with the ID `aaaaaaaaaaaaaaaa`, run:
+To work on the robot you need to join the desired network using a network ID. The network ID address will be provided to you by the assistants. To join the network with the ID `aaaaaaaaaaaaaaaa`, run:
 ```bash
 sudo zerotier-cli join aaaaaaaaaaaaaaaa
 ```
