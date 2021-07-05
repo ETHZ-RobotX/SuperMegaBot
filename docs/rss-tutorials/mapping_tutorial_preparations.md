@@ -49,3 +49,6 @@ Maps for the localization
  - [Challenge site map](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/SLAMTutorial/challenge_decimated.pcd)
 
 Download this rosbags in to the folder ```~/catkin_ws/src/smb_common/smb_slam/maps```
+
+## The tutorial
+Tutorial slides are [here](https://docs.google.com/presentation/d/11D1X3MY6VR8wBW-JjmiB09uwNbryShT9Ahid3iY3HFk/edit#slide=id.ge38e786417_1_5)
