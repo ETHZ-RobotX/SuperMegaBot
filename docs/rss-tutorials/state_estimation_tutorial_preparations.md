@@ -17,12 +17,18 @@ Download the repositories in the same directory where ```smb_common``` is and bu
 
 ```bash
 cd ~/catkin_ws/src/
+# ethzasl_msf clone and build
 git clone https://github.com/ethz-asl/ethzasl_msf.git
 git clone https://github.com/ethz-asl/glog_catkin.git
 git clone https://github.com/catkin/catkin_simple.git
-catkin build loam
 catkin build ethzasl_msf
+# smb_msf clone and build
+git clone https://github.com/ETHZ-RobotX/smb_common.git
 catkin build smb_msf
+# compslam clone and build
+git clone https://bitbucket.org/leggedrobotics/compslam_rss.git
+catkin build loam
+
 source ~/catkin_ws/devel/setup.bash
 ```
 If there is some issues when building the packages, see trouble shooting [below](#trouble-shooting).
