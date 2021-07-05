@@ -51,4 +51,4 @@ Maps for the localization
 Download this rosbags in to the folder ```~/catkin_ws/src/smb_common/smb_slam/maps```
 
 ## The tutorial
-Tutorial slides are [here](https://docs.google.com/presentation/d/11D1X3MY6VR8wBW-JjmiB09uwNbryShT9Ahid3iY3HFk/edit#slide=id.ge38e786417_1_5)
+Tutorial slides are [here](https://docs.google.com/presentation/d/11D1X3MY6VR8wBW-JjmiB09uwNbryShT9Ahid3iY3HFk/edit#slide=id.g5b5781704c_0_260)
