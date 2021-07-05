@@ -31,7 +31,7 @@ catkin build loam
 
 source ~/catkin_ws/devel/setup.bash
 ```
-If there is some issues when building the packages, see trouble shooting [below](#Trouble shooting).
+If there is some issues when building the packages, see trouble shooting [below](#trouble-shooting).
 
 ## Running on your own PC with rosbag
 
@@ -75,8 +75,8 @@ $ roslaunch rviz
 
 ## Download files
 In order to follow the tutorial you will need the following rosbag and rviz file:
-  - [First mission rosbag filtered](https://drive.google.com/file/d/19WjL00NeCvQNPJggVUAQXgWmGNlgPgVX/view?usp=sharing)
-  - [Rviz file](https://drive.google.com/drive/folders/1SvpEzsq67P0i6gEAY6Q_5qGgTa0NeC3r)
+  - [First mission rosbag filtered](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/StateEstimationTutorial/First_mission_wangen_FILTERED.bag)
+  - [Rviz file](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/StateEstimationTutorial/smb.rviz)
 
 Download the rosbag into the folder ```~/catkin_ws/src/smb_common/smb_msf/data```
 Download the rviz profile into the folder ```~/catkin_ws/src/smb_common/smb_msf/rviz```
