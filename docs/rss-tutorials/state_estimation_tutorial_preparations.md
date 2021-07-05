@@ -22,9 +22,11 @@ git clone https://github.com/ethz-asl/ethzasl_msf.git
 git clone https://github.com/ethz-asl/glog_catkin.git
 git clone https://github.com/catkin/catkin_simple.git
 catkin build ethzasl_msf
+
 # smb_msf clone and build
 git clone https://github.com/ETHZ-RobotX/smb_common.git
 catkin build smb_msf
+
 # compslam clone and build
 git clone https://bitbucket.org/leggedrobotics/compslam_rss.git
 catkin build loam
