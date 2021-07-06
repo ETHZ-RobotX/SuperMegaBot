@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Trajectory Optimization
+title: Trajectory Optimization Tutorial
 parent: Summer School Tutorials
 nav_order: 2
 ---
