@@ -5,8 +5,8 @@ repositories:
     version: master
   ocs2_dev:
     type: git
-    url: https://bitbucket.org/leggedrobotics/ocs2.git
-    version: 067733f104eca119237c88981c6aed3720f981a8
+    url: https://github.com/leggedrobotics/ocs2.git
+    version: master
   smb_common:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_common.git
