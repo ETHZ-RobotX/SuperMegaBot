@@ -3,10 +3,10 @@ repositories:
     type: git
     url: https://bitbucket.org/leggedrobotics/compslam_rss.git
     version: master
-  ocs2_dev:
+  ocs2:
     type: git
-    url: https://bitbucket.org/leggedrobotics/ocs2.git
-    version: 067733f104eca119237c88981c6aed3720f981a8
+    url: https://github.com/leggedrobotics/ocs2.git
+    version: 7c3d33fa5633cc32d54123605cb2db7f341ac138
   smb_common:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_common.git
