@@ -147,7 +147,7 @@ conda activate rss
 echo 'conda activate rss' >> ~/.bashrc
 
 # Install python dependencies
-conda install -c conda-forge empy defusedxml rospkg -y
+conda install -c conda-forge empy defusedxml rospkg numpy -y
 ```
 {: .smb-info }
 
