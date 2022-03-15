@@ -135,6 +135,23 @@ sudo apt install ros-noetic-gazebo-plugins
 ```
 {: .smb-info }
 
+(**Optional**) if you are using or want to use *conda* for managing python packages in virtual environments, there's a few missing dependencies you can install in this *optional* step:
+```bash
+# Create a conda environment for the robotics summer school (feel free to choose a different name than rss)
+conda create --name rss
+
+#Activate the conda environment
+conda activate rss
+
+# (Optional) activate this environment by default on a new terminal
+echo 'conda activate rss' >> ~/.bashrc
+
+# Install python dependencies
+conda install -c conda-forge empy defusedxml rospkg -y
+```
+{: .smb-info }
+
+
 ### Finalization
 Since every SMB package and dependency is installed, you can build the project.
 ```bash
