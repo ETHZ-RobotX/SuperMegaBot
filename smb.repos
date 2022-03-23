@@ -15,7 +15,7 @@ repositories:
     url: https://github.com/tomlogan501/robosense_simulator.git
   smb_path_planner:
     type: git
-    url: https://github.com/VIS4ROB-lab/smb_path_planner.git
+    url: https://github.com/ETHZ-RobotX/smb_path_planner.git
     version: master
   teb_local_planner:
     type: git
