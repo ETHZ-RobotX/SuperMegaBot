@@ -16,7 +16,7 @@ jobs:
       HW_FILE: ${{ github.workspace }}/smb_hw.repos
       ROS_PARALLEL_JOBS: '-j8 -l6'
       ROS_DISTRO: noetic
-      CATKIN_WS: ~/catkin_ws/
+      CATKIN_WS: ~/catkin_ws_test/
     container:
           image: dabaret/smb_docker:latest
     steps:
