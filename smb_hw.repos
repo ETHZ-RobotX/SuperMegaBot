@@ -14,7 +14,7 @@ repositories:
   realsense:
     type: git
     url: https://github.com/IntelRealSense/realsense-ros.git
-    version: 2.2.24
+    version: 2.3.2
   message_logger:
     type: git
     url: https://github.com/leggedrobotics/message_logger.git
