@@ -1,7 +1,7 @@
 # Model Predictive Control Tutorial
 
 ## Goal
-Use MPC to drive the MPC to an arbitrary pose
+Use MPC to drive the SMB to an abitrary location.
 
 ## 0.0 Recap - Differential Dynamic Programming
 
@@ -12,13 +12,14 @@ Figure on SLQ / ILRQ algorithm goes here:
 ILQR-MPC produces affine control policies. With the policy, you can 
 
 ### Basic steps algorithm:
-Take current control policy [K, u*] to compute control inputs:  u= K(t)*x(t) + u*(t)
-Forward integrate current state x_0 with the current policy to get  state and input trajectories over time horizon
-Compute second order approximation of the cost functions arround state and input trajectories
-Solve the Riccati Equation to get a new affine control policy
-Use a line search to find the best interpolation between the current and the new policy
+1. Take the current control policy $[\boldsymbol{K}, \boldsymbol{u^*}]$ to compute control inputs:
 
+$$\boldsymbol{u}= \boldsymbol{K}(t) \cdot \boldsymbol{x}(t) + \boldsymbol{u^*}(t)$$
 
+4. Forward integrate current state $\boldsymbol{x}_0$ with the current policy to get state and input trajectories over time horizon.
+5. Compute second order approximation of the cost functions arround state and input trajectories.
+6. Solve the Riccati Equation to get a new affine control policy.
+7. Use a line search to find the best interpolation between the current and the new policy.
 
 
 M. Neunert et al., “Fast nonlinear Model Predictive Control for unified trajectory optimization and tracking,” in 2016 IEEE International Conference on Robotics and Automation (ICRA), May 2016, pp. 1398–1404. doi: 10.1109/ICRA.2016.7487274.
@@ -57,31 +58,38 @@ Control input $\boldsymbol{u}$:
 #### Wanted:
 $\frac{\delta}{\delta t}(x,y,z, q_x, q_y, q_z, q_w, t)^T$
 
-Hints:
+#### Hints:
+$$
+\begin{align}
+\boldsymbol{q}(t) &= \boldsymbol{q_\omega^t} \\
+\boldsymbol{q_\omega^t} &= cos(\omega t / 2) + sin(\omega t / 2)(n_x i+ n_y j+ n_z k) \\
+\boldsymbol{q_\omega^t} &= exp(\omega t / 2 \cdot \boldsymbol{n})
+\end{align}
+$$
 
 
-
-Implement system model in `smb_common/smb_mpc/src/SmbSystemDynamics.cpp`
+Implement the system model in `SmbSystemDynamics::systemFlowMap` in file `smb_common/smb_mpc/src/SmbSystemDynamics.cpp`.
+You can check whether your code compile but in order to see whether the implementation is correct, we first need to implement a costfunction.
 
 ## 2. Cost function
 
 Implement a cost function that penalizes deviations from the point $(x,y,\theta)$: $(2m, 5m, 90deg)$
 
-Method: `costVectorFunction`
-`smb_common/smb_mpc/src/cost/SmbCost.cpp`
+Method: `SmbCost::costVectorFunction` in file `smb_common/smb_mpc/src/cost/SmbCost.cpp`.
 
-Hint:
-`costVectorFunction` should return a 3-dim vector (`result`) with three elements. The scalar value of the cost function is `vector^T \cdot vector`
+#### Hint:
+`SmbCost::costVectorFunction` should return a 3-dim vector (`result`) with three elements.
+The scalar value of the cost function is `vector^T \cdot vector`.
 
 ## 3. Reference Tracking
 
 We want to track arbitrary trajectories with the robot.
-When selecting a goal in  rviz with the 2D Nav Goal marker,  getParameters receives a trajectory of poses and timestamps.
+When selecting a goal in  rviz with the 2D Nav Goal marker, `SmbCost::getParameters` receives a trajectory of poses and timestamps.
 The method should return a target pose for the time $t$.
 
-Hint: `getParameters` works on double types. No `ad_scalar_t`  type needed here.
+Hint: `SmbCost::getParameters` works on double types. No `ad_scalar_t` type needed here.
 
-The method `costVectorFunction` receives this target pose at the current time $t$. Modify the cost function to track this trajectory.
+The method `SmbCost::costVectorFunction` receives this target pose at the current time $t$. Modify the cost function to track this trajectory.
 
 ## 4. Gains
 
