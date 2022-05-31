@@ -61,9 +61,8 @@ $\frac{\delta}{\delta t}(x,y,z, q_x, q_y, q_z, q_w, t)^T$
 #### Hints:
 $$
 \begin{align}
-\boldsymbol{q}(t) &= \boldsymbol{q_\omega^t} \\
-\boldsymbol{q_\omega^t} &= cos(\omega t / 2) + sin(\omega t / 2)(n_x i+ n_y j+ n_z k) \\
-\boldsymbol{q_\omega^t} &= exp(\omega t / 2 \cdot \boldsymbol{n})
+\boldsymbol{q}(t) &= \boldsymbol{q_\omega^t} \boxdot \boldsymbol{q_0} \\
+\boldsymbol{q_\omega^t} &= cos(\omega t / 2) + sin(\omega t / 2)(n_x i+ n_y j+ n_z k) = exp(\omega t / 2 \cdot \boldsymbol{n})
 \end{align}
 $$
 
