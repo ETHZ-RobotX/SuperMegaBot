@@ -71,6 +71,8 @@ Implement a cost function that penalizes deviations from the point $(x,y,\theta)
 
 Method: `SmbCost::costVectorFunction` in file `smb_common/smb_mpc/src/cost/SmbCost.cpp`.
 
+Test your changes in simulation. Execute `roslaunch smb_gazebo sim.launch mpc:=True` to run the simulation with the MPC.
+
 #### Hint:
 `SmbCost::costVectorFunction` should return a 3-dim vector (`result`) with three elements.
 The scalar value of the cost function is $result^T \cdot result$.
@@ -92,6 +94,7 @@ The weight matrices: `QPosition_`, `QPosition_`, `R_` are available in the cost 
 
 Find a good set of gains for the robot to track the reference path
 
+<!---
 ## 5. Dynamic System model (optional)
 
 The kinematic system model assumes that the robot velocity can be changed instantaneously. Since this is not possible on physical systems there are going to be tracking errors.
@@ -103,4 +106,4 @@ Checkout the branch `mpc_tutorial/dynamic_model`
 Implement a dynamic system model and a costfunction for tracking trajectories.
 `smb_common/smb_mpc/src/SmbSystemDynamics.cpp`
 `smb_common/smb_mpc/src/cost/SmbCost.cpp`
-
+--->
