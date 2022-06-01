@@ -51,7 +51,7 @@ Control input $\boldsymbol{u}$:
 - $\omega_z$ : angular velocity in base frame (motion relative to world frame)
 
 #### Wanted:
-$\frac{\delta}{\delta t}(x,y,z, q_x, q_y, q_z, q_w, t)^T$
+$\frac{\delta}{\delta t}(x,y,z, q_x, q_y, q_z, q_w)^T$
 
 #### Hints:
 $$
