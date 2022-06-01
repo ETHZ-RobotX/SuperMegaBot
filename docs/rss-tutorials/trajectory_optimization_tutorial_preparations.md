@@ -34,8 +34,7 @@ We use CppAD Codgen as the implementation. It tracks the computational trees of 
 
 
 ## 1. System Modeling
-Add a picture of SMB on a slope. Visualize body frame, world frame. Add arrows for $v_x$ and $omega_z$ 
-
+![Image of the SMB](mpc_tutorial_smb.png)
 
 Derive flow map $\boldsymbol{\dot{x}} = f(\boldsymbol{x},\boldsymbol{u},t)$ for mobile robot:
 
@@ -43,13 +42,13 @@ Derive flow map $\boldsymbol{\dot{x}} = f(\boldsymbol{x},\boldsymbol{u},t)$ for 
 
 State $\boldsymbol{x}$:
 - $(x,y,z)$ position in world frame
-- $(q_x, q_y, q_z, q_w)$ quaternion rotation body to world frame
+- $(q_x, q_y, q_z, q_w)$ quaternion rotation base to world frame
 
 Time $t$
 
 Control input $\boldsymbol{u}$:
-- $v_x$: linear velocity in body frame (motion relative to world frame)
-- $\omega_z$ : angular velocity in body frame (motion relative to world frame)
+- $v_x$: linear velocity in base frame (motion relative to world frame)
+- $\omega_z$ : angular velocity in base frame (motion relative to world frame)
 
 #### Wanted:
 $\frac{\delta}{\delta t}(x,y,z, q_x, q_y, q_z, q_w, t)^T$
@@ -74,7 +73,7 @@ Method: `SmbCost::costVectorFunction` in file `smb_common/smb_mpc/src/cost/SmbCo
 
 #### Hint:
 `SmbCost::costVectorFunction` should return a 3-dim vector (`result`) with three elements.
-The scalar value of the cost function is `vector^T \cdot vector`.
+The scalar value of the cost function is $result^T \cdot result$.
 
 ## 3. Reference Tracking
 
