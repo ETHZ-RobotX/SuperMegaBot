@@ -1,15 +1,11 @@
 # Model Predictive Control Tutorial
 
 ## Goal
-Use MPC to drive the SMB to an abitrary location.
+We want to steer the robot to an arbitrary goal pose. Since the SMB robots are non-holonomic and the base motion model is non-linear, simple control approaches like PID controllers for each component of the base state cannot be employed. Instead, we want to use Non-Linear Model Predictive Control to plan motion for the robot. 
 
 ## 0.0 Recap - Differential Dynamic Programming
 
-Figure on SLQ / ILRQ algorithm goes here:
-
-
-
-ILQR-MPC produces affine control policies. With the policy, you can 
+We are going to use the SLQ algorithm to solve the N-MPC problem.
 
 ### Basic steps algorithm:
 1. Take the current control policy $[\boldsymbol{K}, \boldsymbol{u^*}]$ to compute control inputs:
@@ -27,8 +23,8 @@ M. Neunert et al., “Fast nonlinear Model Predictive Control for unified trajec
 
 ## 0.1 Automatic Differentiation
 
-In our MPC framework we often use automatic differentiation to compute derivatives of system flow maps and cost functions.
-We use CppAD Codgen as the implementation.
+In our MPC framework, we often use [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation) to compute derivatives of system flow maps and cost functions.
+We use CppAD Codgen as the implementation. It tracks the computational trees of our functions, generates C-code for the function and their derivatives, compiles and then links against the libraries at runtime.
 ### Implications:
 - You cannot use `std::cout` within the auto generation methods
 - All computations need to be done with the `ad_scalar_t` type instead of `double`.
