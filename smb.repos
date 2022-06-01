@@ -6,7 +6,7 @@ repositories:
   ocs2:
     type: git
     url: https://github.com/leggedrobotics/ocs2.git
-    version: 7c3d33fa5633cc32d54123605cb2db7f341ac138
+    version: summerschool_2022
   smb_common:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_common.git
