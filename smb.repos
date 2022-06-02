@@ -22,7 +22,7 @@ repositories:
   lib/ocs2:
     type: git
     url: https://github.com/leggedrobotics/ocs2.git
-    version: 7c3d33fa5633cc32d54123605cb2db7f341ac138
+    version: 10.3
   lib/pointmatcher_ros:
     type: git
     url: https://github.com/leggedrobotics/pointmatcher-ros.git
