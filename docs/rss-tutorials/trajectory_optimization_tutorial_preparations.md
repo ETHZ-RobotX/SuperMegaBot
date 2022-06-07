@@ -1,7 +1,13 @@
 # Model Predictive Control Tutorial
 
 ## Goal
-We want to steer the robot to an arbitrary goal pose. Since the SMB robots are non-holonomic and the base motion model is non-linear, simple control approaches like PID controllers for each component of the base state cannot be employed. Instead, we want to use Non-Linear Model Predictive Control to plan motion for the robot. 
+We want to steer the robot to an arbitrary goal pose. Since the SMB robots are non-holonomic and the base motion model is non-linear, simple control approaches like PID controllers for each component of the base state cannot be employed. Instead, we want to use Model Predictive Control (MPC) to plan motion for the robot.
+
+In MPC, we use a model to simulate the future state evolution of a dynamic system. The model is a differential equation that you will need to implement in the [first task](#1-system-modeling).
+
+Costfunctions govern the reference tracking behavior of the MPC. In the [second task](#2-cost-function), we will implement a cost function that steers the robot to a fixed point.
+
+Finally, we want to control the robot to track a desired reference path. In the [third task](3-reference-tracking), we create an interpolation module for incoming reference trajectories and use it in our costfunction.
 
 ## 0.0 Recap - Differential Dynamic Programming
 
