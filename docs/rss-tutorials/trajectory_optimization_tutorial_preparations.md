@@ -1,3 +1,11 @@
+---
+layout: default
+title: Trajectory Optimization Tutorial
+parent: Summer School Tutorials
+nav_order: 2
+---
+
+
 # Model Predictive Control Tutorial
 
 ## Goal
