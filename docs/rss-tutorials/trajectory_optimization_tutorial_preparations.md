@@ -7,7 +7,7 @@ In MPC, we use a model to simulate the future state evolution of a dynamic syste
 
 Costfunctions govern the reference tracking behavior of the MPC. In the [second task](#2-cost-function), we will implement a cost function that steers the robot to a fixed point.
 
-Finally, we want to control the robot to track a desired reference path. In the [third task](3-reference-tracking), we create an interpolation module for incoming reference trajectories and use it in our costfunction.
+Finally, we want to control the robot to track a desired reference path. In the [third task](#3-reference-tracking), we create an interpolation module for incoming reference trajectories and use it in our costfunction.
 
 ## 0.0 Recap - Differential Dynamic Programming
 
