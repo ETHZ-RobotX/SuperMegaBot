@@ -8,10 +8,10 @@ The documentation is deployed using github pages. Check out https://ethz-robotx.
 Please use the [issues page](https://github.com/ETHZ-RobotX/SuperMegaBot/issues) to report any issues concerning the robots (hardware and software related issues). 
 
 ## Dependencies and Installation
-Please refer to the [installation document](/docs/installation_core.md) to install necessary packages and their dependencies
+Please refer to the [installation document](/docs/core-software/installation_core.md) to install necessary packages and their dependencies
 
 ## How to Use SMB
-Please refer to the [HowToUseSmb Document](/docs/HowToUseSMB.md) to use SMB. The document will direct you to the [HowToRunSoftware Document](/docs/HowToRunSoftware.md) after you see the necessary safety information.
+Please refer to the [HowToUseSmb Document](/docs/robot-operation/index.md) to use SMB. The document will direct you to the [HowToRunSoftware Document](/docs/HowToRunSoftware.md) after you see the necessary safety information.
  
 
 ## History

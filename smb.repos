@@ -1,47 +1,65 @@
 repositories:
-  compslam:
+  core:
     type: git
-    url: https://bitbucket.org/leggedrobotics/compslam_rss.git
+    url: https://github.com/ETHZ-RobotX/smb_common.git
     version: master
-  ocs2:
+  hardware/robosense_simulator:
+    type: git
+    url: https://github.com/tomlogan501/robosense_simulator.git
+    version: master
+  hardware/smb_powerstatus:
+    type: git
+    url: https://github.com/ETHZ-RobotX/smb_powerstatus.git
+    version: main
+  lib/libnabo:
+    type: git
+    url: https://github.com/ANYbotics/libnabo.git
+    version: master
+  lib/libpointmatcher:
+    type: git
+    url: https://github.com/leggedrobotics/libpointmatcher.git
+    version: master
+  lib/ocs2:
     type: git
     url: https://github.com/leggedrobotics/ocs2.git
     version: summerschool_2022
   smb_common:
     type: git
-    url: https://github.com/ETHZ-RobotX/smb_common.git
-  robosense_simulator:
-    type: git
-    url: https://github.com/tomlogan501/robosense_simulator.git
-  smb_path_planner:
-    type: git
-    url: https://github.com/VIS4ROB-lab/smb_path_planner.git
+    url: https://github.com/leggedrobotics/pointmatcher-ros.git
     version: master
-  teb_local_planner:
+  misc/catkin_simple:
+    type: git
+    url: https://github.com/catkin/catkin_simple.git
+    version: master
+  planning/follow_waypoints:
+    type: git
+    url: https://github.com/ETHZ-RobotX/follow_waypoints.git
+    version: master
+  planning/smb_mission_planner:
+    type: git
+    url: https://github.com/ETHZ-RobotX/smb_mission_planner.git
+    version: master
+  planning/smb_path_planner:
+    type: git
+    url: https://github.com/ETHZ-RobotX/smb_path_planner.git
+    version: master
+  planning/teb_local_planner:
     type: git
     url: https://github.com/leggedrobotics/teb_local_planner.git
     version: feature/correct_local_plan_timestamps
-  icp_localization:
+  slam/compslam:
+    type: git
+    url: https://bitbucket.org/leggedrobotics/compslam_rss.git
+    version: master
+  slam/icp_localization:
     type: git
     url: https://github.com/leggedrobotics/icp_localization.git
     version: master
-  libpointmatcher:
+  ui/multimaster_fkie:
     type: git
-    url: https://github.com/leggedrobotics/libpointmatcher
+    url: https://github.com/ETHZ-RobotX/multimaster_fkie
     version: master
-  libnabo:
+  ui/smb_rviz_plugins:
     type: git
-    url: https://github.com/ANYbotics/libnabo.git
-    version: master
-  pointmatcher_ros:
-    type: git
-    url: https://github.com/leggedrobotics/pointmatcher-ros
-    version: master
-  smb_powerstatus:
-    type: git
-    url: https://github.com/ETHZ-RobotX/smb_powerstatus
-    version: main
-  smb_rviz_plugins:
-    type: git
-    url: https://github.com/ETHZ-RobotX/smb_rviz_plugins
+    url: https://github.com/ETHZ-RobotX/smb_rviz_plugins.git
     version: master

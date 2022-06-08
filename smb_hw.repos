@@ -1,21 +1,21 @@
 repositories:
-  rslidar_sdk:
+  hardware/rslidar_sdk:
     type: git
     url: https://github.com/ETHZ-RobotX/rslidar_sdk.git
     version: supermegabot
-  versavis:
+  hardware/versavis:
     type: git
     url: https://github.com/ethz-asl/versavis.git
     version: feature/noetic_support
-  flir_camera_driver:
+  hardware/flir_camera_driver:
     type: git
     url: https://github.com/ethz-asl/flir_camera_driver.git
     version: master
-  realsense:
+  hardware/realsense:
     type: git
     url: https://github.com/IntelRealSense/realsense-ros.git
-    version: 2.2.24
-  message_logger:
+    version: 2.3.2
+  misc/message_logger:
     type: git
     url: https://github.com/leggedrobotics/message_logger.git
     version: master
