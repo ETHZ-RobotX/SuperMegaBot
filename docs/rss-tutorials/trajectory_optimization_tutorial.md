@@ -23,12 +23,12 @@ We are going to use the SLQ algorithm to solve the N-MPC problem.
 ### Basic steps algorithm:
 1. Take the current control policy $[\boldsymbol{K}, \boldsymbol{u^*}]$ to compute control inputs:
 
-$$\boldsymbol{u}= \boldsymbol{K}(t) \cdot \boldsymbol{x}(t) + \boldsymbol{u^*}(t)$$
+    $$\boldsymbol{u}= \boldsymbol{K}(t) \cdot \boldsymbol{x}(t) + \boldsymbol{u^*}(t)$$
 
-4. Forward integrate current state $\boldsymbol{x}_0$ with the current policy to get state and input trajectories over time horizon.
-5. Compute second order approximation of the cost functions arround state and input trajectories.
-6. Solve the Riccati Equation to get a new affine control policy.
-7. Use a line search to find the best interpolation between the current and the new policy.
+2. Forward integrate current state $\boldsymbol{x}_0$ with the current policy to get state and input trajectories over time horizon.
+3. Compute second order approximation of the cost functions arround state and input trajectories.
+4. Solve the Riccati Equation to get a new affine control policy.
+5. Use a line search to find the best interpolation between the current and the new policy.
 
 
 M. Neunert et al., “Fast nonlinear Model Predictive Control for unified trajectory optimization and tracking,” in 2016 IEEE International Conference on Robotics and Automation (ICRA), May 2016, pp. 1398–1404. doi: 10.1109/ICRA.2016.7487274.
@@ -88,21 +88,25 @@ $\boldsymbol{n} = n_x i+ n_y j+ n_z k$ is a purely imaginary quaternion.
 
 Remember that the quaternion multiplication does not commute ($\boldsymbol{q}_1\boldsymbol{q}_2 \neq \boldsymbol{q}_2\boldsymbol{q}_1$) but the scalar quaternion multiplication does commute.
 
-Use the series expansion of the exponential function.
+Use the series expansion of the exponential function if you are unsure how to compute the derivative of a quaternion valued exponential function.
 
 ## 2. Cost function
 
-Implement a cost function that penalizes deviations from the point $(x,y,\theta)$= $(2m, 5m, 90deg)$
+Implement a cost function that penalizes deviations from the point $(x,y,\theta)$= $(2m, 5m, 90deg)$.
 
 Method: `SmbCost::costVectorFunction` in file `smb_common/smb_mpc/src/cost/SmbCost.cpp`.
 
 Test your changes in simulation. Execute `roslaunch smb_gazebo sim.launch mpc:=True` to run the simulation with the MPC. For implementation reasons, the robot will only start to drive once you send a goal with the rviz goal pose marker. It should, however, not drive to the specified goal but to the hard coded goal $(x,y,\theta)$= $(2m, 5m, 90deg)$.
 
-#### Hint:
+#### Hints:
 `SmbCost::costVectorFunction` returns a vector $result$.
 The scalar value of the cost function is $result^T \cdot result$.
 
+The easiest way to generate a quaternion of a specific rotation with the `Eigen` library is to pass an `Eigen::AngleAxis<SCALAR>` object to the constructor of the quaternion. 
+
 One possible error function for rotational errors is to minimize the imaginary part of the relative rotation quaterion.
+
+Do not forget to penalize control actions, too. Without costs on the input $\boldsymbol{u}$, MPC framework cannot solve the Riccati Equation.
 
 ## 3. Reference Tracking
 
@@ -113,6 +117,10 @@ The method should return a target pose for the time $t$.
 Hint: `SmbCost::getParameters` works on double types. No `ad_scalar_t` type needed here.
 
 The method `SmbCost::costVectorFunction` receives this target pose at the current time $t$. Modify the cost function to track this trajectory.
+
+#### Hints:
+
+Two quaternions can be interpolated with the `slerp` algorithm: $\boldsymbol{q}_\alpha = \boldsymbol{q}_1.slerp(\alpha, \boldsymbol{q}_2)$ with $\alpha \ in [0, 1]$.
 
 ## 4. Gains
 
