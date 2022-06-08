@@ -42,7 +42,12 @@ We use CppAD Codgen as the implementation. It tracks the computational trees of 
 ## 1. System Modeling
 ![Image of the SMB](mpc_tutorial_smb.png)
 
-Derive flow map $\boldsymbol{\dot{x}} = f(\boldsymbol{x},\boldsymbol{u},t)$ for mobile robot:
+We are going to use a kinematic motion model for our mobile robot. The skid-steer base has non-holonomic constraints i.e. it cannot move sideways. We parametrize the state of the robot with 3D vector for the position and a quaternion for the base orientation. In contrast to a simpler 2D model, our fomulation allows for more accurate predictions when moving in sloped terrain.
+Your task is to derive and implement the kinematic system model.
+Derive flow map (the differential equation) $\boldsymbol{\dot{\boldsymbol{x}}} = f(\boldsymbol{x},\boldsymbol{u},t)$ for mobile robot.
+
+Implement the system model in `SmbSystemDynamics::systemFlowMap` in file `smb_common/smb_mpc/src/SmbSystemDynamics.cpp`.
+You can check whether your code compiles but in order to see whether the implementation is correct, we first need to implement a costfunction.
 
 #### Given:
 
@@ -60,16 +65,23 @@ Control input $\boldsymbol{u}$:
 $\frac{\delta}{\delta t}(x,y,z, q_x, q_y, q_z, q_w)^T$
 
 #### Hints:
+The quaternion vector product $\boldsymbol{t}_W = \boldsymbol{q} \cdot \boldsymbol{t}_B$ transforms a vector from base to world frame. The `Eigen` library implements this product when multiplying an `Eigen::Quaterniond` type with a `Eigen::Vector3d` type.
+
+You need to compute the time derivative of a quaternion of this task.
+Start with the explicit equation for rotating the quaternion $boldsymbol{q_0}$ for a constant time $t$ with the rate $\omega$ around the axis $\boldsymbol{n}$. We use the Euler identity to retrieve the exponential representation of a unit quaternion:
+
 $$
 \begin{align}
-\boldsymbol{q}(t) &= \boldsymbol{q_\omega^t} \boxdot \boldsymbol{q_0} \\
+\boldsymbol{q}(t) &= \boldsymbol{q_0} \boldsymbol{q_\omega^t} \\
 \boldsymbol{q_\omega^t} &= cos(\omega t / 2) + sin(\omega t / 2)(n_x i+ n_y j+ n_z k) = exp(\omega t / 2 \cdot \boldsymbol{n})
 \end{align}
 $$
 
+$\boldsymbol{n} = n_x i+ n_y j+ n_z k$ is a purely imaginary quaternion.
 
-Implement the system model in `SmbSystemDynamics::systemFlowMap` in file `smb_common/smb_mpc/src/SmbSystemDynamics.cpp`.
-You can check whether your code compile but in order to see whether the implementation is correct, we first need to implement a costfunction.
+Remember that the quaternion multiplication does not commute ($\boldsymbol{q}_1\boldsymbol{q}_2 \neq \boldsymbol{q}_2\boldsymbol{q}_1$) but the scalar quaternion multiplication does commute.
+
+Use the series expansion of the exponential function.
 
 ## 2. Cost function
 
