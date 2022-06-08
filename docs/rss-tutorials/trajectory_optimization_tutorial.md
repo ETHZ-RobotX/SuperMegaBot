@@ -130,7 +130,7 @@ Two quaternions can be interpolated with the `slerp` algorithm: $\boldsymbol{q}_
 The weight matrices: `QPosition`, `QPosition`, `R` are available in the cost function and are loaded from the configuration file:
 `smb_common/smb_mpc/config/task.info`
 
-Find a good set of gains for the robot to track the reference path
+Add the weights to the cost computation and find a good set of gains for the robot to track the reference path
 
 <!---
 ## 5. Dynamic System model (optional)
