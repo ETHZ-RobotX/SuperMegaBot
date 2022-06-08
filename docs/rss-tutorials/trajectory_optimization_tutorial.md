@@ -88,8 +88,7 @@ $\boldsymbol{n} = n_x i+ n_y j+ n_z k$ is a purely imaginary quaternion.
 
 Remember that the quaternion multiplication does not commute ($\boldsymbol{q}_1\boldsymbol{q}_2 \neq \boldsymbol{q}_2\boldsymbol{q}_1$) but the scalar quaternion multiplication does commute.
 
-Use the series expansion of the exponential function if you are unsure how to compute the derivative of a quaternion valued exponential function.
-
+Use the chain rule!
 ## 2. Cost function
 
 Implement a cost function that penalizes deviations from the point $(x,y,\theta)$= $(2m, 5m, 90deg)$.
