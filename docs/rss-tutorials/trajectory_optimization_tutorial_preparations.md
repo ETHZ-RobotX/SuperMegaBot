@@ -13,7 +13,7 @@ Furthermore, you can already build the current state of the `smb_mpc` package. I
 catkin build smb_mpc
 ```
 
-The MPC is not operational in it's current state though, as it is missing some code that will be completed by you during the tutorial.
+The MPC is not operational in its current state though, as it is missing some code that will be completed by you during the tutorial.
 
 ## Check software installation
 To test if the installation is working correctly, source the workspace where the software is installed.
