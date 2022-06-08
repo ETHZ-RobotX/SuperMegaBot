@@ -85,15 +85,17 @@ Use the series expansion of the exponential function.
 
 ## 2. Cost function
 
-Implement a cost function that penalizes deviations from the point $(x,y,\theta)$: $(2m, 5m, 90deg)$
+Implement a cost function that penalizes deviations from the point $(x,y,\theta)$= $(2m, 5m, 90deg)$
 
 Method: `SmbCost::costVectorFunction` in file `smb_common/smb_mpc/src/cost/SmbCost.cpp`.
 
-Test your changes in simulation. Execute `roslaunch smb_gazebo sim.launch mpc:=True` to run the simulation with the MPC.
+Test your changes in simulation. Execute `roslaunch smb_gazebo sim.launch mpc:=True` to run the simulation with the MPC. For implementation reasons, the robot will only start to drive once you send a goal with the rviz goal pose marker. It should, however, not drive to the specified goal but to the hard coded goal $(x,y,\theta)$= $(2m, 5m, 90deg)$.
 
 #### Hint:
-`SmbCost::costVectorFunction` should return a 3-dim vector (`result`) with three elements.
+`SmbCost::costVectorFunction` returns a vector $result$.
 The scalar value of the cost function is $result^T \cdot result$.
+
+One possible error function for rotational errors is to minimize the imaginary part of the relative rotation quaterion.
 
 ## 3. Reference Tracking
 
