@@ -108,6 +108,8 @@ One possible error function for rotational errors is to minimize the imaginary p
 
 Do not forget to penalize control actions, too. Without costs on the input $\boldsymbol{u}$, MPC framework cannot solve the Riccati Equation.
 
+You can ignore the weight matrices `QPosition`, `QPosition`, `R` for now.
+
 ## 3. Reference Tracking
 
 We want to track arbitrary trajectories with the robot.
@@ -120,11 +122,13 @@ The method `SmbCost::costVectorFunction` receives this target pose at the curren
 
 #### Hints:
 
+A simple solution just uses the last pose of an incoming path as the reference pose. Are more sophisticated solution interpolates the poses of an incoming trajectory.
+
 Two quaternions can be interpolated with the `slerp` algorithm: $\boldsymbol{q}_\alpha = \boldsymbol{q}_1.slerp(\alpha, \boldsymbol{q}_2)$ with $\alpha \ in [0, 1]$.
 
 ## 4. Gains
 
-The weight matrices: `QPosition_`, `QPosition_`, `R_` are available in the cost function and are loaded from the configuration file:
+The weight matrices: `QPosition`, `QPosition`, `R` are available in the cost function and are loaded from the configuration file:
 `smb_common/smb_mpc/config/task.info`
 
 Find a good set of gains for the robot to track the reference path
