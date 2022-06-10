@@ -23,7 +23,7 @@ repositories:
     type: git
     url: https://github.com/leggedrobotics/ocs2.git
     version: summerschool_2022
-  smb_common:
+  lib/pointmatcher_ros:
     type: git
     url: https://github.com/leggedrobotics/pointmatcher-ros.git
     version: master
