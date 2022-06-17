@@ -18,7 +18,7 @@ jobs:
       ROS_DISTRO: noetic
       CATKIN_WS: ~/catkin_ws_test/
     container:
-          image: dabaret/smb_docker:latest
+          image: ethzrobotx/smb_docker:latest
     steps:
       - uses: actions/checkout@v3
       - name: Install Python and ROS 

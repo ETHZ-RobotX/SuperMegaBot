@@ -2,7 +2,7 @@
 layout: default
 title: SLAM and Navigation
 parent: SMB Core Software
-nav_order: 2
+nav_order: 3
 ---
 
 # Setting up the SMB Software for Autonomous Navigation
@@ -26,7 +26,7 @@ If you want to use the system on a real SMB robot with real sensors and actuator
 
 
 ## Path Planning
-Once you've installed the [SMB core software](installation_core.md), you can directly follow the [documentation](https://github.com/VIS4ROB-lab/smb_path_planner/wiki) in the repository of the SMB Path Planner.
+Once you've installed the [SMB core software](installation_core.md), you can directly follow the [documentation](https://github.com/ETHZ-RobotX/smb_path_planner/wiki) in the repository of the SMB Path Planner.
 
 All the relevant repositories should already have been cloned into your catkin workspace when installing the core software.
 

@@ -1,3 +1,4 @@
+[![Build](https://github.com/ETHZ-RobotX/SuperMegaBot/workflows/build/badge.svg)](https://github.com/ETHZ-RobotX/SuperMegaBot/actions/workflows/build.yml)
 # ETH RobotX SuperMegaBot
 This repository containins information on the SuperMegaBot as used for the [Robotic Summer School](https://center-for-robotics.ethz.ch/education/summer-school.html) and instructions on how to set it up.
 
@@ -10,12 +11,11 @@ Please use the [issues page](https://github.com/ETHZ-RobotX/SuperMegaBot/issues)
 ## Dependencies and Installation
 Please refer to the [installation document](/docs/core-software/installation_core.md) to install necessary packages and their dependencies
 
-## How to Use SMB
-Please refer to the [HowToUseSmb Document](/docs/robot-operation/index.md) to use SMB. The document will direct you to the [HowToRunSoftware Document](/docs/HowToRunSoftware.md) after you see the necessary safety information.
- 
+## How to Use the SMB
+Please refer to the section [Operating the SMB](/docs/robot-operation/index.md) for information on how to use SMB.  
 
 ## History
-The SuperMegaBot was originally developped by the ETH Construction Robotics group. 
+The SuperMegaBot was originally developped by the ETH Construction Robotics group. It is now maintained by the [ETHZ RobotX Center](https://center-for-robotics.ethz.ch/).
 
 ### RSS 2019 Edition
 See https://github.com/ethz-asl/eth_supermegabot

@@ -35,7 +35,7 @@ Once the SMB core software is installed, you can start the simulation by followi
 Please follow the steps described in [How to use the SMB](robot-operation) to operate a SuperMegaBot.
 
 ## History
-The SuperMegaBot was originally developped by the ETH Construction Robotics group. 
+The SuperMegaBot was originally developped by the ETH Construction Robotics group. It is now maintained by the [ETHZ RobotX Center](https://center-for-robotics.ethz.ch/).
 
 ### RSS 2019 Edition
 See the [link](https://github.com/ethz-asl/eth_supermegabot)

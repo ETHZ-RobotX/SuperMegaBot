@@ -2,7 +2,7 @@
 layout: default
 title: Running the Software
 parent: SMB Core Software
-nav_order: 3
+nav_order: 4
 ---
 
 # How to Run SMB Software?
@@ -47,9 +47,17 @@ The simulation runs on the host PC (your computer). To run the simulation you do
 roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true
 ```
 
+Now you have two possibilities to drive with the robot.
+1. If you have a joystick connect it to the laptop. You can see the buttons configuration [here](../NotionsAndDevices.md#joystick).
+2. You can also drive the robot with the keyboard. If you want to drive make sure that the terminal where you launched the simulation is selected while pressing the keys. Please refere to the [package documentation](http://wiki.ros.org/teleop_twist_keyboard#Controls) for the keybings. To use the keyboard please execute the following command:
+   ```bash
+    # In the host pc
+    roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true keyboard_teleop:=true
+    ```
+
 ### Autonomous Navigation in Simulation 
 
-More information about the path planner can be found in the [path planner repository](https://github.com/VIS4ROB-lab/smb_path_planner).
+More information about the path planner can be found in the [path planner repository](https://github.com/ETHZ-RobotX/smb_path_planner).
 
 Since we have successfully set up the SMB software, one can launch the simulation and get the first experience with the OMPL path planner.
 Make sure that the `smb_navigation` is built. If not, run:
@@ -69,7 +77,7 @@ roslaunch smb_navigation navigate2d_ompl.launch sim:=true global_frame:=tracking
 ```
 In the RVIZ you should observe a grey-scaled map with SMB in the middle. Now, select `2d Navigation Goal` from the top toolbar and set the goal for the planner in the feasible region within the map.
 
-To be able to use the advanced features of the path planner, refer to the [SMB path planner Wiki](https://github.com/VIS4ROB-lab/smb_path_planner/wiki).
+To be able to use the advanced features of the path planner, refer to the [SMB path planner Wiki](https://github.com/ETHZ-RobotX/smb_path_planner/wiki).
 
 ### Running the software on the robot
 #### Manual mode

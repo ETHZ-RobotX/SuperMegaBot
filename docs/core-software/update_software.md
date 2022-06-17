@@ -1,15 +1,19 @@
 ---
 layout: default
-title: Update Core Software
+title: Updating Core Software
 parent: SMB Core Software
-nav_order: 4
+nav_order: 5
 ---
+# Updating the SMB Core Software
+The repositories containing the SMB Core software will most likely be updated. It is recommended to update the sofware from time to time.
+{: .smb-info}
+
 
 * Table of contents
 {:toc}
 
-## Update the SMB Core Software
-The repositories will be occasionally updated. It is recommended to check if there are any updates from time to time.
+## Downloading updates
+To download the most recent software, execute the following commands.
 ```bash
 # Do not forget to change <...> parts
 cd <directory_to_ws>/<catkin_ws_name>/src
@@ -30,7 +34,7 @@ While pulling the repositories you might see this message
 Updating <old_commit>..<new_commit>
 ```
 
-If this is the case you need to build this repositories again.
+If this is the case you need to build the packages in the respective repository again.
 
 ## Troubleshooting
 
@@ -41,7 +45,7 @@ If you import the repositories you might encounter this error:
 Path already exists and contains a different repository
 ```
 
-This means that the repository on your host is outdated and the URL of the new one is changed. In this case just delete the folder and execute again the import command
+This means that the repository on your host is outdated and the URL of the new one is changed. In this case just delete the folder and execute again the import command.
 
 ```bash
 # Do not forget to change <...> parts

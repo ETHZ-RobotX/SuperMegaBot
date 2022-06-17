@@ -12,5 +12,8 @@ The SMB core software allows simulation of the robot in a gazebo environment but
 ## Installation
 To install the simulation/SMB core software, follow the steps described in the [installation documentation](installation_core.md).
 
+## Using Docker
+Instead of downloading and building the SMB core software directly on your machine, you can use a Docker image with a pre-compiled software. Details are given in the [SMB docker documentation](docker_installation.md)
+
 ## Starting the Simulation
 Once the SMB core software is installed, you can start the simulation by following the steps in [How To Run the SMB Software](HowToRunSoftware.md)

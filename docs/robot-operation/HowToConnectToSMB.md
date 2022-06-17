@@ -101,8 +101,8 @@ roscore
 In order to use the visualization tools of ROS, we will set the SMB as ROS master on our local machine:
 
 ```bash
-# In the terminal of host pc
-export ROS_MASTER_URI=http://10.0.0.5:<port>
+# In the terminal of host pc. 
+export ROS_MASTER_URI=http://10.0.x.5:<port>
 # the ip and port tuple we have saved in the previous step  
 ```
 
@@ -115,7 +115,7 @@ In order to give commands from the host pc to SMB, ROS_IP should be set.
 
 ifconfig
 # See the ip addres of wlp4s0
-# It is probably 10.0.0.100
+# It is probably 10.0.x.100
 
 export ROS_IP=<wlp4s0_ip>
 # the ip and port tuple we have saved in the previous step  
