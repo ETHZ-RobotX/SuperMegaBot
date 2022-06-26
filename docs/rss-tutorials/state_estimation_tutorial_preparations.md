@@ -6,80 +6,46 @@ nav_order: 1
 ---
 
 # Preparations for State Estimation Tutorial
-For the tutorial you need the following packages:
- - [ethzasl_msf](https://github.com/ethz-asl/ethzasl_msf)
- - [compslam](https://bitbucket.org/leggedrobotics/compslam_rss/src/master/)
+To prepare for the Tutorial on State Estimation, first set up and install the [SMB core software](../core-software/installation_core.md).
 
-You can test it on your own computer by running it with a rosbag provided [below](#download-files).
+The only required additional packages needed for the state estimation tutorial are [glog_catkin](https://github.com/ethz-asl/glog_catkin.git) and [msf](https://github.com/ethz-asl/ethzasl_msf). 
+Both of these packages are also included in the `smb.repos`-vcs file, and automatically cloned to `se/msf` and `se/glog_catkin`.
 
-## Installation
-Download the repositories in the same directory where ```smb_common``` is and build them:
+## Download files
+In order to follow the tutorial you will need the following rosbag.
+  - [First mission rosbag filtered](https://drive.google.com/file/d/1XovmdpOW9vCzG81Ajre9_1AxS0UCFhmh/view?usp=sharing)
 
+Download the rosbag into a folder of your choice. In the tutorial this location will be denoted as `<path_to_bag>`.
+
+## Compile The C++ Code
+To compile the required packages, simply run
 ```bash
-cd ~/catkin_ws/src/
-# ethzasl_msf clone and build
-git clone https://github.com/ethz-asl/ethzasl_msf.git
-git clone https://github.com/ethz-asl/glog_catkin.git
-git clone https://github.com/catkin/catkin_simple.git
-catkin build ethzasl_msf
-# smb_msf clone and build
-git clone https://github.com/ETHZ-RobotX/smb_common.git
 catkin build smb_msf
-# compslam clone and build
-git clone https://bitbucket.org/leggedrobotics/compslam_rss.git
-catkin build loam
-
-source ~/catkin_ws/devel/setup.bash
 ```
-If there is some issues when building the packages, see trouble shooting [below](#trouble-shooting).
+These instructions are also provided in the [SLAM and Navigation](../core-software/autonomy_software.md) instructions.
 
-## Running on your own PC with rosbag
+### Check The Compiled Code
+You can test the success of the compilation by running the code.
 
 ```bash
 # In Terminal 1
-$ roslaunch loam loam_smb.launch use_sim_time:=true publish_map_frame:=true
-
-# In Terminal 2
-$ roslaunch smb_msf smb_msf.launch  
-
-# In Terminal 3
-$ mkdir -p ~/catkin_ws/src/smb_common/smb_msf/rviz
-# Download the rviz file linked below and put it here to make life easier
-$ cd ~/catkin_ws/src/smb_common/smb_msf/rviz
-# Select file->open config->choose the rviz config that you've dowloaded
-$ rviz
-
-# In Terminal 4
-$ mkdir -p ~/catkin_ws/src/smb_common/smb_msf/data
-# Download the rosbag and put it here
-$ cd ~/catkin_ws/src/smb_common/smb_msf/data
-$ rosbag play First_mission_wangen_FILTERED.bag --clock 
-```
-## Running on smb
-
-```bash
-# In Terminal 1 on smb
-$ roslaunch smb smb.launch
-# wait until you see Received first IMU message
-
-# In Terminal 2 on smb
-$ roslaunch loam loam_smb.launch 
-
-# In Terminal 3 on smb
 $ roslaunch smb_msf smb_msf.launch
-
-# In Terminal 4 on host PC
-$ roslaunch rviz
-# and change the fixed frame (in global options) to odom
 ```
+If everything launches without any error messages, your C++ software is ready for the tutorial.
 
-## Download files
-In order to follow the tutorial you will need the following rosbag and rviz file:
-  - [First mission rosbag filtered](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/StateEstimationTutorial/First_mission_wangen_FILTERED.bag)
-  - [Rviz file](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/StateEstimationTutorial/smb.rviz)
+## Checking the Python Code
+For visualization purposes we also provide a Python node inside smb_msf.
+Make sure that you have all packages required for running the node:
+* numpy
+* matplotlib
+* rospy
 
-Download the rosbag into the folder ```~/catkin_ws/src/smb_common/smb_msf/data```
-Download the rviz profile into the folder ```~/catkin_ws/src/smb_common/smb_msf/rviz```
+Try to run the visualizer node, using the following command:
+```bash
+# In Terminal 2
+roslaunch smb_msf plotting.launch
+```
+If no import error occurs, you are ready for the summer school tutorial.
 
 ## Trouble shooting
 

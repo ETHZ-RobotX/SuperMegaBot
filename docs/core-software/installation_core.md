@@ -107,7 +107,7 @@ To install the dependencies, rosdep package will be used.For more information ab
 {: .smb-mention }
 
 
-To install ***rosdep*** package run the following terminal commands in order, unless you did not do in the ROS installation step.
+To install ***rosdep*** package run the following terminal commands in order, unless you did so already during the ROS installation.
 
 ```bash
 sudo apt-get install python3-rosdep
@@ -153,7 +153,7 @@ conda install -c conda-forge empy defusedxml rospkg numpy -y
 
 
 ### Finalization
-Since every SMB package and dependency is installed, you can build the project.
+After all required SMB packages and dependencies are cloned and installed, you can build the project:
 ```bash
 # Navigate to the directory of workspace
 cd <directory_to_ws>/<catkin_ws_name>/
