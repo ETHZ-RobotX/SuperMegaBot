@@ -8,15 +8,19 @@ nav_exclude: true
 # State Estimation Tutorial
 Before starting the tutorial, follow the [Preparation Instructions](./rss-tutorials/state_estimation_tutorial_preparations.md) and compile the needed code.
 
-## 0.0 Uncertainty in State Estimation
-### 0.1 Quick Introduction to IMU
+## 0.0 State Estimation in Practice
+### 0.1 IMU State Space Model and MSF
+All together.
 
-### 0.2 IMU Covariance Computation
-Follow the instructions on the slide and compuute the noise and bias covariances.
+### 0.2 Quick Introduction to IMU Noise Parameters
+All together.
+
+### 0.3 IMU Covariance Computation
+Follow the instructions on the slide and compute the noise and bias covariances.
 
 ## 1.0 First Run
 ### 1.1 Launching the Code
-As a first step, run the code on your computer and make sure, that everything runs without dying:
+As a first step, run the code on your computer and make sure that everything runs without dying:
 ```bash
 # In Terminal 1
 $ roslaunch smb_msf smb_msf.launch use_sim_time:=true

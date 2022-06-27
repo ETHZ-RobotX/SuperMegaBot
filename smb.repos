@@ -47,13 +47,17 @@ repositories:
     type: git
     url: https://github.com/leggedrobotics/teb_local_planner.git
     version: feature/correct_local_plan_timestamps
-  slam/icp_localization:
+  se/glog_catkin:
     type: git
-    url: https://github.com/leggedrobotics/icp_localization.git
+    url: https://github.com/ethz-asl/glog_catkin.git
     version: master
   se/msf:
     type: git
     url: https://github.com/ethz-asl/ethzasl_msf.git
+    version: master
+  slam/icp_localization:
+    type: git
+    url: https://github.com/leggedrobotics/icp_localization.git
     version: master
   ui/multimaster_fkie:
     type: git
