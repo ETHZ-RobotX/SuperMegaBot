@@ -53,7 +53,7 @@ repositories:
     version: master
   se/msf:
     type: git
-    url: https://github.com/ethz-asl/ethzasl_msf.git
+    url: https://github.com/leggedrobotics/ethzasl_msf.git
     version: master
   slam/icp_localization:
     type: git
