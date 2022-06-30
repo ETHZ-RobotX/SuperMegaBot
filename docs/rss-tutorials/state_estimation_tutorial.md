@@ -6,7 +6,7 @@ nav_exclude: true
 ---
 
 # State Estimation Tutorial
-Before starting the tutorial, follow the [Preparation Instructions](./rss-tutorials/state_estimation_tutorial_preparations.md) and compile the needed code.
+Before starting the tutorial, follow the [Preparation Instructions](./rss-tutorials/state_estimation_tutorial_preparations.md) and compile the required code.
 
 ## 0.0 State Estimation in Practice
 ### 0.1 IMU State Space Model and MSF
@@ -28,7 +28,7 @@ $ roslaunch smb_msf smb_msf.launch use_sim_time:=true
 And make sure that nothing dies. Next, play the attached rosbag, and see what is happening.
 ```bash
 # In Terminal 2
-$ rosbag play <path_to_bag>/2021_wangen_compslam_odometry.bag --clock 
+$ rosbag play <path_to_bag>/2021_wangen_open3d_slam_odometry.bag --clock 
 ```
 
 ### 1.2 Investigation

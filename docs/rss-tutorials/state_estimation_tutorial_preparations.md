@@ -8,12 +8,12 @@ nav_order: 1
 # Preparations for State Estimation Tutorial
 To prepare for the Tutorial on State Estimation, first set up and install the [SMB core software](../core-software/installation_core.md).
 
-The only required additional packages needed for the state estimation tutorial are [glog_catkin](https://github.com/ethz-asl/glog_catkin.git) and [msf](https://github.com/ethz-asl/ethzasl_msf). 
+The only required additional packages needed for the state estimation tutorial are [glog_catkin](https://github.com/ethz-asl/glog_catkin.git) and [msf](https://github.com/leggedrobotics/ethzasl_msf.git). 
 Both of these packages are also included in the `smb.repos`-vcs file, and automatically cloned to `se/msf` and `se/glog_catkin`.
 
 ## Download files
 In order to follow the tutorial you will need the following rosbag.
-  - [First mission rosbag filtered](https://drive.google.com/file/d/1XovmdpOW9vCzG81Ajre9_1AxS0UCFhmh/view?usp=sharing)
+  - [Rosbag open3d_slam](https://drive.google.com/file/d/1gAd003PUeShhxGQ9vYmos0VUboqeL933/view?usp=sharing)
 
 Download the rosbag into a folder of your choice. In the tutorial this location will be denoted as `<path_to_bag>`.
 
