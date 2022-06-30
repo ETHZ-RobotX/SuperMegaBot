@@ -39,11 +39,13 @@ MSF requires standard messages, i.e. `sensor_msgs/Imu` for the IMU topic, and `g
 Note that the trajectory is fairly unsteady and misaligned with the IMU frame.
 
 ### 1.3 Extrinsics
-You notice that the extrinsics calibration between the IMU and the LiDAR at the bottom of `smb_msf/param/smb_msf_params.yaml` are still set to the default values, and hence incorrect.
+While trying to find out what is wrong, you notice that the extrinsics calibration between the IMU and the LiDAR at the bottom of `smb_msf/param/smb_msf_params.yaml` are still set to the default values, and hence incorrect.
 
-Imagine, you have a URDF model of the robot available. However, it only provides the transformation $T_{LI}$.
-$_Lt_{LI} = (-0.024,-0.251,-0.255)^T$,~q_{LI} = (q_x,q_y,q_z,q_w)^T = (0, 0, -0.707, 0.707)^T$.
-Convert it to $T_{IL}$ and include it in the launch file.
+To correct for this, imagine you have access to an URDF model of the robot. However, it only provides the transformation $T_{LI}$.
+
+$_Lt_{LI} = (-0.024,-0.251,-0.255)^T,~q_{LI} = (q_x,q_y,q_z,q_w)^T = (0, 0, -0.707, 0.707)^T$.
+
+Convert it to $T_{IL}$ and correct the default parameters.
 
 **Hint:** You can use the ros tf package with `rosrun tf static_transform_publisher x y z q_x q_y q_z q_w frame_1 frame_2 100` and `rosrun tf tf_echo frame_1 frame_2`.
 
@@ -51,16 +53,17 @@ Convert it to $T_{IL}$ and include it in the launch file.
 ### 2.1 Visualization Script
 Launch the modified configuration for `smb_msf` from above. Now, before playing the rosbag, also launch the plotting node and enter the name `1_default` or similar when being prompted.
 ```bash
+# In Terminal 1
+roslaunch smb_msf smb_msf.launch use_sim_time:=true ... # TOPIC PARAMETERS MISSING
 # In Terminal 2
-roslaunch smb_msf plotting.launch # enter 1_default or similar after bing prompted
-
+roslaunch smb_msf plotting.launch # enter "1_default" or similar after bing prompted
 # In Terminal 3
 rosbag play <path_to_bagfile>/2021_wangen_open3d_slam_odometry.bag --clock 
 ```
-Wait for a minute or so, and then kill `plotting.launch`. Investigate the generated plots in `$HOME/rss_plots/` with respect to their performance and smoothness.
+Wait for a minute or so, and then kill `plotting.launch`. Investigate the generated plots in your home directory in `$HOME/rss_plots/` with respect to their performance and smoothness.
 
 ### 2.2 Biased IMU
-In this subtask, we will investigate the performance of the IMU if a strong bias of **0.8 m/s^2** is present along the z-axis of the imu. In the current default configuration bias estimation is disabled.
+In this subtask, we will investigate the performance of the IMU if a strong bias of **0.8 m/s^2** is present along the z-axis of the imu. In the current default configuration the bias estimation is disabled.
 Run the following:
 ```bash
 # Terminal 1
@@ -84,9 +87,9 @@ roslaunch smb_msf smb_msf.launch use_sim_time:=true imu_topic:=/versavis/imu pos
 # Terminal 3
 rosbag play <path_to_bagfile>/2021_wangen_open3d_slam_odometry.bag --clock
 ```
-Have a look at the trajectory in rviz. Note that the red trajectory is the original one BEFORE applying any noise.
+Have a look at the trajectory in rviz. (Note that the red trajectory is the original one BEFORE applying any noise.) What do you find with respect to the yellow curve?
 
-Now spend some time to tune the parameter `pose_sensor/pose_noise_meas_p` in `smb_msf/param/smb_msf_params.yaml` and re-run the evaluation.
+Now spend some time to tune the parameter `pose_sensor/pose_noise_meas_p` in `smb_msf/param/smb_msf_params.yaml` and re-run the evaluation. In which range do you find the best noise value?
 
 ## 3.0 Outlook and Wrap-Up
-Outlook to SLAM tutorial.
+Outlook to the SLAM tutorial and Wrapping-up.
