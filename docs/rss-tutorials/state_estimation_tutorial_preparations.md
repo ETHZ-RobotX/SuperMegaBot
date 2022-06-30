@@ -8,14 +8,14 @@ nav_order: 1
 # Preparations for State Estimation Tutorial
 To prepare for the Tutorial on State Estimation, first set up and install the [SMB core software](../core-software/installation_core.md).
 
-The only required additional packages needed for the state estimation tutorial are [glog_catkin](https://github.com/ethz-asl/glog_catkin.git) and [msf](https://github.com/leggedrobotics/ethzasl_msf.git). 
+The only required external packages needed for the state estimation tutorial are [glog_catkin](https://github.com/ethz-asl/glog_catkin.git) and [msf](https://github.com/leggedrobotics/ethzasl_msf.git). 
 Both of these packages are also included in the `smb.repos`-vcs file, and automatically cloned to `se/msf` and `se/glog_catkin`.
 
 ## Download files
 In order to follow the tutorial you will need the following rosbag.
   - [Rosbag open3d_slam](https://drive.google.com/file/d/1gAd003PUeShhxGQ9vYmos0VUboqeL933/view?usp=sharing)
 
-Download the rosbag into a folder of your choice. In the tutorial this location will be denoted as `<path_to_bag>`.
+Download the rosbag into a folder of your choice. In the tutorial this location will be denoted as `<path_to_bagfile>`.
 
 ## Compile The C++ Code
 To compile the required packages, simply run
@@ -25,27 +25,41 @@ catkin build smb_msf
 These instructions are also provided in the [SLAM and Navigation](../core-software/autonomy_software.md) instructions.
 
 ### Check The Compiled Code
-You can test the success of the compilation by running the code.
+You can test the success of the compilation by running the following code.
 
 ```bash
-# In Terminal 1
 $ roslaunch smb_msf smb_msf.launch
 ```
 If everything launches without any error messages, your C++ software is ready for the tutorial.
 
 ## Checking the Python Code
-For visualization purposes we also provide a Python node inside smb_msf.
+For visualization purposes we also provide a Python node inside smb_msf. Adiitionally, for further experiments we also provide 2 more python files.
 Make sure that you have all packages required for running the node:
 * numpy
 * matplotlib
 * rospy
+* sensor_msgs.msg.Imu
+* geometry_msgs.msg.TransformStamped
+* os
+* time
 
-Try to run the visualizer node, using the following command:
+Try to run the visualizer node with all options enabled, using the following command:
 ```bash
-# In Terminal 2
-roslaunch smb_msf plotting.launch
+roslaunch smb_msf plotting.launch noisify_pose:=true noisify_imu:=true
 ```
 If no import error occurs, you are ready for the summer school tutorial.
+
+## Voluntary (but recommended) System Intalls
+* terminator, because multiple terminals will be needed during the tutorial.
+```bash
+sudo apt install terminator
+```
+* jsk_rviz_plugins, for visualzing TF-paths in RVIZ.
+```bash
+sudo apt install ros-noetic-jsk-rviz-plugins
+```
+
+=====================================================
 
 ## Trouble shooting
 
