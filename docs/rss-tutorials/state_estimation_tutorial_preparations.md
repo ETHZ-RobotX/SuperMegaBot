@@ -42,6 +42,7 @@ Make sure that you have all packages required for running the node:
 * geometry_msgs.msg.TransformStamped
 * os
 * time
+(after a ros-install all should be present with Python3)
 
 Try to run the visualizer node with all options enabled, using the following command:
 ```bash
@@ -49,12 +50,12 @@ roslaunch smb_msf plotting.launch noisify_pose:=true noisify_imu:=true
 ```
 If no import error occurs, you are ready for the summer school tutorial.
 
-## Voluntary (but recommended) System Intalls
+## Voluntarily (but recommended) System Installs
 * terminator, because multiple terminals will be needed during the tutorial.
 ```bash
 sudo apt install terminator
 ```
-* jsk_rviz_plugins, for visualzing TF-paths in RVIZ.
+* jsk_rviz_plugins, for visualizing TF-paths in RVIZ.
 ```bash
 sudo apt install ros-noetic-jsk-rviz-plugins
 ```
