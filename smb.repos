@@ -59,6 +59,10 @@ repositories:
     type: git
     url: https://github.com/leggedrobotics/icp_localization.git
     version: master
+  slam/open3d_slam:
+    type: git
+    url: https://github.com/leggedrobotics/open3d_slam.git
+    version: master
   ui/multimaster_fkie:
     type: git
     url: https://github.com/ETHZ-RobotX/multimaster_fkie
