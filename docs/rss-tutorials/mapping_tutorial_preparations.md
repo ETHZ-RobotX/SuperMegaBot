@@ -9,14 +9,15 @@ nav_order: 3
 
 ## Download tutorial scripts and data
 
-Download the following [folder](https://drive.google.com/drive/folders/1JLa_MByMxZqtwGD3CzhP2ZrA4hAypZ2o?usp=sharing) which contains the tutorial scripts and maps.
-{: .smb-info }
+Download the following [folder](https://drive.google.com/drive/folders/1GC9h8f6164sgmsRAUPblgw6pvxkMf8z0?usp=sharing) which contains the tutorial scripts and maps. You can place this folder anywhere on your filesystem.
 
-## Open3d python install (required for the tutorial)
+## Open3d python install (required for the interactive part of mapping tutorial)
+
+You need to install the open3d python API.
 
 ### Option 1 - ppa
 
-You can install Open3d from a PPA. The PPA contains Open3d and all dependencies. First add the PPA to your system:
+You can install open3d from a PPA. The PPA contains Open3d and all dependencies. First add the PPA to your system:
 
 ```shell
 sudo add-apt-repository ppa:roehling/open3d
@@ -52,16 +53,25 @@ python -c 'import open3d; print(open3d.__version__)'
 
 ## open3d_slam install (cpp package, required for building maps)
 
-Follow the instructions on open3d_slam repo and website.
+For running *open3d_slam* you will need the open3D library. Follow [the instructions above](#open3d-python-install-required-for-the-interactive-part-of-mapping-tutorial) to install open3d.
 
-- Repo: <https://github.com/leggedrobotics/open3d_slam>
-- Docs: <https://open3d-slam.readthedocs.io/en/latest/>
+Follow the [documentation on how to update the SMB software](../core-software/update_software.md) to download the *open3d_slam* repo into your catking workspace. Alternatively, you can clone it manually:
 
+```bash
+cd <catkin_ws>/src
+git clone https://github.com/leggedrobotics/open3d_slam.git slam/open3d_slam
+```
+
+Once the repo has been cloned, build the ROS integration with:
+
+```bash
+catkin build open3d_slam_ros
+```
 Run an example to make sure that your installation is okay (see documentation, sample datasets).
 
 Download a rosbag from [here](#download-rosbags)
 
-Run `roslaunch open3d_slam_ros mapping_rosbag.launch` while playing the rosbag, or pass the rosbag as an argument
+Run `roslaunch open3d_slam_ros mapping_rosbag.launch` and pass the rosbag filename as an argument. You can check more detailed documentation on how to run *open3d_slam* [here](https://open3d-slam.readthedocs.io/en/latest/usage.html).
 
 ## Miscellaneous
 
@@ -81,4 +91,4 @@ In order to follow the tutorial you will need the following rosbags:
 
 ## The tutorial
 
-Tutorial slides are [here](https://docs.google.com/presentation/d/1dfyh6euc6ZKf0zj_fx_EyYe5SIpInhvIDXDgK0cu7uU/edit#slide=id.p1)
+Tutorial slides are [here](https://drive.google.com/drive/folders/1pGW5H-B_lmcF_J35kizlfmYaa_C9urtk?usp=sharing)
