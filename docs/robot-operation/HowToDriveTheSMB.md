@@ -8,7 +8,7 @@ nav_order: 4
 # How to drive the SMB? 
 {: .no_toc}
 
-This documentation explains the basic steps about how to safely drive the SMB robot.
+This documentation explains the basic steps on how to safely drive the SuperMegaBot.
 
 * Table of contents
 {:toc}
@@ -28,17 +28,19 @@ If batteries are damaged or inflated, distance yourself immediately and inform t
 
 ## Emergency Stop
 For safety purposes, the power input to the motor controller can be cut off by de-energizing a contactor that is part of the [SMB emergency stop system](https://unlimited.ethz.ch/display/ROBOTX/SMB+Emergency+Stop+System).\
-Emergency buttons are in series so if one of them is pushed e-stop is activated! This means, the motor controller and thus motors are not powered anymore, robot stops! 
+Emergency buttons are in series so if one of them is pushed, the e-stop is activated! This means, the motor controller and thus motors are not powered anymore and eventually the robot stops! 
 <p align="center">
   <img style="right;"  src="../images/E-Stop.png" width="300" title="Remote Emergency Stop">
 </p>
 
-In case of an unexpected situation, **first** use the E-Stop on the [Joystick](../images/JoyStick.png) (if core software is activated) or on the [RC Transmitter](../images/RCTransmitter.png) (if RC Controll still active). Wait 1 second, **If the E-Stop on controllers does not work**, use the SMB emergency stop system by using the [E-Stop Remote](../images/E-Stop.png) or the on-board emergency button. 
+In case of an unexpected situation, use the safety stop on the [Joystick](../images/JoyStick.png) (if core software is activated) or on the [RC Transmitter](../images/RCTransmitter.png) (if RC Control is active). If the robot should not decelerate, use the SMB emergency stop system by using the [E-Stop Remote](../images/E-Stop.png) or the emergency stop button on the robot.
+{: .smb-warning }
+
+The safety operator is responsible of activating the e-stop using the [E-Stop Remote](../images/E-Stop.png) whenever the robot behaves differently than expected. 
 {: .smb-warning }
 
 ## RC Connection and Transmitter
-When driving the SMB base using the RC transmitter, there is an additional switch on the RC Transmitter to stop all motor movement. It is located on the lower back left of the RC Transmitter with the name [Emergency Stop Switch](../images/RCTransmitter.png) and can be used to activate the safety stop functionality of the motor controller powering the motors. The safety stop is activated in the lower position (0).\
-Note that when the software overrides the RC commands. 
+When driving the SMB base using the RC transmitter, there is an additional switch on the RC Transmitter to stop all motor movement. It is located on the lower back left of the RC Transmitter with the name [Emergency Stop Switch](../images/RCTransmitter.png) and can be used to activate the safety stop functionality of the motor controller powering the motors. The safety stop is activated in the lower position (0).
 
 
 ## Powering Up 
@@ -54,9 +56,8 @@ Please follow the steps carefully.
    * The E-Stop switch is in activated [e-stop switch is activated](../images/E-Stop.png).
   
 2. Turn on the RC transmitter.
-   * Be sure that the transmitter is connected to the right smb: check the number on the screen of the transmitter and the number that is written back panel of the smb 
+   * Be sure that the transmitter is connected to the correct SMB: check the number on the screen of the transmitter and the number that is written back panel of the smb 
    * Be sure that the [Emergency Stop Switch of the RC Transmitter](../images/RCTransmitter.png)  is in the position of 0. It gives '0' commands to the motots . 
-   * BUT IF THERE IS A PROBLEM WITH THE CONTROLLER (e.g. the robot is uncontrollable) USE THE EMERGENCY STOP SWITCH! THAT SAFETY STOP SWITCH MIGHT NOT WORK 
 
 3. Power up the base using the switch [Base Power Switch](../images/SMB_Backpanel.png). This switch activates also the wireless e-stop receiver.
    * Since the wireless e-stop system is energized and it is in the activate state (we did so in step 1), we can deactivate the [Emergency Stop Button on the SMB](../images/SMB_Backpanel.png). 
@@ -68,7 +69,7 @@ Please follow the steps carefully.
 5. Be sure that the safety stop switch on the RC transmitter is functional by doing a small test.
     * Try to drive the robot while it is in the position 0 -> no movement 
     * Flipping the safety stop switch on the RC remote to position 1 should allow movement of the robot. Use the right control stick on the RC transmitter to steer the SMB. 
-    * Switching the safety stop on the Remote back into position 0 should stop the robot. Try again to to control the robot while switch is in position 0. It should not move. 
+    * Switching the safety stop on the RC remote back into position 0 should stop the robot. Try again to to control the robot while switch is in position 0. It should not move. 
 6. Bring the safety stop switch to the position 1 again. Small movements on the stick are already enough to command forward motion. 
 
 

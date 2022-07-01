@@ -71,3 +71,7 @@ repositories:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_rviz_plugins.git
     version: master
+  object_detection:
+    type: git
+    url: https://github.com/ETHZ-RobotX/smb_object_detection.git
+    version: main

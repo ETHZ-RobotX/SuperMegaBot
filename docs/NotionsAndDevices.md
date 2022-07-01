@@ -25,7 +25,7 @@ Click [here](images/SMB_Backpanel.png) to see it bigger
 
 ## JoyStick
 <p align="center">
-  <img style=" right;"  src="images/JoyStick.png" width="300" title="RC Transmitter">
+  <img style=" right;"  src="images/JoyStick.png" width="300" title="Joystick">
 </p>
 
 

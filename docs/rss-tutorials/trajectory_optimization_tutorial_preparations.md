@@ -6,7 +6,8 @@ nav_order: 2
 ---
 
 # Preparations for Trajectory Optimization Tutorial
-To prepare for the Tutorial on Trajectory Optimization, only the [SMB core software](../core-software/installation_core.md) must be set up and installed. 
+
+To prepare for the Tutorial on Trajectory Optimization, only the [SMB core software](../core-software/installation_core.md) must be set up and installed.
 
 Furthermore, you can already build the current state of the `smb_mpc` package. In the catkin workspace, run:
 ```bash
