@@ -53,20 +53,16 @@ python -c 'import open3d; print(open3d.__version__)'
 
 ## open3d_slam install (cpp package, required for building maps)
 
-For running *open3d_slam* you will need the open3D library. The quickest way is to install open3D from a PPA:
+For running *open3d_slam* you will need the open3D library. Follow [the instructions above](#open3d-python-install-required-for-the-interactive-part-of-mapping-tutorial) to install open3d.
 
+Follow the [documentation on how to update the SMB software](../core-software/update_software.md) to download the *open3d_slam* repo into your catking workspace. Alternatively, you can clone it manually:
+
+```bash
+cd <catkin_ws>/src
+git clone https://github.com/leggedrobotics/open3d_slam.git slam/open3d_slam
 ```
-sudo add-apt-repository ppa:roehling/open3d
-sudo apt update
-sudo apt install libopen3d-dev
-```
 
-For the expert install (i.e. building from source) follow the instructions on *open3d_slam* repo and website (this step is optional).
-
-- Repo: <https://github.com/leggedrobotics/open3d_slam>
-- Docs: <https://open3d-slam.readthedocs.io/en/latest/>
-
-Once you have open3d installed, *open3d_slam* can be placed in the same catkin workspace as the rest of you smb software stack. Then you can clone the *open3d_slam* repo into your catkin workspace and compile the ROS integration with:
+Once the repo has been cloned, build the ROS integration with:
 
 ```bash
 catkin build open3d_slam_ros
