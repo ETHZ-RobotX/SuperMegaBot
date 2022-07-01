@@ -9,7 +9,7 @@ nav_order: 1
 To prepare for the Tutorial on State Estimation, first set up and install the [SMB core software](../core-software/installation_core.md).
 
 The only required external packages needed for the state estimation tutorial are [glog_catkin](https://github.com/ethz-asl/glog_catkin.git) and [msf](https://github.com/leggedrobotics/ethzasl_msf.git). 
-Both of these packages are also included in the `smb.repos`-vcs file, and automatically cloned to `se/msf` and `se/glog_catkin`.
+Both of these packages are also included in the `smb.repos`-vcs file, and automatically cloned to `se/msf` and `misc/glog_catkin`.
 
 ## Download files
 In order to follow the tutorial you will need the following rosbag.
