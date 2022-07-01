@@ -6,7 +6,7 @@ nav_exclude: true
 ---
 
 # State Estimation Tutorial
-Before starting the tutorial, follow the [Preparation Instructions](./rss-tutorials/state_estimation_tutorial_preparations.md) and compile the required code.
+Before starting the tutorial, follow the [Preparation Instructions](state_estimation_tutorial_preparations.md) and compile the required code.
 
 ## 0 IMU in State Estimation
 ### 0.1 IMU State Space Model and MSF
