@@ -31,6 +31,10 @@ repositories:
     type: git
     url: https://github.com/catkin/catkin_simple.git
     version: master
+  misc/glog_catkin:
+    type: git
+    url: https://github.com/ethz-asl/glog_catkin.git
+    version: master
   planning/follow_waypoints:
     type: git
     url: https://github.com/ETHZ-RobotX/follow_waypoints.git
@@ -47,13 +51,17 @@ repositories:
     type: git
     url: https://github.com/leggedrobotics/teb_local_planner.git
     version: feature/correct_local_plan_timestamps
-  slam/compslam:
+  se/msf:
     type: git
-    url: https://bitbucket.org/leggedrobotics/compslam_rss.git
+    url: https://github.com/leggedrobotics/ethzasl_msf.git
     version: master
   slam/icp_localization:
     type: git
     url: https://github.com/leggedrobotics/icp_localization.git
+    version: master
+  slam/open3d_slam:
+    type: git
+    url: https://github.com/leggedrobotics/open3d_slam.git
     version: master
   ui/multimaster_fkie:
     type: git

@@ -166,7 +166,7 @@ conda install -c conda-forge empy defusedxml rospkg numpy -y
 
 
 ### Finalization
-Since every SMB package and dependency is installed, you can build the project.
+After all required SMB packages and dependencies are cloned and installed, you can build the project:
 ```bash
 # Navigate to the directory of workspace
 cd <directory_to_ws>/<catkin_ws_name>/

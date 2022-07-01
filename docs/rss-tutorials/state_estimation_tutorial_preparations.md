@@ -6,80 +6,61 @@ nav_order: 1
 ---
 
 # Preparations for State Estimation Tutorial
-For the tutorial you need the following packages:
- - [ethzasl_msf](https://github.com/ethz-asl/ethzasl_msf)
- - [compslam](https://bitbucket.org/leggedrobotics/compslam_rss/src/master/)
+To prepare for the Tutorial on State Estimation, first set up and install the [SMB core software](../core-software/installation_core.md).
 
-You can test it on your own computer by running it with a rosbag provided [below](#download-files).
-
-## Installation
-Download the repositories in the same directory where ```smb_common``` is and build them:
-
-```bash
-cd ~/catkin_ws/src/
-# ethzasl_msf clone and build
-git clone https://github.com/ethz-asl/ethzasl_msf.git
-git clone https://github.com/ethz-asl/glog_catkin.git
-git clone https://github.com/catkin/catkin_simple.git
-catkin build ethzasl_msf
-# smb_msf clone and build
-git clone https://github.com/ETHZ-RobotX/smb_common.git
-catkin build smb_msf
-# compslam clone and build
-git clone https://bitbucket.org/leggedrobotics/compslam_rss.git
-catkin build loam
-
-source ~/catkin_ws/devel/setup.bash
-```
-If there is some issues when building the packages, see trouble shooting [below](#trouble-shooting).
-
-## Running on your own PC with rosbag
-
-```bash
-# In Terminal 1
-$ roslaunch loam loam_smb.launch use_sim_time:=true publish_map_frame:=true
-
-# In Terminal 2
-$ roslaunch smb_msf smb_msf.launch  
-
-# In Terminal 3
-$ mkdir -p ~/catkin_ws/src/smb_common/smb_msf/rviz
-# Download the rviz file linked below and put it here to make life easier
-$ cd ~/catkin_ws/src/smb_common/smb_msf/rviz
-# Select file->open config->choose the rviz config that you've dowloaded
-$ rviz
-
-# In Terminal 4
-$ mkdir -p ~/catkin_ws/src/smb_common/smb_msf/data
-# Download the rosbag and put it here
-$ cd ~/catkin_ws/src/smb_common/smb_msf/data
-$ rosbag play First_mission_wangen_FILTERED.bag --clock 
-```
-## Running on smb
-
-```bash
-# In Terminal 1 on smb
-$ roslaunch smb smb.launch
-# wait until you see Received first IMU message
-
-# In Terminal 2 on smb
-$ roslaunch loam loam_smb.launch 
-
-# In Terminal 3 on smb
-$ roslaunch smb_msf smb_msf.launch
-
-# In Terminal 4 on host PC
-$ roslaunch rviz
-# and change the fixed frame (in global options) to odom
-```
+The only required external packages needed for the state estimation tutorial are [glog_catkin](https://github.com/ethz-asl/glog_catkin.git) and [msf](https://github.com/leggedrobotics/ethzasl_msf.git). 
+Both of these packages are also included in the `smb.repos`-vcs file, and automatically cloned to `se/msf` and `se/glog_catkin`.
 
 ## Download files
-In order to follow the tutorial you will need the following rosbag and rviz file:
-  - [First mission rosbag filtered](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/StateEstimationTutorial/First_mission_wangen_FILTERED.bag)
-  - [Rviz file](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/StateEstimationTutorial/smb.rviz)
+In order to follow the tutorial you will need the following rosbag.
+  - [Rosbag open3d_slam](https://drive.google.com/file/d/1gAd003PUeShhxGQ9vYmos0VUboqeL933/view?usp=sharing)
 
-Download the rosbag into the folder ```~/catkin_ws/src/smb_common/smb_msf/data```
-Download the rviz profile into the folder ```~/catkin_ws/src/smb_common/smb_msf/rviz```
+Download the rosbag into a folder of your choice. In the tutorial this location will be denoted as `<path_to_bagfile>`.
+
+## Compile The C++ Code
+To compile the required packages, simply run
+```bash
+catkin build smb_msf
+```
+These instructions are also provided in the [SLAM and Navigation](../core-software/autonomy_software.md) instructions.
+
+### Check The Compiled Code
+You can test the success of the compilation by running the following code.
+
+```bash
+$ roslaunch smb_msf smb_msf.launch
+```
+If everything launches without any error messages, your C++ software is ready for the tutorial.
+
+## Checking the Python Code
+For visualization purposes we also provide a Python node inside smb_msf. Adiitionally, for further experiments we also provide 2 more python files.
+Make sure that you have all packages required for running the node:
+* numpy
+* matplotlib
+* rospy
+* sensor_msgs.msg.Imu
+* geometry_msgs.msg.TransformStamped
+* os
+* time
+(after a ros-install all should be present with Python3)
+
+Try to run the visualizer node with all options enabled, using the following command:
+```bash
+roslaunch smb_msf plotting.launch noisify_pose:=true noisify_imu:=true
+```
+If no import error occurs, you are ready for the summer school tutorial.
+
+## Voluntarily (but recommended) System Installs
+* terminator, because multiple terminals will be needed during the tutorial.
+```bash
+sudo apt install terminator
+```
+* jsk_rviz_plugins, for visualizing TF-paths in RVIZ.
+```bash
+sudo apt install ros-noetic-jsk-rviz-plugins
+```
+
+=====================================================
 
 ## Trouble shooting
 

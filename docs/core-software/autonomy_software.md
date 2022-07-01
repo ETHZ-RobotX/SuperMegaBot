@@ -19,7 +19,7 @@ Please [create an issue](https://github.com/ETHZ-RobotX/SuperMegaBot/issues/new)
 ## Remark
 {:.no_toc}
 
-Please follow the steps described in the [installation documentation](installation_core.md) of the SMB core software before in order to prepare for the SLAM and navigation related software.
+Please follow the steps described in the [installation documentation](installation_core.md) of the SMB core software before, in order to have the required dependencies for the SLAM and navigation related software.
 
 If you want to use the system on a real SMB robot with real sensors and actuators, the [hardware related part](../robot-operation/installation_hw_packages.md) should be installed **on top of the core part**. This document contains the instructions about SMB core software, which also contains the simulation environment.
 
@@ -48,3 +48,12 @@ Just run the following command in the catkin workspace to build all the SLAM rel
 catkin build smb_slam
 ```
 
+## State Estimation
+As an alternative to the camera-based state estimation provided by RealSense, you can run a custom extended Kalman filter and fuse lidar-localization measurements with IMU measurements.
+
+Same as for the other two packages, [msf](https://github.com/leggedrobotics/ethzasl_msf.git), [icp_localization](https://github.com/leggedrobotics/icp_localization.git) and [open3d_slam](https://github.com/leggedrobotics/open3d_slam.git) are already included in the [core repositories](../core-software/installation_core.html#catkin-workspace-and-all-packages) contained in `smb.repos`. Furthermore, msf also requires [glog_catkin](https://github.com/ethz-asl/glog_catkin.git).
+
+For running msf, and after having set up the workspace, just run the following command in the catkin workspace to build all related packages:
+```bash
+catkin build smb_msf
+```
