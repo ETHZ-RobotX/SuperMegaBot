@@ -63,7 +63,7 @@ roslaunch smb_msf plotting.launch # enter "1_default" or similar after bing prom
 # In Terminal 4
 rosbag play <path_to_bagfile>/2021_wangen_open3d_slam_odometry.bag --clock 
 ```
-While msf is running, the plotting script should print out messages in the terminal *"Received state message."*. If not, please check that the topic `/msf_core/state_out` is indeed published.
+While msf is running and the rosbag is played, the plotting script should print out messages in the terminal *"Received state message."*. If not, please check that the topic `/msf_core/state_out` is indeed published.
 (e.g. by `rostopic hz /msf_core/state_out`).
 
 If everything is running, wait for a minute or so, and then kill `plotting.launch`. Investigate the generated plots in your home directory in `$HOME/rss_plots/` with respect to their performance and smoothness.
