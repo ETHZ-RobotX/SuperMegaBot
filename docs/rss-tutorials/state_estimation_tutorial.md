@@ -57,7 +57,7 @@ We recommend starting an external roscore in a 4th window, such that all nodes c
 # In Terminal 1
 roscore
 # In Terminal 2
-roslaunch smb_msf smb_msf.launch use_sim_time:=true ... # TOPIC PARAMETERS MISSING
+<Use the launch command from task 1.2, i.e. setting the correct topic_names.>
 # In Terminal 3
 roslaunch smb_msf plotting.launch # enter "1_default" or similar after bing prompted
 # In Terminal 4
