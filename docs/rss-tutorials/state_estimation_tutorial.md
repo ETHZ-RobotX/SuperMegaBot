@@ -43,7 +43,7 @@ While trying to find out what is wrong, you notice that the extrinsics calibrati
 
 To correct for this, imagine you have access to an URDF model of the robot. However, it only provides the transformation $T_{LI}$.
 
-$_L t_{LI}=(-0.024,-0.251,-0.255)^T$, $q_{LI}=(q_x,q_y,q_z,q_w)^T=(0,0,-0.707,0.707)^T$.
+$t^L_{LI}=(-0.024,-0.251,-0.255)^T$, $q_{LI}=(q_x,q_y,q_z,q_w)^T=(0,0,-0.707,0.707)^T$.
 
 Convert it to $T_{IL}$ and correct the default parameters.
 
