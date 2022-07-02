@@ -13,7 +13,7 @@ Both of these packages are also included in the `smb.repos`-vcs file, and automa
 
 ## Download files
 In order to follow the tutorial you will need the following rosbag.
-  - [Rosbag open3d_slam](https://drive.google.com/file/d/1gAd003PUeShhxGQ9vYmos0VUboqeL933/view?usp=sharing)
+  - [Rosbag open3d_slam](http://robotics.ethz.ch/~asl-datasets/2022_RSS_datasets/2021_wangen_open3d_slam_odometry.bag)
 
 Download the rosbag into a folder of your choice. In the tutorial this location will be denoted as `<path_to_bagfile>`.
 
