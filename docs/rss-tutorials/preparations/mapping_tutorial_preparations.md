@@ -1,8 +1,10 @@
 ---
 layout: default
 title: Mapping Tutorial
-parent: Summer School Tutorials
+grand_parent: Summer School Tutorials
+parent: Tutorial Preparations
 nav_order: 3
+nav_exclude: false
 ---
 
 # Preparations for Mapping Tutorial

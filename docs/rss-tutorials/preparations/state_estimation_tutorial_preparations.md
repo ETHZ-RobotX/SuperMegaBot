@@ -1,8 +1,10 @@
 ---
 layout: default
 title: State Estimation Tutorial
-parent: Summer School Tutorials
+grand_parent: Summer School Tutorials
+parent: Tutorial Preparations
 nav_order: 1
+nav_exclude: false
 ---
 
 # Preparations for State Estimation Tutorial

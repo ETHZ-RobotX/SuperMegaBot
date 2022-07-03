@@ -1,8 +1,10 @@
 ---
 layout: default
 title: Trajectory Optimization Tutorial
-parent: Summer School Tutorials
+grand_parent: Summer School Tutorials
+parent: Tutorial Preparations
 nav_order: 2
+nav_exclude: false
 ---
 
 # Preparations for Trajectory Optimization Tutorial

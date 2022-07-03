@@ -38,5 +38,18 @@ ssh-copy-id team2@10.0.1.5   # adjust username and robot IP address!
 
 Combined with setting up the robot in `~/.ssh/config` this allows connecting to the robot without the need to type the password. 
 
-
 More details can be found in the [official documentation of ssh-copy-id](https://www.ssh.com/academy/ssh/copy-id).
+
+## Setting ROS_MASTER_URI and ROS_IP
+Setting the environment variables `ROS_MASTER_URI` and `ROS_IP` properly is the best strategy to avoid any communication issues in the ROS network. 
+
+A convinient way to set the variables is to adjust the following code to match your robot and add it to the file `~/.bash_aliases` (or `~/.bashrc`):
+```bash
+alias connect-smb261='export ROS_MASTER_URI=http://10.0.1.5:11311 ; 
+export ROS_IP=`ip route get 10.0.1.5 | awk '"'"'{print $5; exit}'"'"'` ; 
+echo "ROS_MASTER_URI and ROS_IP set to " ; 
+printenv ROS_MASTER_URI ; 
+printenv ROS_IP'
+```
+
+Then (for any newly openend terminal), you can execute `connect-smb261` to set the correct environment variables for your robot.

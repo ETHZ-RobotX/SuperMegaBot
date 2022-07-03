@@ -2,12 +2,18 @@
 layout: default
 title: Summer School Tutorials
 nav_order: 4
-has_children: false
+has_children: true
+has_toc: false
 ---
 
-# Tutorials of the Robotics Summer School
+# Robotics Summer School Tutorials
 
-In due time, information for the tutorials of the Robotics Summer School 2022 will be given here.
+## Preparations for Tutorials of Robotics Summer School
 
+Please follow the instructions given [here](preparations/) to prepare for the tutorials.
 
+## Tutorials of the Robotics Summer School
+
+- Robot Introduction: [Slides](https://docs.google.com/presentation/d/1i8MCOWxbqVXRCWMQOwWgHl8M9TGJLvluw3vByF_Z6js/edit?usp=sharing)
+- Robot Software: [Slides](https://docs.google.com/presentation/d/1scdq9YNLUFSm322NZWfndzX-z0wgS1x8cZm-BVjsqc0/edit?usp=sharing)
 
