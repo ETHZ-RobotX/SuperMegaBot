@@ -43,7 +43,7 @@ While trying to find out what is wrong, you notice that the extrinsics calibrati
 
 To correct for this, imagine you have access to an URDF model of the robot. However, it only provides the transformation $T_{LI}$.
 
-$_Lt_{LI} = (-0.024,-0.251,-0.255)^T,~q_{LI} = (q_x,q_y,q_z,q_w)^T = (0, 0, -0.707, 0.707)^T$.
+$t^L_{LI}=(-0.024,-0.251,-0.255)^T$, $q_{LI}=(q_x,q_y,q_z,q_w)^T=(0,0,-0.707,0.707)^T$.
 
 Convert it to $T_{IL}$ and correct the default parameters.
 
@@ -52,15 +52,21 @@ Convert it to $T_{IL}$ and correct the default parameters.
 ## 2.0 Performance Analysis
 ### 2.1 Visualization Script
 Launch the modified configuration for `smb_msf` from above. Now, before playing the rosbag, also launch the plotting node and enter the name `1_default` or similar when being prompted.
+We recommend starting an external roscore in a 4th window, such that all nodes can safely communicate with each other.
 ```bash
 # In Terminal 1
-roslaunch smb_msf smb_msf.launch use_sim_time:=true ... # TOPIC PARAMETERS MISSING
+roscore
 # In Terminal 2
-roslaunch smb_msf plotting.launch # enter "1_default" or similar after bing prompted
+<Use the launch command from task 1.2, i.e. setting the correct topic_names.>
 # In Terminal 3
+roslaunch smb_msf plotting.launch # enter "1_default" or similar after bing prompted
+# In Terminal 4
 rosbag play <path_to_bagfile>/2021_wangen_open3d_slam_odometry.bag --clock 
 ```
-Wait for a minute or so, and then kill `plotting.launch`. Investigate the generated plots in your home directory in `$HOME/rss_plots/` with respect to their performance and smoothness.
+While msf is running and the rosbag is played, the plotting script should print out messages in the terminal *"Received state message."*. If not, please check that the topic `/msf_core/state_out` is indeed published.
+(e.g. by `rostopic hz /msf_core/state_out`).
+
+If everything is running, wait for a minute or so, and then kill `plotting.launch`. Investigate the generated plots in your home directory in `$HOME/rss_plots/` with respect to their performance and smoothness.
 
 ### 2.2 Biased IMU
 In this subtask, we will investigate the performance of the IMU if a strong bias of **0.8 m/s^2** is present along the z-axis of the imu. In the current default configuration the bias estimation is disabled.
