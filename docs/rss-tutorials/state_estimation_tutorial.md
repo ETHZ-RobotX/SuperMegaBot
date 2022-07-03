@@ -87,7 +87,7 @@ Next, disable the `core/core_fixed_bias` flag (set it to false) in `smb_msf/para
 In this (optional) task, we simulate a noisy pose estimate (gaussian noise with std-dev of 0.1 for x,y,z), which can occur in challenging environments. For this task, run:
 ```bash
 # Terminal 1
-roslaunch smb_msf plotting.launch noisify_imu:=true # enter "4_position_noisified" or similar
+roslaunch smb_msf plotting.launch noisify_pose:=true # enter "4_position_noisified" or similar
 # Terminal 2
 roslaunch smb_msf smb_msf.launch use_sim_time:=true imu_topic:=/versavis/imu pose_topic:=/mapping_node/scan2map_transform_noisified # Note the "noisified" in the name
 # Terminal 3
