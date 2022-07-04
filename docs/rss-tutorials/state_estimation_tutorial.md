@@ -3,6 +3,7 @@ layout: default
 title: State Estimation Tutorial
 parent: Summer School Tutorials
 nav_exclude: true
+math: mathjax3
 ---
 
 # State Estimation Tutorial

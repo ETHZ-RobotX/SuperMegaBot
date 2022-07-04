@@ -3,6 +3,7 @@ layout: default
 title: Trajectory Optimization Tutorial
 parent: Summer School Tutorials
 nav_exclude: true
+math: mathjax3
 ---
 
 # Model Predictive Control Tutorial

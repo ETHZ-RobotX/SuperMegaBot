@@ -186,8 +186,6 @@ After you built the packages, you can add the source file into **~/.bashrc** so 
 echo "source <directory_to_ws>/<catkin_ws_name>/devel/setup.bash" >> ~/.bashrc
 ```
 
-## Aliases for quick connection with SMB
-
 ## Running the simulation
 
 Refer to the [How To Run Software Documentation](HowToRunSoftware.md) to learn on how to run the simulation.
@@ -196,3 +194,7 @@ Refer to the [How To Run Software Documentation](HowToRunSoftware.md) to learn o
 ## Hardware related software
 
 To get everything running on the real robot, you also need to follow the steps described in the [documentation of the hardware related ROS packages](../robot-operation/installation_hw_packages.md).
+
+## Setting aliases for quick connection with SMB
+
+Refer to the [HowToSimplifyAccess](../robot-operation/HowToSimplifyAccess.md) to learn on how to simplify the SSH connection to NUC computer and Jetson Xavier on SMB.

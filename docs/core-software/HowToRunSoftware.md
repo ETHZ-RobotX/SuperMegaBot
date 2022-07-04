@@ -39,20 +39,25 @@ In both modes all sensor values, odometry and robot state can be read and visual
 
 ### Simulation Mode
 
-The simulation runs on the host PC (your computer). To run the simulation you do not need a connection to SMB.
+The simulation in `WaA.world` (stands for Test venue in Wangen an der Aare) runs on the host PC (your computer). To run the simulation you do not need a connection to SMB.
 
 ```bash
 # In the host pc
-roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true
+roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true world:=WaA
 ```
 
 Now you have two possibilities to drive with the robot.
+
 1. If you have a joystick connect it to the laptop. You can see the button configuration [here](../NotionsAndDevices.md#joystick).
 2. You can also drive the robot with the keyboard. If you want to drive the robot, make sure that the terminal where you launched the simulation (i.e. where the `teleop_twist_keyboard` node is running) is selected while pressing the keys. Please refer to the [package documentation](http://wiki.ros.org/teleop_twist_keyboard#Controls) for the key bindings. To use the keyboard execute the following command:
-   ```bash
+
+    ```bash
     # In the host pc
     roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true keyboard_teleop:=true
     ```
+
+For more information about different simulation worlds, you could find details and test different worlds from [smb_common/smb_gazebo/worlds/](https://github.com/ETHZ-RobotX/smb_common/tree/master/smb_gazebo/worlds).
+{: .smb-info }
 
 ### Autonomous Navigation in Simulation
 
@@ -66,11 +71,11 @@ Make sure that the `smb_navigation` is built. If not, run:
 catkin build smb_path_planner
 ```
 
-Then, launch the simulation environment:
+Then, launch the simulation environment in `planner_tutorial.world`:
 
 ```bash
 # In the host pc
-roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true
+roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true world:=planner_tutorial
 ```
 
 Subsequently, in a second terminal window launch the OMPL path planner:
@@ -80,7 +85,7 @@ Subsequently, in a second terminal window launch the OMPL path planner:
 roslaunch smb_navigation navigate2d_ompl.launch sim:=true global_frame:=tracking_camera_odom
 ```
 
-In RVIZ you should see a grey-scaled map with SMB in the middle. Now, select `2d Navigation Goal` from the top toolbar and set the goal for the planner in the feasible region within the map.
+In RVIZ, you should see a grey-scaled map with SMB in the middle. Now, select `2d Navigation Goal` from the top toolbar and set the goal for the planner in the feasible region within the map.
 
 | Gazebo | RVIZ |
 | ------------------ | ------------------ |
@@ -89,6 +94,7 @@ In RVIZ you should see a grey-scaled map with SMB in the middle. Now, select `2d
 > PS: click image to see in full size.
 
 To be able to use the advanced features of the path planner, refer to the [SMB path planner Wiki](https://github.com/ETHZ-RobotX/smb_path_planner/wiki).
+{: .smb-info }
 
 ### Running the core software on the robot
 
@@ -103,6 +109,7 @@ roslaunch smb smb.launch
 ```
 
 You can test the sensors by displaying the published topics.
+
 ```bash
 # In a terminal of host PC
 
@@ -112,7 +119,6 @@ rostopic list
 # Example: Display the measured wheelspeeds
 rostopic echo /wheelSpeeds
 ```
-
 
 To visualize the sensor readings via Rviz
 
@@ -129,9 +135,10 @@ You might need to restart the _SMB base_ if the robot does not respond to sofwar
 {: .smb-info }
 
 Once the core software (`smb.launch`) is started on the robot, you have several options:
- 1. Control the robot using the RC transmitter. The signals from the RC transmitter are read out by the onboard computer and sent to the motor controller. 
- 2. Use a Joystick to generate control signals (twist messages) In order to control the SMB with the joystick, you should keep presing the L1 button while driving and use the left stick to control the robot.
- 3. Run the autonmous software stack as outlined in the following section.
+
+1. Control the robot using the RC transmitter. The signals from the RC transmitter are read out by the onboard computer and sent to the motor controller.
+2. Use a Joystick to generate control signals (twist messages) In order to control the SMB with the joystick, you should keep presing the L1 button while driving and use the left stick to control the robot.
+3. Run the autonmous software stack as outlined in the following section.
 
 ### Running the autonomous navigation software
 
@@ -150,7 +157,7 @@ To start the autonomous navigation please run the following terminal command in 
 
 ```bash
 # In the terminal of SSH
-roslaunch smb_navigation navigate2d_ompl.launch 
+roslaunch smb_navigation navigate2d_ompl.launch
 
 # If you see the message "odom received",
 # everything started without any problem
