@@ -20,4 +20,4 @@ Please follow the instructions given [here](preparations/) to prepare for the tu
 - SLAM: [Google Slides](https://docs.google.com/presentation/d/1wmRThS-t5mTzbMzZ7oIxbhRSn8dBjcha/edit?usp=sharing&ouid=104109680251067945482&rtpof=true&sd=true)
 - Trajectory Optimization: [Exercise](trajectory_optimization_tutorial.md), [PDF Exercise](https://drive.google.com/file/d/1kri7ThMUCT6mhh7B8mMjcROAQ4RbWBv7/view?usp=sharing), [Solutions](https://docs.google.com/document/d/1pTwah8hE7s7AXWEATaOjLdM_6gjuFVBa-_Rm8F_lDtA/edit?usp=sharing), [PDF Slides](https://drive.google.com/file/d/1b5dYZhlhaMps75hHddvldIAFFivRs-my/view?usp=sharing)
 - Path Planning: [Google Slides](https://docs.google.com/presentation/d/1SIZkOv5EcxKiCPJMOcYGV5KUOrF50aDr20GBRTD7JPU/edit?usp=sharing), [PDF Slides](https://drive.google.com/file/d/1o3XLxk7u8ZGY-dM2K4NIuoYgvvajx0qx/view?usp=sharing)
-
+- Artefact Detection Tutorial: [Google Slides](https://docs.google.com/presentation/d/1eCi_FnHrDkGzo5rtMYWr_ZM5ZjPNoGf-gcA8LdtjW2E/edit?usp=sharing), [PDF Slides](https://drive.google.com/file/d/1zpWCKIipeZtTar-HHMNhWsbv_sflkXZL/view?usp=sharing)
