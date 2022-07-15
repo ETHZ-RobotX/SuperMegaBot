@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Artefact Detection Tutorial
-grand_parent: Summer School Tutorials
+grand_parent: Robotics Summer School
 parent: Tutorial Preparations
 nav_order: 5
 nav_exclude: false

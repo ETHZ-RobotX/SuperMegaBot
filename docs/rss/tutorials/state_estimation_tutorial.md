@@ -7,7 +7,7 @@ math: mathjax3
 ---
 
 # State Estimation Tutorial
-Before starting the tutorial, follow the [Preparation Instructions](preparations/state_estimation_tutorial_preparations.md) and compile the required code.
+Before starting the tutorial, follow the [Preparation Instructions](../preparations/state_estimation_tutorial_preparations.md) and compile the required code.
 
 ## 0 IMU in State Estimation
 ### 0.1 IMU State Space Model and MSF

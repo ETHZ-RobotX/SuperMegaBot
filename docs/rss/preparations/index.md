@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Tutorial Preparations
-parent: Summer School Tutorials
+parent: Robotics Summer School
 has_children: true
 has_toc: true
+nav_order: 1
 ---
 
 # Preparations for Tutorials of Robotics Summer School

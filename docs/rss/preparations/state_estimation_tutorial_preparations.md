@@ -1,14 +1,14 @@
 ---
 layout: default
 title: State Estimation Tutorial
-grand_parent: Summer School Tutorials
+grand_parent: Robotics Summer School
 parent: Tutorial Preparations
 nav_order: 1
 nav_exclude: false
 ---
 
 # Preparations for State Estimation Tutorial
-To prepare for the Tutorial on State Estimation, first set up and install the [SMB core software](../core-software/installation_core.md).
+To prepare for the Tutorial on State Estimation, first set up and install the [SMB core software](../../core-software/installation_core.md).
 
 The only required external packages needed for the state estimation tutorial are [glog_catkin](https://github.com/ethz-asl/glog_catkin.git) and [msf](https://github.com/leggedrobotics/ethzasl_msf.git). 
 Both of these packages are also included in the `smb.repos`-vcs file, and automatically cloned to `se/msf` and `misc/glog_catkin`.
@@ -24,7 +24,7 @@ To compile the required packages, simply run
 ```bash
 catkin build smb_msf
 ```
-These instructions are also provided in the [SLAM and Navigation](../core-software/autonomy_software.md) instructions.
+These instructions are also provided in the [SLAM and Navigation](../../core-software/autonomy_software.md) instructions.
 
 ### Check The Compiled Code
 You can test the success of the compilation by running the following code.

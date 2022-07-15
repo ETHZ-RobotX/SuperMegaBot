@@ -1,18 +1,15 @@
 ---
 layout: default
-title: Summer School Tutorials
-nav_order: 4
-has_children: true
+title: Tutorials
+parent: Robotics Summer School
+has_children: false
 has_toc: false
+nav_order: 2
 ---
 
-# Robotics Summer School Tutorials
+# Robotics Summer School
 
-## Preparations for Tutorials of Robotics Summer School
-
-Please follow the instructions given [here](preparations/) to prepare for the tutorials.
-
-## Tutorials of the Robotics Summer School
+## Tutorials
 
 - Robot Introduction: [Google Slides](https://docs.google.com/presentation/d/1i8MCOWxbqVXRCWMQOwWgHl8M9TGJLvluw3vByF_Z6js/edit?usp=sharing), [PDF Slides](https://drive.google.com/file/d/1IGVYaFTOX26qhTpwe7GOv481tv7y2-qy/view?usp=sharing)
 - Robot Software: [Google Slides](https://docs.google.com/presentation/d/1scdq9YNLUFSm322NZWfndzX-z0wgS1x8cZm-BVjsqc0/edit?usp=sharing), [PDF Slides](https://drive.google.com/file/d/1UPLOG8CVnTw_pfvIA2EGX9MZRsWq4UHj/view?usp=sharing)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mapping Tutorial
-grand_parent: Summer School Tutorials
+grand_parent: Robotics Summer School
 parent: Tutorial Preparations
 nav_order: 3
 nav_exclude: false
@@ -57,7 +57,7 @@ python -c 'import open3d; print(open3d.__version__)'
 
 For running *open3d_slam* you will need the open3D library. Follow [the instructions above](#open3d-python-install-required-for-the-interactive-part-of-mapping-tutorial) to install open3d.
 
-Follow the [documentation on how to update the SMB software](../core-software/update_software.md) to download the *open3d_slam* repo into your catking workspace. Alternatively, you can clone it manually:
+Follow the [documentation on how to update the SMB software](../../core-software/update_software.md) to download the *open3d_slam* repo into your catking workspace. Alternatively, you can clone it manually:
 
 ```bash
 cd <catkin_ws>/src

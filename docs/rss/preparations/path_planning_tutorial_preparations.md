@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Path Planning Tutorial
-grand_parent: Summer School Tutorials
+grand_parent: Robotics Summer School
 parent: Tutorial Preparations
 nav_order: 4
 nav_exclude: false
@@ -9,7 +9,7 @@ nav_exclude: false
 
 # Preparations for Path Planning Tutorial
 
-To prepare for the Tutorial on Path Planning, only the [SMB core software](../core-software/installation_core.md) and the [SMB path planner](../core-software/autonomy_software.md#path-planning) has to be set up and installed.
+To prepare for the Tutorial on Path Planning, only the [SMB core software](../../core-software/installation_core.md) and the [SMB path planner](../../core-software/autonomy_software.md#path-planning) has to be set up and installed.
 {: .smb-info }
 
 ## Check software installation
