@@ -62,7 +62,7 @@ repositories:
   slam/open3d_slam:
     type: git
     url: https://github.com/leggedrobotics/open3d_slam.git
-    version: master
+    version: 97609e36984665340fd7749762bcf65a91071bf2
   ui/multimaster_fkie:
     type: git
     url: https://github.com/ETHZ-RobotX/multimaster_fkie
