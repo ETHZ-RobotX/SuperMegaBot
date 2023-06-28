@@ -3,14 +3,10 @@ repositories:
     type: git
     url: https://github.com/ETHZ-RobotX/rslidar_sdk.git
     version: supermegabot
-  hardware/versavis:
+  hardware/smb_imu_interface:
     type: git
-    url: https://github.com/ethz-asl/versavis.git
-    version: feature/noetic_support
-  hardware/flir_camera_driver:
-    type: git
-    url: https://github.com/ethz-asl/flir_camera_driver.git
-    version: master
+    url: https://github.com/ETHZ-RobotX/smb_imu_interface.git
+    version: main
   hardware/realsense:
     type: git
     url: https://github.com/IntelRealSense/realsense-ros.git

@@ -10,13 +10,14 @@ has_children: true
 {:.no_toc}
 The SMB core software allows simulation of the robot in a gazebo environment but is also required on the real robots.
 
-## Local Installation
-
-To install the simulation/SMB core software, follow the steps described in the [installation documentation](installation_core.md).
-
 ## Using Docker
 
-Instead of downloading and building the SMB core software directly on your machine, you can use a Docker image with a pre-compiled software. Details are given in the [SMB docker documentation](docker_installation.md)
+To run the SMB software only in simulation, you can use a Docker image with pre-compiled software. Details are given in the [SMB docker documentation](docker_installation.md). With this, no further installation is needed.
+
+## Local Installation
+
+Instead of running the docker image, you can install the simulation/SMB core software on a native Ubuntu 20.04 running ROS Noetic: Follow the steps described in the [installation documentation](installation_core.md).
+
 
 ## Starting the Simulation
 
