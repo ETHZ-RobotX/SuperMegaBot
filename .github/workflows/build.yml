@@ -16,7 +16,9 @@ jobs:
       HW_FILE: ${{ github.workspace }}/smb_hw.repos
       ROS_PARALLEL_JOBS: '-j8 -l6'
       ROS_DISTRO: noetic
-      CATKIN_WS: ~/catkin_ws_test/
+      CATKIN_WS: /root/catkin_ws_test/
+      LIBSPINNAKER_FILEID: 1r4LNuU9IhfRWavegSaLTFLIenTrmMpN1
+      LIBSPINNAKER_FILENAME: spinnaker-2.7.0.128-Ubuntu20.04-amd64-pkg.tar.gz
     container:
           image: ethzrobotx/smb_docker:latest
     steps:
@@ -29,8 +31,7 @@ jobs:
         run: |
             mkdir -p $CATKIN_WS/src
             cd $CATKIN_WS
-            catkin init
-            catkin config --extend /opt/ros/noetic -DCMAKE_BUILD_TYPE=Release
+            catkin config --init --extend /opt/ros/noetic -DCMAKE_BUILD_TYPE=Release
       - name: Install ROS packages with rosdep
         run: |
           rosdep update
@@ -54,8 +55,15 @@ jobs:
         run: |
           cd $CATKIN_WS
           catkin build smb_path_planner --no-status
-
-      - name: Install dependencies for hardware
+      - name: catkin build gbplanner 
+        run: |
+          cd $CATKIN_WS
+          catkin build gbplanner* pci_general --no-status
+      - name: catkin build frontier_exploration 
+        run: |
+          cd $CATKIN_WS
+          catkin build explore_lite slam_gmapping --no-status
+      - name: Install librealsense and dependencies
         run: |
             # Realsense
             sudo apt-key adv --keyserver keys.gnupg.net --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
@@ -63,17 +71,24 @@ jobs:
             sudo apt update
             sudo apt install librealsense2-dev librealsense2-dkms librealsense2-utils -y
             sudo apt install ros-noetic-ddynamic-reconfigure -y
+      - name: Install Robosense dependencies
+        run: |
             # Robosense
             sudo apt-get install -y libyaml-cpp-dev libpcap-dev libprotobuf-dev protobuf-compiler git
-            # Spinnaker
-            sudo apt update
-            sudo apt install debconf-utils libusb-1.0-0 -y 
-            wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1wVK0dAH4mre1Prsr-Wsaowz0_OAmWe2f' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1wVK0dAH4mre1Prsr-Wsaowz0_OAmWe2f" -O 'spinnaker-2.4.0.143-Ubuntu20.04-amd64-pkg.tar.gz' && rm -rf /tmp/cookies.txt
-            tar -xvf spinnaker-2.4.0.143-Ubuntu20.04-amd64-pkg.tar.gz 
-            rm spinnaker-2.4.0.143-Ubuntu20.04-amd64-pkg.tar.gz 
-            cd spinnaker-2.4.0.143-amd64/
-            echo libspinnaker libspinnaker/accepted-flir-eula boolean true | sudo debconf-set-selections
-            sudo dpkg -i libgentl_2.4.0.143_amd64.deb libspinnaker_2.4.0.143_amd64.deb libspinnaker-dev_2.4.0.143_amd64.deb libspinnaker-c_2.4.0.143_amd64.deb libspinnaker-c-dev_2.4.0.143_amd64.deb
+      # - name: Install FLIR camera driver (libspinnaker)
+      #   run: |
+      #       # Spinnaker
+      #       sudo apt update
+      #       sudo apt install debconf-utils libusb-1.0-0 -y 
+      #       wget --quiet --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id='"$LIBSPINNAKER_FILEID" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=$LIBSPINNAKER_FILEID" -O $LIBSPINNAKER_FILENAME && rm -rf /tmp/cookies.txt
+      #       tar -xf $LIBSPINNAKER_FILENAME
+      #       SPINNAKER_DIR=$(tar -xvf $LIBSPINNAKER_FILENAME | head -1)
+      #       SPINNAKER_VERSION=${SPINNAKER_DIR#spinnaker-}
+      #       SPINNAKER_VERSION="${SPINNAKER_VERSION%-amd64/}"_amd64
+      #       rm $LIBSPINNAKER_FILENAME 
+      #       cd $SPINNAKER_DIR
+      #       echo libspinnaker libspinnaker/accepted-flir-eula boolean true | sudo debconf-set-selections
+      #       sudo dpkg -i libgentl_${SPINNAKER_VERSION}.deb libspinnaker_${SPINNAKER_VERSION}.deb libspinnaker-dev_${SPINNAKER_VERSION}.deb libspinnaker-c_${SPINNAKER_VERSION}.deb libspinnaker-c-dev_${SPINNAKER_VERSION}.deb
       - name: catkin build smb 
         run: |
           cd $CATKIN_WS
