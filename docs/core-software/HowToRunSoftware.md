@@ -129,8 +129,6 @@ roslaunch smb_opc opc.launch
 # You should see the robot model in Rviz
 ```
 
-When launching the `smb.launch` file with default arguments, the onboard computer assumes control over the motor controller. This means that the motors can now only be controlled via software (not directly via RC anymore).
-
 You might need to restart the _SMB base_ if the robot does not respond to sofware commands.
 {: .smb-info }
 

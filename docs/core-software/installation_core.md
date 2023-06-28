@@ -2,7 +2,7 @@
 layout: default
 title: Core Software Setup
 parent: SMB Core Software
-nav_order: 1
+nav_order: 2
 ---
 
 # Setting up the SMB Core Software
@@ -17,13 +17,15 @@ Please [create an issue](https://github.com/ETHZ-RobotX/SuperMegaBot/issues/new)
 * Table of contents
 {:toc}
 
-## Remark
+## Remarks
 
 {:.no_toc}
 
-The SMB software consists of two parts: core and hardware related.
+1. In case you would like to only run the simulation environment, it is enough to [download and run the SMB docker image](docker_installation.md). <br />
+Alternatively, you can follow the steps below to set the simulation up in an Ubuntu 20.04 environment.
 
-If you want to use the system on a real SMB robot with real sensors and actuators, the [hardware related part](../robot-operation/installation_hw_packages.md) should be installed **on top of the core part**. This document contains the instructions about SMB core software, which also contains the simulation environment.
+2. The SMB software is split up in two parts: non-hardware and hardware related. <br />
+If you want to use the system on a real SMB robot with real sensors and actuators, the [hardware related part](../robot-operation/installation_hw_packages.md) should be installed **on top of the non-hardware part**. This document contains the instructions about SMB non-hardware related software, which also contains the simulation environment.
 
 
 ## Prerequisites
