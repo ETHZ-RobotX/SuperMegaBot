@@ -11,22 +11,10 @@ repositories:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_powerstatus.git
     version: main
-  lib/libnabo:
-    type: git
-    url: https://github.com/ANYbotics/libnabo.git
-    version: master
-  lib/libpointmatcher:
-    type: git
-    url: https://github.com/leggedrobotics/libpointmatcher.git
-    version: master
   lib/ocs2:
     type: git
     url: https://github.com/leggedrobotics/ocs2.git
     version: summerschool_2022
-  lib/pointmatcher_ros:
-    type: git
-    url: https://github.com/leggedrobotics/pointmatcher-ros.git
-    version: master
   misc/catkin_simple:
     type: git
     url: https://github.com/catkin/catkin_simple.git
@@ -55,18 +43,10 @@ repositories:
     type: git
     url: https://github.com/leggedrobotics/ethzasl_msf.git
     version: master
-  slam/icp_localization:
-    type: git
-    url: https://github.com/leggedrobotics/icp_localization.git
-    version: master
   slam/open3d_slam:
     type: git
     url: https://github.com/leggedrobotics/open3d_slam.git
-    version: master
-  ui/multimaster_fkie:
-    type: git
-    url: https://github.com/ETHZ-RobotX/multimaster_fkie
-    version: master
+    version: robotics_summer_school_2023
   ui/smb_rviz_plugins:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_rviz_plugins.git
@@ -75,3 +55,58 @@ repositories:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_object_detection.git
     version: main
+# EXPLORATION MISC
+  misc/eigen_catkin:
+    type: git
+    url: https://github.com/ethz-asl/eigen_catkin.git
+    version: 00b5eb254bad8de9cd68d238aa994e443062cf30
+  misc/eigen_checks:
+    type: git
+    url: https://github.com/ethz-asl/eigen_checks.git
+    version: 22a6247a3df11bc285d43d1a030f4e874a413997
+  misc/gflags_catkin:
+    type: git
+    url: https://github.com/ethz-asl/gflags_catkin.git
+    version: 5324e74119996a6e2da12d20e5388c17480ebd79
+  misc/minkindr:
+    type: git
+    url: https://github.com/ethz-asl/minkindr.git
+    version: bc4503c34970a13b7ef06f62505e3333395ce02c
+  misc/minkindr_ros:
+    type: git
+    url: https://github.com/ethz-asl/minkindr_ros.git
+    version: 88e0bd476f82027453f04fdf7c40c7c9a358aa1b
+  misc/mav_comm:
+    type: git
+    url: https://github.com/ethz-asl/mav_comm.git
+    version: master
+  misc/yaml_cpp_catkin:
+    type: git
+    url: https://github.com/ethz-asl/yaml_cpp_catkin.git
+    version: master
+# EXPLORATION MAPPING
+  mapping/voxblox:
+    type: git
+    url: https://github.com/ntnu-arl/voxblox.git
+    version: dev/noetic
+  mapping/slam_gmapping:
+    type: git
+    url: https://github.com/ETHZ-RobotX/slam_gmapping
+    version: melodic-devel
+# EXPLORATION
+  exploration/gbplanner_ros:
+    type: git
+    url: https://github.com/ETHZ-RobotX/gbplanner_ros.git
+    version: gbplanner2
+  exploration/pci_general:
+    type: git
+    url: https://github.com/ntnu-arl/pci_general.git
+    version: main
+  exploration/adaptive_obb_ros:
+    type: git
+    url: https://github.com/ntnu-arl/adaptive_obb_ros.git
+    version: master
+  exploration/m-explore:
+    type: git
+    url: https://github.com/hrnr/m-explore.git
+    version: noetic-devel
