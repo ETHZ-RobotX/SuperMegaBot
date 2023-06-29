@@ -64,7 +64,7 @@ sudo apt install python3-catkin-tools python3-catkin-lint python3-pip
 # tool for install deps
 sudo apt install python3-rosdep
 # misc libs/tools
-python -m pip install osrf-pycommon
+python3 -m pip install osrf-pycommon
 ```
 
 ### Creating catkin workspace
