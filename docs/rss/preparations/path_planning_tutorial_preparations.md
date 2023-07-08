@@ -28,7 +28,3 @@ To test if the installation is working correctly, source the workspace where the
    * The SMB should move while tracking the local path
 
 If everything runs, then the software is working and ready for the tutorial.
-
-## Tutorial Slides
-
-The slides for the tutorial are available [here](https://docs.google.com/presentation/d/1wrH-gTAJQq2iququ-cOHDCa6Z_HXRueYX-B6Pd9Bt50/edit?usp=sharing) (pdf version available [here](https://github.com/ETHZ-RobotX/smb_path_planner/blob/master/docs/Path%20Planning%20Tutorial%20-%20Summer%20School%202021.pdf)).
