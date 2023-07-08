@@ -44,4 +44,4 @@ Follow the instructions given in the [readme of the smb_slam package](https://gi
 ## State Estimation
 As an alternative to the visual-inertial odometry based state estimation provided by RealSense tracking camera, you can install a [graph based multi sensor fusion framework](https://github.com/leggedrobotics/graph_msf/).
 
-Follow the instructions given in the [reamde of the smb_msf_graph package](https://github.com/ETHZ-RobotX/smb_common/blob/devel/smb_msf_graph/readme.md) to install the framework on your system.
+Follow the instructions given in the [reamde of the smb_msf_graph package](https://github.com/ETHZ-RobotX/smb_common/blob/master/smb_msf_graph/README.md) to install the framework on your system.
