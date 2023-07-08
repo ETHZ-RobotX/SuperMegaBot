@@ -11,6 +11,10 @@ repositories:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_powerstatus.git
     version: main
+  lib/gtsam_catkin:
+    type: git
+    url: https://github.com/leggedrobotics/gtsam_catkin
+    version: main
   lib/ocs2:
     type: git
     url: https://github.com/leggedrobotics/ocs2.git
@@ -39,10 +43,10 @@ repositories:
     type: git
     url: https://github.com/leggedrobotics/teb_local_planner.git
     version: feature/correct_local_plan_timestamps
-  se/msf:
+  se/graph_msf:
     type: git
-    url: https://github.com/leggedrobotics/ethzasl_msf.git
-    version: master
+    url: https://nubertj@bitbucket.org/nubertj/gmsf_robotics_summer_school.git
+    version: robotics_summer_school_2023
   slam/open3d_slam:
     type: git
     url: https://github.com/leggedrobotics/open3d_slam.git
