@@ -3,6 +3,7 @@ layout: default
 title: How to VPN
 parent: Operating the SMB
 nav_order: 5
+nav_exclude: true
 ---
 
 # How to establish the VPN connection?

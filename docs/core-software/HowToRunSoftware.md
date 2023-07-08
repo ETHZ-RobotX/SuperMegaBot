@@ -75,7 +75,7 @@ Then, launch the simulation environment in `planner_tutorial.world`:
 
 ```bash
 # In the host pc
-roslaunch smb_gazebo sim.launch launch_gazebo_gui:=true world:=planner_tutorial
+roslaunch smb_gazebo sim.launch tracking_camera:=true launch_gazebo_gui:=true world:=planner_tutorial
 ```
 
 Subsequently, in a second terminal window launch the OMPL path planner:
@@ -151,17 +151,7 @@ roslaunch smb smb.launch
 # everything started without any problem
 ```
 
-To start the autonomous navigation please run the following terminal command in an other terminal window.
-
-```bash
-# In the terminal of SSH
-roslaunch smb_navigation navigate2d_ompl.launch
-
-# If you see the message "odom received",
-# everything started without any problem
-```
-
-To visualize the sensor reading via Rviz
+The visualization in Rviz can then be started.
 
 ```bash
 # In the terminal of host PC
@@ -170,4 +160,48 @@ roslaunch smb_opc opc.launch
 # You should see the robot model in Rviz
 ```
 
-After that you can use the Rviz 2D Navigation Goal tool.
+An overview of different options to start the autonomous navigation is given below. For a more detailed explanation please refer to [path planner](https://github.com/ETHZ-RobotX/smb_path_planner), [SLAM](https://github.com/ETHZ-RobotX/smb_common/blob/exploration/smb_slam/README.md).
+
+#### Option 1: Running with tracking camera
+To start the autonomous navigation please run the following terminal command in an other terminal window.
+```bash
+# In the terminal of SSH
+roslaunch smb_navigation navigate2d_ompl.launch global_frame:=tracking_camera_odom
+
+# If you see the message "odom received",
+# everything started without any problem
+```
+
+#### Option 2: Running with Online SLAM + MSF Graph
+To start the autonomous navigation please run the following terminal commands.
+```bash
+# launch the state estimator with online slam
+roslaunch smb_msf_graph smb_msf_graph.launch
+
+# launch the autonomous navigation
+roslaunch smb_navigation navigate2d_ompl.launch global_frame:=world_graph_msf odom_topic:=/graph_msf/est_odometry_odom_imu
+
+# If you see the message "odom received",
+# everything started without any problem
+```
+#### Option 3: Running with Localization SLAM + MSF Graph
+If an existing global map is available, it can be used for planning. In a first step, the state estimator needs to be launched:
+```bash
+# launch the state estimator with online slam
+roslaunch smb_slam localization.launch
+```
+
+Before running anything else, you need to first localize the robot in the map. This can be done in Rviz using ```2D Pose Estimate``` from the top toolbar. The localization is successful if the data from the lidar and the points from the map allign. Once this is done, you can run the state estimation and autonomous planning as follows:
+
+```bash
+# launch the state estimator
+roslaunch smb_msf_graph smb_msf_graph.launch launch_o3d_slam:=false
+
+# launch the autonomous navigation
+roslaunch smb_navigation navigate2d_ompl.launch global_frame:=world_graph_msf odom_topic:=/graph_msf/est_odometry_odom_imu
+
+# If you see the message "odom received",
+# everything started without any problem
+```
+
+Once the autonomous navigation is running, you can use the Rviz ```2D Navigation Goal``` tool.

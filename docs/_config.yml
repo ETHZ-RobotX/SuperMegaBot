@@ -1,5 +1,6 @@
 title: ETHZ RobotX SuperMegaBot
 description: Documentation of the SuperMegaBot
-remote_theme: pmarsceill/just-the-docs
+# theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 markdown: kramdown
 color_scheme: RobotX

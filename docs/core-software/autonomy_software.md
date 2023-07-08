@@ -38,22 +38,10 @@ catkin build smb_path_planner
 
 ## Setting up Mapping and Localization (SLAM)
 
-The mapping and localization packages have only be tested on the real robot and on recorded datasets and has not been tested in the simulation environment.
-{: .smb-mention }
+Follow the instructions given in the [readme of the smb_slam package](https://github.com/ETHZ-RobotX/smb_common/blob/master/smb_slam/README.md) to set up the SLAM software. 
 
-As for the path planning software packages, also the mapping and localization related packages are already downloaded when you [cloned the list of repositories](../core-software/installation_core.html#catkin-workspace-and-all-packages) contained in `smb.repos` and [installed all the dependencies using the rosdep tool](installation_core.md#installing-dependencies).
-
-Just run the following command in the catkin workspace to build all the SLAM related packages:
-``` bash
-catkin build smb_slam
-```
 
 ## State Estimation
-As an alternative to the camera-based state estimation provided by RealSense, you can run a custom extended Kalman filter and fuse lidar-localization measurements with IMU measurements.
+As an alternative to the visual-inertial odometry based state estimation provided by RealSense tracking camera, you can install a [graph based multi sensor fusion framework](https://github.com/leggedrobotics/graph_msf/).
 
-Same as for the other two packages, [msf](https://github.com/leggedrobotics/ethzasl_msf.git), [icp_localization](https://github.com/leggedrobotics/icp_localization.git) and [open3d_slam](https://github.com/leggedrobotics/open3d_slam.git) are already included in the [core repositories](../core-software/installation_core.html#catkin-workspace-and-all-packages) contained in `smb.repos`. Furthermore, msf also requires [glog_catkin](https://github.com/ethz-asl/glog_catkin.git).
-
-For running msf, and after having set up the workspace, just run the following command in the catkin workspace to build all related packages:
-```bash
-catkin build smb_msf
-```
+Follow the instructions given in the [reamde of the smb_msf_graph package](https://github.com/ETHZ-RobotX/smb_common/blob/devel/smb_msf_graph/readme.md) to install the framework on your system.
