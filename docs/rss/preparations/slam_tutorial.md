@@ -19,7 +19,9 @@ You need to install the open3d python API which will be needed for tutorial on s
 
 1. Install anaconda:  
     a. You can follow the instructions [here](https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-20-04/)  
-    b. You can skip the step where the path is added to your ```~/.bashrc``` by typing ```no``` to the following prompt (```Do you wish the installer to initialize Anaconda3 by running conda init?```)
+    b. Type ```yes``` to the following prompt(```Do you wish the installer to initialize Anaconda3 by running conda init?```)  
+    c. Run the following command so that conda base is not automatically activated in every new terminal:  
+         ```conda config --set auto_activate_base false``` 
 
 2. Create a new conda environment:   
     ```
