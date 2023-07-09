@@ -57,7 +57,10 @@ Check the open3d version (it should be 0.16)
 Make sure that you have installed the repositories following the instructions [here](https://ethz-robotx.github.io/SuperMegaBot/core-software/installation_core.html
 ) for core SMB software since we will be running online SLAM in Gazebo simulation.  
 
-Furthermore, make sure that there is no conda environment activated.
+Furthermore, make sure that there is no conda environment activated: 
+```(bash)
+conda deactivate
+```
 
 Some additional dependencies are required for Open3d_slam for which you can follow these steps:
 
