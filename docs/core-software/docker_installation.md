@@ -102,3 +102,12 @@ In the then so created terminal, run:
 ```bash
 roslaunch smb_gazebo sim.launch
 ```
+
+## Known issues
+### /tmp/.docker.xauth
+It might happen that after rebooting your system you will get the following error:
+```bash
+Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting "/tmp/.docker.xauth" to rootfs at "/tmp/.docker.xauth": mount /tmp/.docker.xauth:/tmp/.docker.xauth (via /proc/self/fd/7), flags: 0x5000: not a directory: unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type
+Error: failed to start containers: smb_container
+```
+In that case, try to run the script [`restart_container.sh` from the smb_docker repository](https://github.com/ETHZ-RobotX/smb_docker/blob/master/restart_container.bash). 
