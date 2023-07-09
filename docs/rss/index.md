@@ -16,8 +16,8 @@ Please follow the instructions given [here](preparations/) to prepare for the tu
 
 ## Tutorials
 
-- Robot Introduction: [Google Slides](#), [PDF Slides](#)
-- Robot Software: [Google Slides](#), [PDF Slides](#)
+- Robot Introduction: [PDF Slides](https://drive.google.com/file/d/1h4hj4IZvKJVzwkMB6sZB8aAFnHYSey_E/view?usp=drive_link)
+- Robot Software: [PDF Slides](https://drive.google.com/file/d/1GOI1U_t8c13qupE5kRYH0HwlTPazJZx0/view?usp=drive_link)
 - State Estimation: [Google Slides](#), [PDF Slides](#)
 - SLAM: [Google Slides](#)
 - Trajectory Optimization: [Exercise](#), [PDF Slides](#)
