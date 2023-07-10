@@ -28,6 +28,37 @@ The following instructions are for running the object detection on your machine:
 This notebook will be used during tutorial. Please download it beforehand if possible.
 
 - [Vision Notebook](https://polybox.ethz.ch/index.php/s/NIWeZP1pn6DiI31)
+
+In order to use the notebook, you may use two approaches:
+
+- local installation within conda
+- docker
+
+**Local installation with conda:**
+
+- You may find the **env_vision_notebook.yml** file under the link above. Navigate to the folder where you downloaded the file.
+Run `conda env create -f environment.yml`
+- Activate your conda environment `conda activate rss_vision_notebook`
+- Navigate to the base folder where you copied our vision_notebook folder and run `jupyter notebook`
+- The previous command has opened your browser. Navigate to and open `ETH Robotics Summer School - Computer Vision Algorithms.ipynb`
+- You are ready to follow the instructions and run the notebook.
+
+**Docker:**
+
+- Navigate to the vision_notebook folder
+- You may find there the docker-compose.yaml, open it 
+- Find the line **network_mode: host** for each service 
+  - if you are using Ubuntu leave these lines **uncommneted**
+  - if you are using Mac or Windows **comment these lines**
+- Pull the docker image `docker compose pull notebook`
+- Once the image is pulled, we may run the image with command `docker compose run notebook`
+- Access the notebook in the browser by following of of the specified URLs. Navigate to and open `./notebook/ETH Robotics Summer School - Computer Vision Algorithms.ipynb`
+
+Run `conda env create -f environment.yml`
+- Activate your conda environment `conda activate rss_vision_notebook`
+- Navigate to the base folder where you copied our vision_notebook folder and run `jupyter notebook`
+- The previous command has opend your browser. Navigate to and open `ETH Robotics Summer School - Computer Vision Algorithms.ipynb`
+- You are ready to follow the instructions and run the notebook.
   
 ## Testing data
 These rosbags and yaml files will be used during tutorial. Please download them beforehand if possible.
