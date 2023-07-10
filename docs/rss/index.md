@@ -26,7 +26,7 @@ Please follow the instructions given [here](preparations/) to prepare for the tu
 
 ## Lectures
 - State Estimation: [PDF Slides](https://drive.google.com/file/d/1_mA8CQsiDTCsWqiJivcgrhrC09Nu9iyf/view?usp=drive_link)
-- SLAM: [PDF Slides](#)
+- SLAM: [PDF Slides](https://drive.google.com/file/d/1jMSyEz8fatCIcXF-VZ6GcZjBKhE8baTq/view?usp=drive_link)
 - Trajectory Optimization: [PDF Slides](#)
 - Path Planning: [PDF Slides](#)
 - Camera Geometry: [PDF Slides](#)
