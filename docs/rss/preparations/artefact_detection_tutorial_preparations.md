@@ -37,7 +37,7 @@ In order to use the notebook, you may use two approaches:
 **Local installation with conda:**
 
 - You may find the **env_vision_notebook.yml** file under the link above. Navigate to the folder where you downloaded the file.
-Run `conda env create -f environment.yml`
+Run `conda env create -f env_vision_notebook.yml`
 - Activate your conda environment `conda activate rss_vision_notebook`
 - Navigate to our vision_notebook folder and run `jupyter notebook`
 - The previous command has opened your browser. Navigate to and open `ETH Robotics Summer School - Computer Vision Algorithms.ipynb`
