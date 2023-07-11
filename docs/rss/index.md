@@ -29,4 +29,4 @@ Please follow the instructions given [here](preparations/) to prepare for the tu
 - SLAM: [PDF Slides](https://drive.google.com/file/d/1jMSyEz8fatCIcXF-VZ6GcZjBKhE8baTq/view?usp=drive_link)
 - Path Planning: [PDF Slides](https://drive.google.com/file/d/1e69iJhVd-cJ8S_Y6PpAVuxxkJZDm1CVw/view?usp=drive_link)
 - Trajectory Optimization: [PDF Slides](#)
-- Camera Geometry: [PDF Slides](#)
+- Camera Geometry: [PDF Slides](https://drive.google.com/file/d/1UKy2_PFvz83pVKspG4PKPrUn-7owdk9G/view?usp=drive_link)
