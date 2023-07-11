@@ -21,7 +21,7 @@ Please follow the instructions given [here](preparations/) to prepare for the tu
 - State Estimation: [Google Slides](https://docs.google.com/presentation/d/1xiaYlTGTCo0_HWiaU5daBHRzq8zMxDCYoaUlXdkROJE/edit?usp=drive_link), [PDF Slides](https://drive.google.com/file/d/1UzOTbkvu5sFWfiOa2SCwD2sqRXchQgKQ/view?usp=drive_link)
 - SLAM: [PDF Slides](https://drive.google.com/file/d/1Fjoz5c2RoAeMoLjguB1ZiJkbb-FXkjFb/view?usp=sharing)
 - Path Planning: [PDF Slides](https://drive.google.com/file/d/121nAIg6NTGSbtxecgALuTVhUS4RrFTME/view?usp=drive_link), [pcd Map](https://drive.google.com/file/d/1h5Ou0AuXRODTGZ3t4uZlUYq5-nWGefy9/view?usp=drive_link)
-- Trajectory Optimization: [Exercise](#), [PDF Slides](#)
+- Trajectory Optimization: [Exercise](tutorials/trajectory_optimization_tutorial.md), [PDF Slides](https://drive.google.com/file/d/1RwegLOPVUG1Z0r6y4qRPq_dAITZWVW6H/view?usp=drive_link)
 - Artefact Detection Tutorial: [Google Slides](#), [PDF Slides](#)
 
 ## Lectures
