@@ -22,11 +22,11 @@ Please follow the instructions given [here](preparations/) to prepare for the tu
 - SLAM: [PDF Slides](https://drive.google.com/file/d/1Fjoz5c2RoAeMoLjguB1ZiJkbb-FXkjFb/view?usp=sharing)
 - Path Planning: [PDF Slides](https://drive.google.com/file/d/121nAIg6NTGSbtxecgALuTVhUS4RrFTME/view?usp=drive_link), [pcd Map](https://drive.google.com/file/d/1h5Ou0AuXRODTGZ3t4uZlUYq5-nWGefy9/view?usp=drive_link)
 - Trajectory Optimization: [Exercise](tutorials/trajectory_optimization_tutorial.md), [Solutions](https://drive.google.com/file/d/1RwegLOPVUG1Z0r6y4qRPq_dAITZWVW6H/view?usp=drive_link)
-- Artefact Detection Tutorial: [Google Slides](#), [PDF Slides](#)
+- Artefact Detection Tutorial: [PDF Slides](https://drive.google.com/file/d/1poBVtQDUyO9-_EsPy1Wj0jjoukSyvLGC/view?usp=drive_link)
 
 ## Lectures
 - State Estimation: [PDF Slides](https://drive.google.com/file/d/1_mA8CQsiDTCsWqiJivcgrhrC09Nu9iyf/view?usp=drive_link)
 - SLAM: [PDF Slides](https://drive.google.com/file/d/1jMSyEz8fatCIcXF-VZ6GcZjBKhE8baTq/view?usp=drive_link)
-- Path Planning: [PDF Slides](#)
+- Path Planning: [PDF Slides](https://drive.google.com/file/d/1e69iJhVd-cJ8S_Y6PpAVuxxkJZDm1CVw/view?usp=drive_link)
 - Trajectory Optimization: [PDF Slides](#)
 - Camera Geometry: [PDF Slides](#)
