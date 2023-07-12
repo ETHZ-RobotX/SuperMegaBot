@@ -16,8 +16,12 @@ The following instructions are for running the object detection on your machine:
 
 - Navigate to the repository: `cd <ws_path>/src/object_detection`
 - Install python dependencies: `pip install -r requirements.txt`
-  - If you are using a conda environment, install the dependencies inside your environment.
-    Follow the instructions for installing conda at: [Conda User Guide](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+
+- If you are using a conda environment, install the dependencies inside your environment.
+    Follow the instructions for installing conda at: [Conda User Guide](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) and you can install the requirements within your new conda environment.
+- **Careful,** you may encounter an issue with the python interpreter being called.
+    - Please ensure that on the top of your **"smb_object_detection/object_detection/src/node.py"** you specify the python interpreter from the conda, example: **#!/Users/robotx/miniconda3/envs/rss_summer_school/bin/python**
+    - Also after **bulding object_detection (the following step)** please ensure that under **.../<your_work_space>/devel/lib/object_detection/node.py** the same python interpreter from conda is set, example: **#!/Users/robotx/miniconda3/envs/rss_summer_school/bin/python**
 - Build object_detection: `catkin build object_detection`
 - Download the YOLO model weights from [here](https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5l6.pt).
   - After downloading the weights, place them in the `/usr/share/yolo/models` folder
