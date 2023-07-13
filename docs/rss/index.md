@@ -30,3 +30,4 @@ Please follow the instructions given [here](preparations/) to prepare for the tu
 - Path Planning: [PDF Slides](https://drive.google.com/file/d/1e69iJhVd-cJ8S_Y6PpAVuxxkJZDm1CVw/view?usp=drive_link)
 - Trajectory Optimization: [PDF Slides](https://drive.google.com/file/d/1EGAWmmBAYaacmPMA3XUw96BpAwf6eSLm/view?usp=drive_link)
 - Camera Geometry: [PDF Slides](https://drive.google.com/file/d/1UKy2_PFvz83pVKspG4PKPrUn-7owdk9G/view?usp=drive_link)
+- Exploration: [PDF Slides](https://drive.google.com/file/d/11LBIJd-LNpMLb4-U3ENhhWqSzXjCwc_r/view?usp=drive_link)
