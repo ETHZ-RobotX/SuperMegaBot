@@ -70,7 +70,7 @@ repositories:
   object_detection:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_object_detection.git
-    version: main
+    version: docker
 # EXPLORATION MISC
   misc/eigen_catkin:
     type: git
