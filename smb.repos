@@ -6,7 +6,7 @@ repositories:
   hardware/robosense_simulator:
     type: git
     url: https://github.com/tomlogan501/robosense_simulator.git
-    version: master
+    version: main
   hardware/smb_powerstatus:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_powerstatus.git
@@ -17,8 +17,12 @@ repositories:
     version: main
   lib/ocs2:
     type: git
-    url: https://github.com/leggedrobotics/ocs2.git
-    version: summerschool_2022
+    url: https://github.com/IoannisDadiotis/ocs2.git
+    version: robotx_school2024
+  lib/libnabo:
+    type: git
+    url: https://github.com/ANYbotics/libnabo.git
+    version: master
   misc/catkin_simple:
     type: git
     url: https://github.com/catkin/catkin_simple.git
@@ -38,19 +42,27 @@ repositories:
   planning/smb_path_planner:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_path_planner.git
-    version: master
+    version: master 
   planning/teb_local_planner:
     type: git
     url: https://github.com/leggedrobotics/teb_local_planner.git
     version: feature/correct_local_plan_timestamps
+  planning/autonomous_exploration_development_environment:
+    type: git
+    url: https://github.com/ETHZ-RobotX/autonomous_exploration_development_environment.git
+    version: noetic
+  planning/far_planner:
+    type: git
+    url: https://github.com/ETHZ-RobotX/far_planner.git
+    version: melodic-noetic
   se/graph_msf:
     type: git
-    url: https://nubertj@bitbucket.org/nubertj/gmsf_robotics_summer_school.git
-    version: robotics_summer_school_2023
+    url: https://bitbucket.org/leggedrobotics/graph_msf_dev.git
+    version: robotics_summer_school_2024
   slam/open3d_slam:
     type: git
-    url: https://github.com/leggedrobotics/open3d_slam.git
-    version: robotics_summer_school_2023
+    url: https://github.com/ETHZ-RobotX/open3d_slam_advanced_rss_2024_public.git
+    version: main
   ui/smb_rviz_plugins:
     type: git
     url: https://github.com/ETHZ-RobotX/smb_rviz_plugins.git
@@ -93,10 +105,6 @@ repositories:
     type: git
     url: https://github.com/ntnu-arl/voxblox.git
     version: dev/noetic
-  mapping/slam_gmapping:
-    type: git
-    url: https://github.com/ETHZ-RobotX/slam_gmapping
-    version: melodic-devel
 # EXPLORATION
   exploration/gbplanner_ros:
     type: git
@@ -114,3 +122,7 @@ repositories:
     type: git
     url: https://github.com/hrnr/m-explore.git
     version: noetic-devel
+  exploration/tare_planner:
+    type: git
+    url: https://github.com/ETHZ-RobotX/tare_planner.git
+    version: rss2024
