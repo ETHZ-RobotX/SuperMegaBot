@@ -1,12 +1,24 @@
 ---
 layout: default
 title: State Estimation Tutorial
-parent: Summer School Tutorials
-nav_exclude: true
+parent: Tutorials
+grand_parent: Robotics Summer School
+nav_order: 1
+# nav_exclude: true
 math: mathjax3
 ---
 
 # State Estimation Tutorial
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 Before starting the tutorial, follow the [Preparation Instructions](../preparations/state_estimation_tutorial_preparations.md) and compile the required code.
 
 The first part of this tutorial - Section 0 - will be given as a presentation. The second part - `Sections 1-3` - will then be more interactive. 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Path Planning Tutorial
+title: Path Planning
 grand_parent: Robotics Summer School
 parent: Tutorial Preparations
 nav_order: 4
@@ -9,22 +9,17 @@ nav_exclude: false
 
 # Preparations for Path Planning Tutorial
 
-To prepare for the Tutorial on Path Planning, only the [SMB core software](../../core-software/installation_core.md) and the [SMB path planner](../../core-software/autonomy_software.md#path-planning) have to be set up and installed.
-{: .smb-info }
-
-## Check software installation
-
-To test if the installation is working correctly, source the workspace where the software is installed; then, the following needs to be checked:
-
-1. The simulation is running properly (`$ roslaunch smb_gazebo sim.launch tracking_camera:=true launch_gazebo_gui:=true`)
-   * You should see the SMB in RViz and Gazebo
-   * `tracking_camera:=true` is necessary as we want to use the tracking camera odometry
-   * `launch_gazebo_gui:=true` is used for activating the visualization in gazebo
-2. The Path Planner can be launched (`$ roslaunch smb_navigation navigate2d_ompl.launch sim:=true global_frame:=tracking_camera_odom`)
-   * You should see the occupancy map in RViz
-3. Place a goal using the `2D Nav Goal` from the top toolbar in RViz
-   * Make sure to give the goal in the `tracking_camera_odom` frame. This can be changed in the Displays panel.
-   * Both a global and a local path have to be generated (global: green line, local: red arrows)
-   * The SMB should move while tracking the local path
+To prepare for the Tutorial on Path Planning, please set up the planners as describe in [SMB Navigation](../../simulation/tasks/navigation.md) and the [SMB Exploration](../../simulation/tasks/exploration.md).
 
 If everything runs, then the software is working and ready for the tutorial.
+
+## Useful References
+[1]C. Cao, H. Zhu, F. Yang, Y. Xia, H.
+Choset, J. Oh, and J. Zhang, "Autonomous Exploration
+Development Environment and the Planning Algorithms",
+In IEEE Intl. Conf. on Robotics and Automation, 2022\\
+[2]F. Yang, C. Cao, H. Zhu, J. Oh, and J. Zhang, “FAR planner:
+Fast, attemptable route planner using dynamic visibility update", In IEEE/RSJ Intl. Conf. on Intelligent Robots and Systems, 2022\\
+[3]C. Cao, H. Zhu, H. Choset, and J. Zhang,
+"Tare: A hierarchical framework for efficiently exploring
+complex 3d environments", In Robotics: Science and Systems, 2021

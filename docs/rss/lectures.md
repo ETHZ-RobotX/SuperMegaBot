@@ -5,14 +5,14 @@ parent: Robotics Summer School
 has_children: false
 has_toc: false
 nav_order: 3
-nav_exclude: true
+nav_exclude: false
 ---
 
 # Robotics Summer School
 
 ## Lectures
 
-- State Estimation: [PDF Slides](https://drive.google.com/file/d/1_mA8CQsiDTCsWqiJivcgrhrC09Nu9iyf/view?usp=drive_link)
+- State Estimation: [PDF Slides](#)
 - SLAM: [PDF Slides](#)
 - Trajectory Optimization: [PDF Slides](#)
 - Path Planning: [PDF Slides](#)

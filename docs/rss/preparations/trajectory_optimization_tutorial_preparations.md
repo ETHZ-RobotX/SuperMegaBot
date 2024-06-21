@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Trajectory Optimization Tutorial
+title: Trajectory Optimization
 grand_parent: Robotics Summer School
 parent: Tutorial Preparations
 nav_order: 2
@@ -9,29 +9,26 @@ nav_exclude: false
 
 # Preparations for Trajectory Optimization Tutorial
 
-To prepare for the Tutorial on Trajectory Optimization, only the [SMB core software](../../core-software/installation_core.md) must be set up and installed.
+To prepare for the Tutorial on Trajectory Optimization, only the [OCS2](https://leggedrobotics.github.io/ocs2/overview.html) toolbox must be set up. We provide the required packages in `lib/ocs2`. The only packages we will be using are `ocs2_legged_robot_ros` and `ocs2_legged_robot` which contains all the code to run the tutorial.
 
-Furthermore, you can already build the current state of the `smb_mpc` package. In the catkin workspace, run:
+You can already build the current state of the `ocs2_legged_robot_ros` package. In the catkin workspace, run:
 ```bash
-catkin build smb_mpc
+catkin build ocs2_legged_robot_ros
 ```
 
-The MPC is not operational in its current state though, as it is missing some code that will be completed by you during the tutorial.
+The package is not operational in its current state though, as it is missing some code that will be completed by you during the tutorial.
 
 ## Check software installation
-To test if the installation is working correctly, source the workspace where the software is installed.
-
-Then, check if the SMB Gazebo simulation is running properly.
+After building the package you can try to launch the node by running the following command in the catkin workspace:
 ```bash
-roslaunch smb_gazebo sim.launch
+roslaunch ocs2_legged_robot_ros legged_robot_ddp.launch
 ```
-You should now see the SMB in RViz.
+This should startup the automatic differentiation module and launch a RViZ window with the robot visualization and three separate terminals. If everything runs, then the software is working and ready for the tutorial.
 
-
-If everything runs, then the software is working and ready for the tutorial.
+N.B. If you try to provide a command to the robot at this stage it would not work and throw out errors in the terminal window. This is because of the missing code that you will complete during the tutorial.
 
 ## Background
-During the tutorial, we will work with our implementation of SLQ-MPC, a Nonlinear Model Predictive Control method.
+During the tutorial, we will work with our implementation of SLQ-MPC, a Nonlinear Model Predictive Control method and apply it in the case of a legged robot locomotion control.
 You can read up on the method in this paper:
 
 M. Neunert et al., “Fast nonlinear Model Predictive Control for unified trajectory optimization and tracking,” in 2016 IEEE International Conference on Robotics and Automation (ICRA), May 2016, pp. 1398–1404. doi: 10.1109/ICRA.2016.7487274.

@@ -1,0 +1,6 @@
+{
+	"name": "Jekyll",
+	"image": "mcr.microsoft.com/devcontainers/jekyll:2.7-bullseye",
+	"postCreateCommand": "bundle install --gemfile=${containerWorkspaceFolder}/docs/Gemfile",
+	"postStartCommand": "jekyll serve --livereload -s ${containerWorkspaceFolder}/docs"
+}

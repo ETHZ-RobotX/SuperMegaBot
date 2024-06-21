@@ -7,13 +7,54 @@ nav_order: 3
 nav_exclude: false
 ---
 
-# Preparations for SLAM Tutorial
+# 🧭 Preparations for SLAM Tutorial
 
-## Download tutorial scripts and data
+This section highlights the steps to follow to prepare for the SLAM tutorial during the Robotics Summer School 2024.
 
-Download the following [folder](https://drive.google.com/drive/folders/1UYSW2WWhQVyTyuiPeuYasUF1EvQcqu1R?usp=sharing) which contains the tutorial scripts and maps. You can place this folder anywhere on your filesystem.
+The official documentation can be found in the [open3d_slam_advanced_rss_2024_public](https://github.com/ETHZ-RobotX/open3d_slam_advanced_rss_2024_public) repo.
 
-## Open3d Python install
+## 🔧 Setting-up
+
+The tutorial material can be run if you have successfully followed the [installation steps](../../installation/index.md). Using [RSS Workspace](../../installation/rss-workspace.md) is recommended.
+
+```bash
+# build smb_slam
+catkin build -c smb_msf_graph smb_slam
+```
+
+## 📂 Resources
+
+### 🔍 Open3D SLAM Resources
+
+To refer information about `open3d_slam` repo can be found here:
+- [Repo](https://github.com/leggedrobotics/open3d_slam)
+- [Docs](https://open3d-slam.readthedocs.io/en/latest/)
+
+You have installed everything correctly if building ```smb_slam``` doesn't throw any error.
+
+### 🗃️ ROSBags
+
+In order to follow the tutorial, you might need the following rosbags from `RSS2023` if you plan on creating an offline map:
+
+- [First mission rosbag](http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-33-01_smb263.bag)
+- [Second mission rosbag](http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-39-50_smb263.bag)
+- [Challenge site rosbag](http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-45-45_smb263.bag)
+
+### 📋 Tutorial Material
+
+The link for the tutorial slides will be available soon [here]().
+
+The link for the tutorial scripts will be available soon [here]().
+
+
+<!-- ### Download tutorial scripts and data
+
+Download the following [folder](https://drive.google.com/drive/folders/1UYSW2WWhQVyTyuiPeuYasUF1EvQcqu1R?usp=sharing) which contains the tutorial scripts and maps. -->
+
+
+<!-- ## Manual Installation (Optional)
+
+### Open3d Python install
 
 You need to install the open3d python API which will be needed for tutorial on scan registration. We will use conda for this.
 
@@ -37,7 +78,7 @@ You need to install the open3d python API which will be needed for tutorial on s
     pip install open3d==0.16.0
     ```
 
-### Verify the installation  
+#### Verify the installation  
 
 Check the open3d version (it should be 0.16)
 
@@ -52,49 +93,26 @@ Check the open3d version (it should be 0.16)
     open3d.__version__
     ```
 
-## Open3d_slam install (cpp package, required for online SLAM and Localization)
+### Open3d_slam install (cpp package, required for online SLAM and Localization)
 
 Make sure that you have installed the repositories following the instructions [here](https://ethz-robotx.github.io/SuperMegaBot/core-software/installation_core.html
 ) for core SMB software since we will be running online SLAM in Gazebo simulation.  
 
-Furthermore, make sure that there is no conda environment activated: 
-```(bash)
-conda deactivate
-```
-
 Some additional dependencies are required for Open3d_slam for which you can follow these steps:
 
 ```bash
-sudo apt install libgoogle-glog-dev libglfw3 libglfw3-dev ros-noetic-jsk-rviz-plugins liblua5.2-dev
+sudo apt install libgoogle-glog-dev
+sudo apt install libglfw3 libglfw3-dev
+sudo apt install ros-noetic-jsk-rviz-plugins
+sudo apt install liblua5.2-dev
 sudo add-apt-repository ppa:roehling/open3d
 sudo apt update
-sudo apt install libopen3d-dev cmake
+sudo apt install libopen3d-dev
 ```
 
-You can now go to your smb workspace and directly build the package smb_gazebo and smb_slam by running the following command:
+You can now go to your rss workspace and directly build the package smb_gazebo and smb_slam by running the following command:
 
 ```bash
 cd smb_ws # PATH TO YOUR WORKSPACE
 catkin build smb_gazebo smb_slam
-```
-
-Additional information about Open3d_slam repo can be found here:
-- [Repo](https://github.com/leggedrobotics/open3d_slam)
-- [Docs](https://open3d-slam.readthedocs.io/en/latest/)
-
-You have installed everything correctly if building ```smb_slam``` doesn't throw any error.
-
-## Miscellaneous
-
-### Download rosbags
-
-In order to follow the tutorial you might need the following rosbags if you plan on creating an offline map:
-
-- [First mission rosbag](http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-33-01_smb263.bag)
-- [Second mission rosbag](http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-39-50_smb263.bag)
-- [Challenge site rosbag](http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-45-45_smb263.bag)
-
-
-## The tutorial
-
-Tutorial slides are [here]() (TODO)
+``` -->

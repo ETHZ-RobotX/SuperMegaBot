@@ -1,6 +1,39 @@
 title: ETHZ RobotX SuperMegaBot
 description: Documentation of the SuperMegaBot
-# theme: just-the-docs
 remote_theme: just-the-docs/just-the-docs
 markdown: kramdown
 color_scheme: RobotX
+
+
+enable_copy_code_button: true
+
+
+relative_links:
+  enabled: true
+
+
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: yellow
+  warning:
+    title: Warning
+    color: red
+
+  
+# Favicon settings
+favicon_ico: favicon.ico
+
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-relative-links
