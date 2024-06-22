@@ -4,7 +4,7 @@ title: Tutorials
 parent: Robotics Summer School
 has_children: true
 has_toc: false
-nav_order: 2
+nav_order: 3
 # nav_exclude: true
 ---
 

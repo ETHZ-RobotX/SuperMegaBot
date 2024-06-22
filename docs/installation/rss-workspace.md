@@ -22,7 +22,9 @@ nav_order: 1
 {: .important }
 Please [create an issue](https://github.com/ETHZ-RobotX/rss_workspace/issues) for any missing library, package, driver, error, or any kind of unclear instruction related to the RSS Workspace.
 
-The **RSS Workspace** is built to provide an out-of-the-box working environment for simulation tasks and connecting with the SMB Physical Robot. It leverages [Docker](https://www.docker.com/), [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) to provide a consistent and reproducible development environment across different platforms.
+The **RSS Workspace** is a all-in-one development environment for the Super Mega Bot (SMB). It contains all the necessary packages, tools, and configurations to develop, simulate, and test the SMB project.
+
+Under the hood, the workspace uses [Docker](https://www.docker.com/) and [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) to provide a consistent development environment across different platforms.
 
 This has been tested on the following platforms:
 - ✅ Ubuntu 22.04/20.04 AMD64
@@ -38,16 +40,19 @@ For other Linux distros, the steps should be similar to Ubuntu and work for both
 ### Git
 Make sure you have installed Git on your system. ([Instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
 
-### VSCode
-Ensure you have a working VSCode setup and that it is up to date to avoid any issues.
+### VSCode + Dev Containers Extension
+- Ensure you have a working VSCode setup and that it is up to date to avoid any issues.
+- Install the [Remote - Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) in VSCode.
 
-[How to set up VSCode?](https://code.visualstudio.com/learn/get-started/basics)
+### **(Optional)** Install Real VNC Viewer
+- Required if you want to run GUI application with VNC. 
+- Install Real VNC Viewer by following [the official website](https://www.realvnc.com/en/connect/download/viewer)
 
-### Install other requirements
-Follow the [preparation steps](https://github.com/ETHZ-RobotX/rss_workspace#preparation) to install the necessary requirements for the RSS Workspace.
+### **(Optional)** SSH-agent
+- To use SSH (for pushing commits to GitHub and connecting robots over SSH) inside container without copying your private ssh-key, you need to setup ssh-agent locally and add your ssh key to the ssh-agent. See the **preparation step 2** [here](https://github.com/ETHZ-RobotX/rss_workspace#preparation) for more details.
 
 ### **(Optional)** Fork the repository
-If you want to customize your workspace and save your changes, you can fork the repository to your GitHub account and clone the forked repository.
+- If you want to customize your workspace and save your changes, you can fork the repository to your GitHub account and clone the forked repository.
 
 ---
 
@@ -55,8 +60,16 @@ If you want to customize your workspace and save your changes, you can fork the 
 
 ### **Method 1**: Clone the workspace to your local file system and open it in VScode.
 
-{: .note }
-The Dev Containers extension uses "bind mounts" to source code in your local filesystem by default. While this is the simplest option, on macOS and Windows, you may encounter slower disk performance when using `catkin build` or other disk-intensive operations. If you encounter this issue, consider using Method 2.
+{: .warning} 
+> For **macOS** and **Windows** users, we recommend using **Method 2** to avoid performance issues.
+>
+> <details markdown="block">
+>  <summary>
+>      Click here for more details!
+>  </summary>
+>  
+>  The Dev Containers extension uses "bind mounts" to source code in your local filesystem by default. While this is the simplest option, on macOS and Windows, you may encounter slower disk performance when using `catkin build` or other disk-intensive operations. If you encounter this issue, consider using Method 2.
+> </details>
 
 ##### Clone the workspace
 
@@ -75,20 +88,35 @@ Press `Ctrl+Shift+P` or `F1` to open the command palette, type `Reopen in Contai
 
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/ETHZ-RobotX/rss_workspace)
 
-#### **TL;DR**: 
+**TL;DR**: 
 Click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/ETHZ-RobotX/rss_workspace) to open the workspace in a Dev Container. If the link does not work, follow the detailed steps below.
 
-{: .note}
-This method will clone the workspace to a docker volume. File data will be chunked and managed by Docker. Though, the chunked data are stored in the local file system, you cannot access them directly. This may be useful if you want to keep your local file system clean or if you encounter performance issues when using the workspace on macOS or Windows. To know more about the docker volume, please refer to the [Docker documentation](https://docs.docker.com/storage/volumes/).
+<details markdown="block">
+  <summary>
+    Click here for detailed steps!
+  </summary>
 
-#### **Detailed Steps:**
+  1. Copy the following link or the forked repository link to the clipboard `https://github.com/ETHZ-RobotX/rss_workspace.git`.
 
-In VSCode,
-1. Open the Command Palette by pressing `F1`.
-2. Copy the following link or the forked repository link to the clipboard `https://github.com/ETHZ-RobotX/rss_workspace.git`.
-3. Search for _"clone"_ and select **Dev Containers: Clone Repository in Container Volume**.
-4. Paste the copied link into the box and press enter.
-5. The dev container will set up properly. (This might take some time as it pulls base docker images and builds locally. You can click `Starting Dev Container (show log)` at the bottom right to see the progress.)
+  2. Open the Command Palette in VScode by pressing `F1`.
+
+  3. Search for _"clone"_ and select **Dev Containers: Clone Repository in Container Volume**.
+
+  4. Paste the copied link into the box and press enter.
+
+  5. The dev container will set up properly. (This might take some time as it pulls base docker images and builds locally. You can click `Starting Dev Container (show log)` at the bottom right to see the progress.)
+</details>
+
+{: .important}
+> You won't be able to access the workspace files directly in the local file system. The workspace files are stored in the docker volume.
+>
+> <details markdown="block">
+>  <summary>
+>      Click here for more details!
+>  </summary>
+>  This method will clone the workspace to a docker volume. File data will be chunked and managed by Docker. Though, the chunked data are stored in the local file system, you cannot access them directly. This may be useful if you want to keep your local file system clean or if you encounter performance issues when using the workspace on macOS or Windows. To know more about the docker volume, please refer to the [Docker documentation](https://docs.docker.com/storage/volumes/).
+> </details>
+
 
 ---
 
@@ -172,50 +200,43 @@ This works out of the box in Linux; when a GUI is launched, the window pops up.
 {: .important}
 Works on Linux, Windows, and Mac
 
-Modify the [line](https://github.com/ETHZ-RobotX/rss_workspace/blob/5db953b27bb6c1ca603944d1345371c666ad93af/.devcontainer/devcontainer.json#L20) in the `.devcontainer/devcontainer.json` to
-
+1. Modify the [line #20](https://github.com/ETHZ-RobotX/rss_workspace/blob/372af7b42366f53c7fa6f94b59a8d87f0e9c2255/.devcontainer/devcontainer.json#L20) in the `.devcontainer/devcontainer.json` to
 ```json
 "DISPLAY": ":1"
 ```
-and rebuild the workspace by opening the command palette (`Ctrl+Shift+P`) and selecting `Remote-Containers: Rebuild Container`.
+and **optionally** modify the [line #9](https://github.com/ETHZ-RobotX/rss_workspace/blob/372af7b42366f53c7fa6f94b59a8d87f0e9c2255/.devcontainer/devcontainer.json#L9) in the same file to set the resolution of the VNC viewer.
 
-**How to open the VNC viewer?**
 
-Open the following link [(http://localhost:6080/)](http://localhost:6080/) in the browser to connect with the VNC environment. Click the connect button to open the viewer. (password: `robotx`)
+2. Rebuild the workspace by opening the command palette (`Ctrl+Shift+P`) and selecting `Remote-Containers: Rebuild Container`.
 
-Check whether everything is working by opening RViz:
+**Use VNC Viewer to connect to the desktop environment of the workspace.**
+
+1. Open the RealVNC Viewer.
+2. File -> New Connection.
+3. Add `localhost:5901` as the VNC Server. The default password is `robotx`.
+4. Click Ok.
+5. Click and open the new connection.
+6. Ignore the unencrypted connection issue.
+
+Now you can see the desktop environment inside the VNC Viewer. You may need to adjust the picture quality settings in the VNC Viewer settings to get the best experience.
+
+### Try a GUI application
+
+You can try to run the smb gazebo simulation inside the workspace to see if the GUI application works. 
+
+You can run the following command to start the simulation:
 
 ```bash
-# In VSCode terminal (Terminal->New Terminal)
-# wssetup    # Source the workspace setup file if not sourced
+cd /workspaces/rss_workspace
+catkin build smb_gazebo # Build the package if not built
+source devel/setup.zsh # Source the workspace setup file if not sourced
 roslaunch smb_gazebo sim.launch
 ```
 
-### Using VNC Viewer
-
-{: .important}
-Works on Linux, Windows, and Mac
-
-1. Install the Real VNC Viewer following the steps on the [RealVNC website](https://www.realvnc.com/en/connect/download/viewer/).
-2. Open the RealVNC Viewer.
-3. File -> New Connection.
-4. Add `localhost:5901` as the VNC Server.
-5. Click Ok.
-6. Click and open the new connection.
-7. Ignore the unencrypted connection issue.
-
-Now you can see the GUI desktop similar to noVNC.
-
-Check whether everything is working by opening RViz:
-
-```bash
-# In VSCode terminal (Terminal->New Terminal)
-# wssetup    # Source the workspace setup file if not sourced
-roslaunch smb_gazebo sim.launch
-```
+If everything goes well, you should see the Gazebo simulation running and the GUI on your screen or VNC viewer.
 
 ---
-
+{: #customizing-the-workspace}
 ## 🎨 Customizing the Workspace
 
 {: .important}
@@ -223,6 +244,8 @@ To save your customization, you should fork the repository and clone the forked 
 
 {: .note}
 You can take a look of the following files and get an idea of what aliases/tools are pre-configured to make your life easier.
+
+To further customize the workspace, you can:
 
 * Add additional packages and productivity tools (e.g., `autojump`, `htop`, etc.) in the `.devcontainer/Dockerfile`.
 * Add additional features and vscode extensions in the `.devcontainer/devcontainer.json`.
@@ -232,27 +255,42 @@ You can take a look of the following files and get an idea of what aliases/tools
 
 ---
 
+{: #tips-and-tricks}
 ## 💡 Tips & Tricks
 
 ### [Tmux](https://github.com/tmux/tmux/wiki) 
 
-#### _Use tmux in the workspace and remote access the physical robot via SSH_
+#### **Use tmux in the workspace and remote access the physical robot via SSH**
 Tmux is a terminal multiplexer; it allows you to create several "pseudo terminals" from a single terminal. It decouples the terminal from the main program (SSH at the remote), protecting it from being closed accidentally when connection is lost. It is particularly useful when remote accessing the physical robot via SSH, as it allows you to keep the program running even when the connection is lost and provides a multi-pane terminal interface for better organization.
 
-#### _Tmux mouse mode_
+#### **Tmux mouse mode**
 We enable tmux mouse mode by default. You can use the mouse to switch between panes and scroll up and down in the terminal.
 
-#### _Tmux panes synchronization_
+#### **Tmux panes synchronization**
 You can toggle pane synchronization mode by pressing `Ctrl+b` and `Ctrl+s`. It is useful when you want to type the same command in multiple panes.
 
 ### GUI
 
-#### _GUI Screen is oversized?_
-On the left menu,
-Go to settings -> scaling mode -> try with local scaling/remote resizing
+#### **GUI Screen does not fit your screen in VNC?**
+You can try,
+- Hover over the top of the window to see the menu bar, click on the first icon from the left (the full-screen icon) to enter full-screen mode.
+- Hover over the top of the window to see the menu bar, click on the second icon from the left (the scaling icon) to scale the screen to fit the viewer.
+- Or adjust the default VNC resolution. See [VNC default resolution is too small?](#vnc_resolution_adjustment) for more details.
 
-#### _Windows spawn oversized?_
-Right-click on the window title bar -> Maximize (this will fit the window into the screen size)
 
-#### _VNC default resolution is too small?_
+#### **Resize windows spawn inside VNC**
+We use [fluxbox](http://fluxbox.org/) as the window manager in the VNC environment. It is more lightweight compared to the GNOME desktop environment.
+
+To resize the windows, you can drag the window from the bottom left or right corner. If the window is too big to fit the screen, you can hold the `Alt` key and drag the window to move it around. If you just want to fit the window into the screen size, you can Right-click on the window title bar -> Maximize, this will fit the window into the screen size.
+
+{: #vnc_resolution_adjustment}
+#### **VNC default resolution is too small?**
 Modify build arguments `VNC_RESOLUTION` in the `.devcontainer/devcontainer.json` file and rebuild the workspace.
+
+### Shell
+
+#### **reverse-i-search**
+It is common to enter a command that you have used before. You can use `Ctrl+r` to search for the command in the history. We integrate `fzf` with the shell by default to provide a more interactive reverse-i-search experience.
+
+#### **`Tab` completion in zsh**
+We use `zsh` as the default shell. You can use `Tab` to auto-complete the command, file, directory name or even ros launch file parameters. When you press `Tab` twice, it will show you all the possible completions, and you can select the one you want by continuously pressing `Tab` until the cursor is on the desired completion.

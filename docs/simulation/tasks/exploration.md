@@ -32,7 +32,7 @@ roslaunch smb_gazebo sim.launch
 Launch the slam:
 ```bash
 # In the host PC
-roslaunch roslaunch smb_msf_graph smb_msf_graph.launch
+roslaunch smb_msf_graph smb_msf_graph.launch use_sim_time:=true
 ```
 
 Launch the local planner and path follower:

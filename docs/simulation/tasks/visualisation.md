@@ -69,4 +69,4 @@ Now you have two possibilities to drive with the robot.
     ```
 
     The joystick mode might not work properly if you are using the **RSS Workspace** or **SMB Docker** image on Windows and MacOS environments.
-    {: .smb-warning}
+    {: .warning }

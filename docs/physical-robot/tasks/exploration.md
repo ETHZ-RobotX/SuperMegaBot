@@ -25,7 +25,7 @@ roslaunch smb smb.launch
 Launch the slam:
 ```bash
 # In a new terminal on SMB
-roslaunch roslaunch smb_msf_graph smb_msf_graph.launch
+roslaunch smb_msf_graph smb_msf_graph.launch
 ```
 
 Launch the local planner and path follower:

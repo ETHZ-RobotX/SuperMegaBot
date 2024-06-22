@@ -27,3 +27,4 @@ In this section, the core tasks of navigation and exploration are explained, alo
 - [🧭 Navigation](tasks/navigation.md)
 - [🗺️ Mission Planning](tasks/mission-planning.md)
 - [🔍 Exploration](tasks/exploration.md)
+- [🕵️‍♂️ Object Detection](tasks/object-detection.md)

@@ -43,18 +43,42 @@ After having recorded all your missions, stop the node with `Ctrl-C`. All your r
 
 The `mission_planner.py` executes the previously defined mission plan.
 
-Start the simulation and the path planner. As soon as the path planner is ready to receive goals, start the `mission_planner` with
+Start the simulation and the path planner.
+```bash
+# launch the FAR planner
+roslaunch smb_navigation navigate2d_cmu.launch use_msf:=true global_frame:=world_graph_msf state_estimation_topic:=/transformed_odom 
+```
+
+As soon as the path planner is ready to receive goals, start the `mission_planner` with
 
 ```bash
 # launch the mission planner
-# if graph_msf is used
-roslaunch smb_mission_planner mission_planner.launch reference_frame:=world_graph_msf mission_file_name:=mission.yaml
+roslaunch smb_mission_planner mission_planner.launch reference_frame:=world_graph_msf mission_file_name:=test_mission.yaml
 ```
 
 The robot will now try to reach the specified waypoints of each mission one by one, as defined in the `yaml` file. In the command line window of the `mission_planner` you can find information on where and in which mission you currently are.
 
+In order to make the above command run, you need to add few twist mission in the test_mission.yaml (since the provided mission_planner.py expect first to execute a FARWaypointMission and then a TwistMission). For this you can copy the twist mission from mission.yaml
+```
+twist_mission:
+  twist_1:
+    lin_vel: 1
+    ang_vel: 1
+    time: 5
+  twist_2:
+    lin_vel: 1
+    ang_vel: 1
+    time: 5
+  twist_3:
+    lin_vel: 1
+    ang_vel: 1
+    time: 5
+```
+and append it to the test_mission.yaml you just created. 
+
+
 Example mission yaml file: 
 [`mission.yaml`](https://github.com/ETHZ-RobotX/smb_mission_planner/blob/master/configs/missions/mission.yaml)
 
-Please note that you need to edit the `mission_planner.py` as required to make it work, you can also refer to the [`navigation_mission.py`](https://github.com/ETHZ-RobotX/smb_mission_planner/blob/master/src/smb_mission_planner/mission_planner.py) for an example implementation.
+Please note that you need to edit the `mission_planner.py` as required to make it work, you can also refer to the [`mission_planner.py`](https://github.com/ETHZ-RobotX/smb_mission_planner/blob/master/src/smb_mission_planner/mission_planner.py) for an example implementation.
 {: .note}

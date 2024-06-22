@@ -47,7 +47,7 @@ To build `smb_msf_graph` run
 ```bash
 catkin build smb_msf_graph
 ```
-This will compile all dependencies present in the workspace, including [open3d_slam](#).
+This will compile all dependencies present in the workspace, including open3d_slam.
 
 ---
 
@@ -70,7 +70,7 @@ sudo apt-get install terminator
 ```
 
 {: .note}
-If you are using [rss_workspace](../../simulation/setting-up/rss-workspace.md), js_rviz_plugins is already installed.
+If you are using [rss_workspace](../../installation/rss-workspace.md), js_rviz_plugins is already installed.
 
 * jsk_rviz_plugins, for visualizing TF-paths in RVIZ.
 
