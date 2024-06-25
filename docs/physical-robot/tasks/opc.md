@@ -56,7 +56,3 @@ Once the core software (`smb.launch`) is started on the robot, you have several 
 1. Control the robot using the RC transmitter. The signals from the RC transmitter are read by the onboard computer and sent to the motor controller.
 2. Use a Joystick to generate control signals (twist messages). In order to control the SMB with the joystick, you should keep pressing the L1 button while driving and use the left stick to control the robot.
 3. Run the autonomous software stack as outlined in the following section.
-
-## TMux Environment
-
-TODO: Add tmux setting up information
