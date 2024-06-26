@@ -43,6 +43,9 @@ After having recorded all your missions, stop the node with `Ctrl-C`. All your r
 
 The `mission_planner.py` executes the previously defined mission plan.
 
+Remember to start the `graph_msf` and `smb_gazebo` using the steps in [navigation](../tasks/navigation.md).
+{: .note}
+
 Start the simulation and the path planner.
 ```bash
 # launch the FAR planner
