@@ -41,7 +41,7 @@ roslaunch smb_opc opc.launch
 
 ```bash
 # In the SMB terminal - launch msf graph 
-roslaunch smb_msf_graph smb_msf_graph.launch use_sim_time:=true
+roslaunch smb_msf_graph smb_msf_graph.launch
 ```
 
 If successful, you can see `GMsf ...graph is initialized.` message in the SMB terminal.
