@@ -53,7 +53,7 @@ Turn on the Network Host mode in the experiemental features section in Docker De
 
 #### Configure Resource Allocation (Optional)
 
-If you encounter any performance issues, you can adjust the resource allocation settings as below. 
+If you encounter any performance issues, you can adjust the resource allocation settings as needed. 
 
 <p align="center">
   <img style="left;" src="{{ 'images/docker-desktop-resource-allocation.png' | absolute_url }}" width="80%" title="Docker Desktop Resource Allocation">

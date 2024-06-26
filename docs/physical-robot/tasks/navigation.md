@@ -30,7 +30,7 @@ roslaunch smb smb.launch
 In another terminal, launch the localization and mapping:
 ```bash
 # In the host PC
-roslaunch roslaunch smb_msf_graph smb_msf_graph.launch
+roslaunch smb_msf_graph smb_msf_graph.launch
 ```
 
 ## Local Planner
