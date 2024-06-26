@@ -20,11 +20,9 @@ The SMB consists of two parts: Base and payload.
 
 ## 🚜 Base
 
-TODO: talk about the drive system and components of the base
+The base consists of a motor controller, power management systems, and safety systems. It comes with a separate battery and can be turned off even when the payload is turned on.
 
 ## 📦 Payload
-
-TODO: talk about the sensors and components in the payload
 
 The payload for the SuperMegaBot incorporates sensors, an onboard computer, networking utilities, and a power system. It was developed with the goal to allow quick adaptations for various applications. 
 

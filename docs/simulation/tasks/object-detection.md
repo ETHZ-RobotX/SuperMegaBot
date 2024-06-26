@@ -32,6 +32,23 @@ To launch the detection pipeline locally, run:
 # In the host PC
 roslaunch object_detection object_detection.launch gpu:=off model:=yolov5l6
 ```
+To view the bounding boxes and get more information about the detections use the following two commands:
+
+```bash
+rosrun rqt_image_view rqt_image_view
+```
+
+Then select the following topic to see the bounding boxes in the image: 
+
+```
+/object_detector/detections_in_image
+```
+
+To get more information like position, classification, etc. subscribe to or echo the following topic: 
+
+```bash
+rostopic echo /object_detector/detection_info
+```
 
 For more information, please check out the [Artefact Detection Tutorial](../../rss/preparations/artefact_detection_tutorial_preparations.md).
 

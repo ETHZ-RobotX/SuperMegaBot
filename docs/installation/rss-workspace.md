@@ -40,6 +40,26 @@ For other Linux distros, the steps should be similar to Ubuntu and work for both
 ### Git
 Make sure you have installed Git on your system. ([Instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
 
+### Docker
+Make sure to install the latest [Docker](https://docs.docker.com/get-docker/).
+
+#### Configure Docker Desktop (Windows/Mac)
+
+Turn on the Network Host mode in the experiemental features section in Docker Desktop settings.
+
+<p align="center">
+  <img style="left;" src="{{ 'images/docker-desktop-host-networking.png' | absolute_url }}" width="80%" title="Docker Desktop Host Networking Option">
+</p>
+
+#### Configure Resource Allocation (Optional)
+
+If you encounter any performance issues, you can adjust the resource allocation settings as below. 
+
+<p align="center">
+  <img style="left;" src="{{ 'images/docker-desktop-resource-allocation.png' | absolute_url }}" width="80%" title="Docker Desktop Resource Allocation">
+</p>
+
+
 ### VSCode + Dev Containers Extension
 - Ensure you have a working VSCode setup and that it is up to date to avoid any issues.
 - Install the [Remote - Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) in VSCode.

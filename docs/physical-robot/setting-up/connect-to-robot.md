@@ -79,8 +79,11 @@ ssh <user>@10.0.x.5
 
 #! Terminal becomes terminal of SSH! 
 
-# To connect the SMB to Internet 
-nmcli connection up
+# To view connections available, this shows the list of connections available to join
+nmcli connection show
+
+# To connect the SMB to Internet (you can specify the connections available from above command, e.g: sudo nmcli connection up mavt-asl-iot)
+sudo nmcli connection up
 ```
 
 **You should connect to the SMB with your given username. The Username is your team number**.
