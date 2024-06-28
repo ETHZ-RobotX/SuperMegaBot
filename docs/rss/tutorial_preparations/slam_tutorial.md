@@ -36,9 +36,9 @@ You have installed everything correctly if building ```smb_slam``` doesn't throw
 
 In order to follow the tutorial, you might need the following rosbags from `RSS2023` if you plan on creating an offline map:
 
-- [First mission rosbag](http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-33-01_smb263.bag)
-- [Second mission rosbag](http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-39-50_smb263.bag)
-- [Challenge site rosbag](http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-45-45_smb263.bag)
+- <a href="http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-33-01_smb263.bag" download>First mission rosbag</a>
+- <a href="http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-39-50_smb263.bag" download>Second mission rosbag</a>
+- <a href="http://robotics.ethz.ch/~asl-datasets/2023_RoboticsSummerSchool_testing_data/2023-06-16-11-45-45_smb263.bag" download>Challenge site rosbag</a>
 
 ### 📋 Tutorial Material
 
