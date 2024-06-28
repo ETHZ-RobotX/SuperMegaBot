@@ -65,9 +65,6 @@ Once you are connected, from the terminal you should connect the SMB via SSH.
 *Example: For SMB 263 the on-board computer IP address is 10.0.3.5*
 {: .note }
 
-
-
-
 Note that there might be an error in the host PC while trying to connect the SMB via ssh. Please read the terminal and use the suggested command in terminal to remove the previous ssh connection settings. 
 {: .note }
 
@@ -76,7 +73,28 @@ Note that there might be an error in the host PC while trying to connect the SMB
 # Do not forget to change x and <user>
 ssh <user>@10.0.x.5
 # Password: smb
+```
 
+**You should connect to the SMB with your given username. The Username is your team number**.
+*Example: For team 1, the username is team1*
+{: .note }
+
+
+Once you are connected to the SMB you will see an IP address and port tuple on the terminal starting with `http://`. Please save it since we will need it in the next step. 
+
+If you do not see such a tupple, please start the roscore and check the part `ROS_MASTER_URI`.
+
+```bash
+# In the terminal of SSH
+roscore
+# See the part of ROS_MASTER_URI
+```
+
+#### Network Sharing
+
+Whenever the 4G connection is not working well, you can connect the SMB NUC to another Wi-Fi using,
+
+```bash
 #! Terminal becomes terminal of SSH! 
 
 # To view connections available, this shows the list of connections available to join
@@ -86,21 +104,29 @@ nmcli connection show
 sudo nmcli connection up
 ```
 
-**You should connect to the SMB with your given username. The Username is your team number**.
-*Example: For team 1, the username is team1*
-{: .note }
+If by any case the 4G network is not working and you are connected to internet using `nmcli connection up`, you may want to share the internet with jetson and your personal computer connected to WiFi.
 
-
-Once you are connected to the SMB you will see an IP address and port tuple on the terminal starting with 'http://'. Please save it since we will need it in the next step. 
-
-If you do not see such a tupple, please start the roscore and check the part ROS_MASTER_URI.
-
+Sharing with the Jetson,
 ```bash
-# In the terminal of SSH
-roscore
-# See the part of ROS_MASTER_URI
+# in the SMB
+./ics_gpu.sh
 ```
 
+Sharing with the PC,
+```bash
+# in the SMB
+./ics_gpu.sh
+
+# in the Host
+## in Ubuntu
+sudo route add default 10.0.x.5 # replace x with SMB26X if it's 263 X is 3
+sudo systemd-resolve --set-dns=10.0.x.1 --set-dns=8.8.8.8 --interface=eth0 # use your network interface, e.g: eth0
+
+## in Mac
+sudo route delete default
+sudo route add default 10.0.x.5 # replace x with SMB26X if it's 263 X is 3
+sudo networksetup -setdnsservers Wi-Fi 10.0.x.1 8.8.8.8 # use your network interface, e.g: Wi-Fi, to list all networks use `networksetup -listallhardwareports`
+```
 
 ## Visualization Settings
 

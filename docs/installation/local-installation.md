@@ -229,14 +229,10 @@ Setting the environment variables `ROS_MASTER_URI` and `ROS_IP` properly is the 
 A convinient way to set the variables is to **adjust the following code to match your robot** and add it to the file `~/.bash_aliases` (or `~/.bashrc`):
 
 ```bash
-alias connect-smb261='export ROS_MASTER_URI=http://10.0.1.5:11311 ;
-export ROS_IP=`ip route get 10.0.1.5 | awk '"'"'{print $5; exit}'"'"'` ;
-echo "ROS_MASTER_URI and ROS_IP set to " ;
-printenv ROS_MASTER_URI ;
-printenv ROS_IP'
+alias connect-smb="export ROS_MASTER_URI=http://\$(ip route show default | grep -oP 'via \K\d+\.\d+\.\d+').5:11311 ; export ROS_IP=\$(ip route get 8.8.8.8 | grep -oP '(?<=src )\S+') ; echo 'ROS_MASTER_URI and ROS_IP set to ' ; printenv ROS_MASTER_URI ; printenv ROS_IP"
 ```
 
-Then (for any newly openend terminal), you can execute `connect-smb261` to set the correct environment variables for your robot.
+Then (for any newly openend terminal), you can execute `connect-smb` to set the correct environment variables for your robot.
 
 
 ## 🔂 Updating the SMB Core Software

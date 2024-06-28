@@ -20,7 +20,7 @@ Next, launch the object detection locally with these parameters for simulation:
 - `gpu="off"`: Runs detection on the CPU.
 - `model_path=""`: Don't set this parameter if you want to use the pre-installed model. If you have a downloaded model, specify its path.
 - `model="yolov5l6"`: Selects the pre-installed YOLOv5 model.
-- `object_detection_classes="[0,1,2,10]"`: Populate this list with the IDs of objects added to the Gazebo scene. If you leave this empty, it will try to detect all objects in the dataset for the simulation. To see what numbers correspond to what items, check out the [Artefact Detection Tutorial](../..//rss/preparations/artefact_detection_tutorial_preparations.md) page and look for the **YOLOv5 Supported Object Classes** section. The example `[0, 1, 2, 10]` corresponds to person, bicycle, car, and fire hydrant.
+- `object_detection_classes="[0,1,2,10]"`: Populate this list with the IDs of objects added to the Gazebo scene. If you leave this empty, it will try to detect all objects in the dataset for the simulation. To see what numbers correspond to what items, check out the [Artefact Detection Tutorial](../../rss/tutorial_preparations/artefact_detection_tutorial_preparations.md) page and look for the **YOLOv5 Supported Object Classes** section. The example `[0, 1, 2, 10]` corresponds to person, bicycle, car, and fire hydrant.
 
 ```
 Note: The `object_detection_classes` parameter is only effective on the real robot or for non-docker users. Docker users use ONNX for detection instead of Torch, as this makes the Docker image smaller. Consequently, all objects will be detected and one cannot select what objects to detect.
