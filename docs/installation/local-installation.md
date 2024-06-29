@@ -234,6 +234,15 @@ alias connect-smb="export ROS_MASTER_URI=http://\$(ip route show default | grep 
 
 Then (for any newly openend terminal), you can execute `connect-smb` to set the correct environment variables for your robot.
 
+The `connect-smb` command doesn't work on Docker running on Mac and Windows, there you can set an allias for exporting the `ROS_MASTER_URI` and manually find the `ROS_IP` of the host using `ifconfig` (e.g: 10.0.X.Y)
+{: .warning}
+
+```bash
+# For mac/windows docker environment
+alias connect-smb261="export ROS_MASTER_URI=http://10.0.1.5:11311 ; export ROS_IP=10.0.1.Y" # replace the Y with the ip of the host computer (outside docker)
+
+# You can define similar commands for other robots
+```
 
 ## 🔂 Updating the SMB Core Software
 
