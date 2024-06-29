@@ -62,6 +62,66 @@ If everything launches without any error messages, your C++ software is ready fo
 
 ---
 
+## Running the ROS Bag File in Docker (Only for rss_workspace and smb_docker)
+
+### Copying the ROS Bag File into the Docker Container
+
+If you use `rss_workspace` and `smb_docker`, you can copy them into the Docker container using the docker cp command. Ensure the Docker container is running before performing these steps:
+
+1. Find the name of the Docker container by running the following command (make sure your Docker container is running)
+
+   ```bash
+   docker ps
+   ```
+
+   The output will look like this if you are using the rss_workspace:
+   ```
+   CONTAINER ID   IMAGE                            COMMAND       CREATED         STATUS         NAMES
+   1234567890ab   vsc-rss_workspace-123asd-uid     "/bin/bash"   5 minutes ago   Up 5 minutes   sad_hawking
+   ```
+   
+   or like this if you are using the smb_docker:
+   ```
+   CONTAINER ID   IMAGE             COMMAND       CREATED         STATUS         NAMES
+   1234567890ab   smb_docker        "/bin/bash"   5 minutes ago   Up 5 minutes   sad_hawking
+   ```
+
+   In this example, the name of the Docker container is `sad_hawking`.
+
+2. Copy the ROS bag file into the Docker container, replacing `<NAME-OF-CONTAINER>` with the actual name of the Docker container and `/path/to/your/rosbag.bag` with the path to the ROS bag file on your local machine:
+
+   ```bash
+   docker cp /path/to/your/rosbag.bag <NAME-OF-CONTAINER>:/workspaces/rss_workspace/src/rosbags/
+   ```
+
+   {: .note}
+   If you are using vscode, you can try to drag and drop the rosbag into the vscode file explorer to copy it into the container. But be aware that this might take longer than `docker cp`. For example, it might take a few minutes to copy a 1GB file.
+
+3. Navigate to the directory containing the ROS bag file inside the container:
+
+   ```bash
+   cd /workspaces/rss_workspace/src/rosbags
+   ```
+
+4. Play the ROS bag file:
+
+   ```bash
+   rosbag play <rosbag_name>.bag
+   ```
+
+   {: .note }
+   > If the bag file does not run and you see an error like:
+   >
+   > ```
+   > [ERROR] [1718830710.056746147]: [registerPublisher] Failed to contact master at [localhost:11311]. Retrying...
+   > ```
+   > You might need to start the ROS master with the following command:
+   > ```
+   > roscore
+   > ```
+
+---
+
 ## (Optional, but recommended) System Installs
 * terminator, because multiple terminals will be needed during the tutorial.
 
@@ -70,7 +130,7 @@ sudo apt-get install terminator
 ```
 
 {: .note}
-If you are using [rss_workspace](../../installation/rss-workspace.md), js_rviz_plugins is already installed.
+If you are using [rss_workspace](../../installation/rss-workspace.md), jsk_rviz_plugins is already installed.
 
 * jsk_rviz_plugins, for visualizing TF-paths in RVIZ.
 

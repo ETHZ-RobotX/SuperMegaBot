@@ -28,6 +28,10 @@ callouts:
   warning:
     title: Warning
     color: red
+  question:
+    color: blue
+  task:
+    color: yellow
 
   
 # Favicon settings
