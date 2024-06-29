@@ -12,8 +12,18 @@ has_toc: false
 Once the planner is set up and the real SMB is running, you can begin experimenting with object detection. Ensure that the `object_detection` package is built. If it isn't, use the following command:
 
 ```bash
-# On the host PC
+# On the SMB
 catkin build object_detection   
+```
+
+Source the workspace again and launch the SMB launch file.
+
+```bash
+# On the SMB
+roslaunch smb smb.launch
+
+# If you see the message "First IMU Received",
+# everything started without any problem
 ```
 
 Next, launch the object detection locally with these parameters for the real robot:
@@ -25,13 +35,14 @@ Next, launch the object detection locally with these parameters for the real rob
 To launch the detection pipeline locally, run:
 
 ```bash
-# In the host PC
+# On the SMB
 roslaunch object_detection object_detection.launch object_detection_classes:="[0,1,2,10]"
 ```
 
 To view the bounding boxes and get more information about the detections use the following two commands:
 
 ```bash
+# On the host
 rosrun rqt_image_view rqt_image_view
 ```
 
@@ -44,6 +55,7 @@ Then select the following topic to see the bounding boxes in the image:
 To get more information like position, classification, etc. subscribe to or echo the following topic: 
 
 ```bash
+# On the host
 rostopic echo /object_detector/detection_info
 ```
 
