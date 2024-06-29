@@ -89,7 +89,7 @@ To save the map, use the following ROS service:
 
 ```bash
 # in the SMB third terminal
-rosservice call /mapping_node/save_map
+rosservice call /mapping/save_map
 ```
 
 The point cloud will be saved to `src/core/smb_slam/data/maps/map.pcd`.
