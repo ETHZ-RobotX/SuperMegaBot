@@ -72,7 +72,7 @@ Note that there might be an error in the host PC while trying to connect the SMB
 # In the terminal of host pc
 # Do not forget to change x and <user>
 ssh <user>@10.0.x.5
-# Password: smb
+# Password: <password>
 ```
 
 **You should connect to the SMB with your given username. The Username is your team number**.

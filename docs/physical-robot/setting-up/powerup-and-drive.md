@@ -96,6 +96,6 @@ sudo poweroff
 To power off both Jetson and NUC,
 ```bash
 # In terminal of SSH of SMB
-sudo poweroff_all
+poweroff_all
 ```
 
