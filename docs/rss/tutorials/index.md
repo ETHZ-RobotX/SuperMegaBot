@@ -15,7 +15,7 @@ nav_order: 3
 - Robot Introduction: [Google Slides](#), [PDF Slides](#)
 - Robot Software: [Google Slides](#), [PDF Slides](#)
 - State Estimation: [Google Slides](#), [PDF Slides](#), [Instructions](./state_estimation_tutorial.md)
-- SLAM: [Google Slides](https://docs.google.com/presentation/d/1GL9zNxByaHGRzI-YQ3DODKc2xlg69W0kwwL4BB0Y5S8/edit?usp=sharing), [Instructions](./slam_tutorial.md)
+- SLAM: [Google Slides](https://docs.google.com/presentation/d/1GL9zNxByaHGRzI-YQ3DODKc2xlg69W0kwwL4BB0Y5S8/edit?usp=sharing), [PDF Slides](https://drive.google.com/file/d/1rn9lGbAbHmHskDt8HCZ-F49JfU6OxHJ-/view), [Instructions](./slam_tutorial.md)
 - Trajectory Optimization: [Google_Slides](#), [PDF Slides](#)
 - Path Planning: [Google Slides](#), [PDF Slides](#)
 - Artefact Detection Tutorial: [Google Slides](#), [PDF Slides](#)
