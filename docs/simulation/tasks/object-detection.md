@@ -19,7 +19,7 @@ Source the workspace again and launch the SMB launch file.
 
 ```bash
 # On the host PC
-roslaunch smb smb.launch
+roslaunch smb_gazebo sim.launch
 
 # If you see the message "First IMU Received",
 # everything started without any problem
