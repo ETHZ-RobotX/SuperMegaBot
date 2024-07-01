@@ -13,7 +13,7 @@ nav_exclude: false
 ## Lectures
 
 - State Estimation: [PDF Slides](#)
-- SLAM: [PDF Slides](#)
+- SLAM: [Google Slides](https://docs.google.com/presentation/d/1y4CfG5U3n2LEyFKZA7vB8nLsR_nIUj-f/edit?usp=drive_web&ouid=116455126816385759225&rtpof=true)
 - Trajectory Optimization: [PDF Slides](#)
 - Path Planning: [PDF Slides](#)
 - Camera Geometry: [PDF Slides](#)
