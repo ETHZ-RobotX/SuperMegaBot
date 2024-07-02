@@ -90,7 +90,7 @@ If you have downloaded the ROS bag files to your local machine and are using Mac
 2. Copy the ROS bag file into the Docker container, replacing `<NAME-OF-CONTAINER>` with the actual name of the Docker container and `/path/to/your/rosbag.bag` with the path to the ROS bag file on your local machine:
 
    ```bash
-   docker cp /path/to/your/rosbag.bag <NAME-OF-CONTAINER>:/workspaces/rss_workspace/src/rosbags/
+   docker cp /path/to/your/rosbag.bag <NAME-OF-CONTAINER>:/workspaces/rss_workspace/src/path_to_bag_storage 
    ```
 
    {: .note}
@@ -118,6 +118,7 @@ If you have downloaded the ROS bag files to your local machine and are using Mac
    > ```
    > roscore
    > ```
+   > Note that detection in Docker will not be as effective as on the actual SMB due to the lack of a GPU and the use of ONNX with custom pre and post-processing.
 
 ---
 

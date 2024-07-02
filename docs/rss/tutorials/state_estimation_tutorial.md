@@ -68,7 +68,7 @@ $ rosbag play <path_to_bagfile>/outdoor_2023-06-16-11-39-50_smb263.bag --clock -
 >
 > - What can you observe qualitatively?
 
-The corresponding plots are then saved on your computer in `~/smb_msf_graph/tutorial/rss_plots`. Inspect them.
+The corresponding plots are then saved on your computer in `smb_msf_graph/tutorial/rss_plots`. Inspect them.
 
 {: .question-title}
 > **Question 3**
