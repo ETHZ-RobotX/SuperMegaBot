@@ -17,4 +17,4 @@ nav_exclude: false
 - Trajectory Optimization: [PDF Slides](https://drive.google.com/file/d/1nWlS3OZdyQNT0swUu8q3F3qYMPgdvtFe/view?usp=drive_link)
 - Path Planning: [PDF Slides](https://drive.google.com/file/d/13lzrN-Ak3tlyxVtLXTOsuZkwn7gqXj2Q/view?usp=sharing)
 - Exploration: [PDF Slides](https://drive.google.com/file/d/1Saz5y-0tbWHk7SGu-CvCD9hP24YD1-KV/view?usp=drive_link)
-- Camera Geometry: [PDF Slides](#)
+- Camera Geometry: [PDF Slides](https://drive.google.com/file/d/1YXSnopAHAgFw93_8_fD2hh_3AIxAAUhm/view?usp=drive_link)
